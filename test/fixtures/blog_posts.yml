@@ -1,0 +1,16 @@
+melhor_cartao_de_credito:
+  original_post_id: 1
+  title: Qual o melhor cartao de credito?
+  url: http://blog.triunfei.com/melhor-cartao-de-credito
+  visible: true
+  published_at: <%= Time.current %>
+  summary: "<p>Voce sabe qual o melhor cartao de credito?</p>"
+  content: 'O melhor cartao de credito é o meu'
+
+melhor_plano_de_operadora:
+  original_post_id: 1
+  title: Qual o melhor plano de operadora?
+  url: http://blog.triunfei.com/melhor-plano-de-operadora
+  visible: false
+  published_at: <%= Time.current %>
+  summary: Voce sabe qual a melhor operadora?

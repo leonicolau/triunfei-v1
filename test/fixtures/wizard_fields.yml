@@ -1,0 +1,55 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+name:
+  wizard: santander
+  name: name
+  label: name
+  field_type: :text
+  step: 1
+
+birthdate:
+  wizard: santander
+  name: birthdate
+  label: birthdate
+  field_type: :text
+  mask: "99/99/9999"
+  step: 2
+
+bank_id:
+  wizard: santander
+  name: bank_id
+  label: bank_id
+  field_type: :hidden
+  default_value: 01
+  step: 2
+
+cep:
+  wizard: santander
+  name: cep
+  label: cep
+  field_type: :text
+  default_value: 91320-150
+  mask: "99999-999"
+  step: 3
+
+banco:
+  wizard: bradesco
+  name: banco
+  label: banco
+  field_type: :text
+  step: 1
+
+adress:
+  wizard: bradesco
+  name: adress
+  label: adress
+  field_type: :text
+  step: 2
+
+number:
+  wizard: bradesco
+  name: number
+  label: number
+  field_type: :text
+  mask: "99999-999"
+  step: 3

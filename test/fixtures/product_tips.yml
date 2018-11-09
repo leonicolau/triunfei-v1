@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+card:
+  title: A card tip
+  description: A cool card tip
+  active: true
+  product: :card
+  slug: 'a-card-tip'
+
+account:
+  title: An account tip
+  description: A cool account tip
+  active: true
+  product: :account
+  slug: 'an-account-tip'
+
+loan:
+  title: A loan tip
+  description: A cool loan tip
+  active: true
+  product: :loan
+  slug: 'a-loan-tip'
+
+insurance:
+  title: An insurance tip
+  description: A cool insurance tip
+  active: true
+  product: :insurance
+  slug: 'an-insurance-tip'
+
+insurance_car:
+  title: An insurance car tip
+  description: A cool insurance car tip
+  active: true
+  product: :insurance_car
+  slug: 'an-insurance-car-tip'
+
+cell_phone_plan:
+  title: An cell phone plan tip
+  description: A cool cell phone plan tip
+  active: true
+  product: :cell_phone_plan
+
+investment:
+  title: An investment tip
+  description: A cool investment tip
+  active: true
+  product: :investment
+  slug: 'an-investment-tip'

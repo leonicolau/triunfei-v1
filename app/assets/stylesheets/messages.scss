@@ -1,0 +1,31 @@
+.error-msg {
+  text-align: center;
+  width: 80%;
+  margin: 2em auto;
+  padding: 1em;
+  color: #c35a05;
+  border-radius: .5em;
+  animation: bounce 500ms;
+
+  .glyphicon {
+    font-size: 2em;
+    margin-bottom: .3em;
+  }
+}
+
+@keyframes bounce {
+  0% {
+      opacity: 0;
+      transform: scale(.3);
+   }
+   50% {
+      opacity: 1;
+      transform: scale(1.05);
+   }
+   70% {
+      transform: scale(.9);
+   }
+   100% {
+      transform: scale(1);
+   }
+}

@@ -1,0 +1,86 @@
+<% cache [item, item.bank] do %>
+   <div class="card-wrap" id="account-<%= item.id %>">
+     <%= render partial:'shared/highlighted' if item.highlighted? %>
+      <div class="row">
+       <!-- Title -->
+        <div class='col-xs-12 col-sm-6 col-md-9 hidden-lg hidden-md'>
+           <h2 class='fs20 fw-bold mt10'> <%= item.name %> </h2>
+        </div>
+        <!-- Image -->
+        <div class="col-xs-6 col-sm-6 col-md-3 br-r">
+           <%= image_tag item.bank.photo.url, class: 'img-responsive center-block' %>
+        </div>
+        <!-- Title -->
+        <div class='col-xs-12 col-sm-6 col-md-9 hidden-sm hidden-xs'>
+          <h2 class='fs20 fw-bold mt10'> <%= item.name %> </h2>
+        </div>
+      <!-- Text -->
+        <div class='col-xs-6 col-sm-6 col-md-6'>
+          <div class='card-text-block'>
+            <p><%= t(:'taxe') %></p>
+            <h2 class='fw-bold'><%= taxes_account(item) %></h2>
+          </div>
+          <div class='card-text-block'>
+            <p><%= t(:'minimum_rent') %></p>
+            <h2 class='fw-bold'><%= minimun_rent(item) %></h2>
+          </div>
+        </div>
+      <!-- Buttons -->
+      <div class='col-xs-12 col-sm-6 col-md-3 card-buttons-block'>
+        <%= link_to t(:go_to_account), go_to_site_account_path(item, cid: cid_param), class: 'btn tr-btn--primary btn-block fw-bold',
+              data: { 'ga-event-category': 'contas', 'ga-event-action': 'clickout', 'ga-event-label': item.name },
+              target: :_blank %>
+        <%= link_to "#card-wrap-info-#{item.id}", class: 'btn btn-block', data: { toggle: :collapse },
+              'aria-expanded': false, 'aria-controls': "#card-wrap-info-#{item.id}" do %>
+              <span class='display-inline'>Saiba mais</span>
+              <span class='display-inline'>
+                <i class='fa fa-chevron-down toggle-wrap-open'></i>
+                <i class='fa fa-chevron-up toggle-wrap-close'></i>
+              </span>
+        <% end %>
+      </div>
+    </div>
+    <!-- More Info -->
+    <div id="card-wrap-info-<%= item.id %>" class='collapse'>
+      <div class='row'>
+        <div class='col-md-12'>
+          <hr>
+          <div class='p10 br3 bg-light-gray'>
+            <ul class='info-card'>
+              <% item.benefits&.split('#').to_a.each do |benefit| %>
+                <li class="benefit-item"><i class="fa fa-check" aria-hidden="true"></i><b><%= benefit %><b></li><br>
+              <% end %>
+              <% if item.withdrawal %>
+                <li class="benefit-item"><i class="fa fa-money" aria-hidden="true"></i>
+                  <%= t('accounts.withdrawal_message', count: item.withdrawal) %>
+                </li>
+              <% end %>
+              <% if item.transfer %>
+                <li class="benefit-item"><i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                  <%= t('accounts.transfer_message', count: item.transfer) %>
+                </li>
+              <% end %>
+              <% if item.statement %>
+                <li class="benefit-item"><i class="fa fa-print" aria-hidden="true"></i>
+                  <%= t('accounts.statement_message', count: item.statement) %>
+                </li>
+              <% end %>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-md-12'>
+              <div class='p10 br3 fs15 text-align-justify more-info-bank'>
+              <%= account_modal_description(item).html_safe %>
+              </div>
+            </div>
+          </div>
+          <div class='row'>
+          <%= render partial: 'shared/cta_list_buttons_item', locals: {item: item, request_product_label: t('go_to_account'),
+                    request_product_path: go_to_site_account_path(item, cid: cid_param), more_info_label: '+ Detalhes da Conta',
+                    more_info_path: item, display_more_info_button: true}  %>
+          </div>
+      </div>
+    </div>
+<% end %>

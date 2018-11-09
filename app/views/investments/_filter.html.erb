@@ -1,0 +1,301 @@
+<div class="col-md-3">
+  <div class="row">
+    <!-- SORT -->
+    <div class="dropdown col-xs-6 mobile-sort">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <i class="fa fa-sort-alpha-asc" aria-hidden="true"></i>
+        <%= t('order') %>
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu sort" aria-labelledby="dropdownMenu1">
+        <li>
+          <a href="#" data-order='ordenado-por-retorno-esperado'><%= t(:expected_return) %></a>
+        </li>
+        <li>
+          <a href="#" data-order='ordenado-por-tipo-duracao'><%= t('duration') %></a>
+        </li>
+      </ul>
+    </div>
+    <!-- FILTROS (MOBILE) -->
+    <%= form_tag(filter_investments_url, id: 'investments-filter') do %>
+    <div class="dropdown col-xs-6 mobile-filter col-filter">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <i class="fa fa-filter" aria-hidden="true"></i>
+        <%= t('calculator') %>
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu filter" aria-labelledby="dropdownMenu2">
+        <!-- Filter de valor -->
+        <div class="panel-group" id="accordion-1" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne-1">
+              <h4 class="panel-title fw-bold">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne-1" aria-expanded="true" aria-controls="collapseOne-1">
+                  <%= t('income_value')%>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-1">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <div class="loan-value">
+                  <%= number_field_tag :amount, params[:amount] || Investment::DEFAULT_VALUE_FOR_FILTER, class: 'amount', id: 'amount_value' %>
+                  <label for="text-amount">Valor do investimento (R$)</label>
+                </div>
+                <div class="investment-time">
+                  <%= number_field_tag :time_value, params[:time_value] || Investment::DEFAULT_VALUE_FOR_TIME_VALUE, class: 'time_value' %>
+                  <label for="text-time_value">Digite a quantidade de dias que deseja investir</label>
+                </div>
+              </li>
+            </ul>
+          </div>
+          </div>
+        </div>
+        <!-- Filter por broker -->
+        <div class="panel-group" id="accordion-2" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne-2">
+              <h4 class="panel-title fw-bold">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-2" href="#collapseOne-2" aria-expanded="true" aria-controls="collapseOne-2">
+                  <%= t('filter_by_broker') %>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne-2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-2">
+              <ul class="list-group">
+                <% Broker.joins(:investments).distinct.all.each do |broker| %>
+                  <li class="list-group-item">
+                    <label>
+                      <%= check_box_tag broker.id, broker.slug, params[:path]&.include?(broker.slug), data: { 'search-param': broker.slug }%>
+                      <%= broker.name %>
+                    </label>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+          <!-- Filter por remuneraçao fixa -->
+  <div class="panel-group" id="accordion-3" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne-3">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion-3" class='fw-bold' href="#collapseOne-3" aria-expanded="true" aria-controls="collapseOne-3">
+         <%= t('fixed_remuneration')%> </a>
+        </h4>
+      </div>
+      <div id="collapseOne-3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-3">
+        <ul class="list-group">
+        <% Investment.fixed_remunerations.each do |type| %>
+          <li class="list-group-item">
+            <label>
+            <%= check_box_tag I18n.t("enum.fixed_remunerations.#{type[0]}"), I18n.t("enum.fixed_remunerations.#{type[0]}"), params[:path]&.include?( I18n.t("enum.fixed_remunerations.#{type[0]}").parameterize), data: { 'search-param': "tipo-#{I18n.t("enum.fixed_remunerations.#{type[0]}")}".parameterize }, class: 'checkbox-decoration' %>
+            <%= I18n.t("enum.fixed_remunerations.#{type[0]}").titleize %>
+            </label>
+           </li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <!-- Filter por duration -->
+    <div class="panel-group" id="accordion-2" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne-2">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion-2" class='fw-bold' href="#collapseOne-2" aria-expanded="true" aria-controls="collapseOne-2">
+              <%= t('duration')%>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseOne-2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-2">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <label>
+                <%= radio_button_tag 'duracao-mobile', 'duracao-0-100', params[:path]&.include?('duracao-0-100'), data: { 'search-param': 'duracao-0-100' }%>
+               <%= t('of')%> 0 a 100 <%= t('days')%>
+              </label>
+            </li>
+            <li class="list-group-item">
+              <label>
+                <%= radio_button_tag 'duracao-mobile', 'duracao-200-300', params[:path]&.include?('duracao-200-300'), data: { 'search-param': 'duracao-200-300' }%>
+               <%= t('of')%> 200 a 300 <%= t('days')%>
+              </label>
+            </li>
+            <li class="list-group-item">
+             <label>
+                <%= radio_button_tag 'duracao-mobile', 'duracao-300-500', params[:path]&.include?('duracao-300-500'), data: { 'search-param': 'duracao-300-500' }%>
+               <%= t('of')%> 300 a 500 <%= t('days')%>
+              </label>
+            </li>
+            <li class="list-group-item">
+              <label>
+                <%= radio_button_tag 'duracao-mobile', 'duracao-500-10000', params[:path]&.include?('duracao-500-10000'), data: { 'search-param': 'duracao-500-10000' }%>
+              + de 500 <%= t('days')%>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+        <!-- Dicas -->
+        <div class="panel-group" id="accordion-4" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne-4">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-4" href="#collapseOne-4" aria-expanded="true" aria-controls="collapseOne-4">
+                  <%= t('tips_triunfei') %></a>
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne-4" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-4">
+            <ul class="list-group">
+              <% ProductTip.investment.all.each do |tip| %><br>
+                <li class="list-group-item">
+                  <label>
+                    <%= link_to tip.title, url_for(tip: tip.slug) %>
+                  </label>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </ul>
+</div>
+<!-- filter desktop -->
+<div class="dropdown col-xs-12 desktop-filter">
+  <div class="panel-group" id="accordion-desktop-1" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne-desktop-1">
+          <b>
+            <h4 class="panel-title fw-bold"></b>
+            <a role="button" data-toggle="collapse" data-parent="#accordion-desktop-1" href="#collapseOne-desktop-1" aria-expanded="true" aria-controls="collapseOne-desktop-1">
+              <%= t('income_value')%>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseOne-desktop-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-desktop-1">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <div class="investment-amount">
+                <%= number_field_tag :amount, params[:amount] || Investment::DEFAULT_VALUE_FOR_FILTER, class: 'amount' %>
+                <label for="text-amount">Valor do investimento (R$)</label>
+              </div>
+              <div class="investment-time">
+                <%= number_field_tag :time_value, params[:time_value] || Investment::DEFAULT_VALUE_FOR_TIME_VALUE, class: 'time_value' %>
+                <label for="text-time_value">Digite a quantidade de dias que deseja investir</label>
+              </div>
+            </li>
+          </ul>
+        </div>
+     </div>
+</div>
+  <!-- Filter por insurer -->
+  <div class="panel-group" id="accordion-desktop-1" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne-desktop-1">
+        <h4 class="panel-title fw-bold">
+          <a role="button" data-toggle="collapse" data-parent="#accordion-desktop-1" class='fw-bold' href="#collapseOne-desktop-1" aria-expanded="true" aria-controls="collapseOne-desktop-1">
+            <%= t('filter_by_broker') %>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseOne-desktop-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-desktop-1">
+        <ul class="list-group">
+          <% Broker.joins(:investments).distinct.all.each do |broker| %>
+            <li class="list-group-item">
+              <label>
+                <%= check_box_tag "broker-#{broker.id}", broker.slug, params[:path]&.include?(broker.slug), data: { 'search-param': broker.slug }%>
+                <%= broker.name %>
+              </label>
+            </li>
+          <%end%>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Filter por insurance_type -->
+  <div class="panel-group" id="accordion-desktop-3" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne-desktop-3">
+        <h4 class="panel-title fw-bold">
+          <a role="button" data-toggle="collapse" data-parent="#accordion-desktop-3" class='fw-bold' href="#collapseOne-desktop-3" aria-expanded="true" aria-controls="collapseOne-desktop-3">
+         <%= t('fixed_remuneration')%></a>
+        </h4>
+      </div>
+      <div id="collapseOne-desktop-3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-desktop-3">
+        <ul class="list-group">
+        <% Investment.fixed_remunerations.each do |type| %>
+          <li class="list-group-item">
+            <label>
+            <%= check_box_tag I18n.t("enum.fixed_remunerations.#{type[0]}"), I18n.t("enum.fixed_remunerations.#{type[0]}"), params[:path]&.include?( I18n.t("enum.fixed_remunerations.#{type[0]}").parameterize), data: { 'search-param': "tipo-#{I18n.t("enum.fixed_remunerations.#{type[0]}")}".parameterize }, class: 'checkbox-decoration' %>
+            <%= I18n.t("enum.fixed_remunerations.#{type[0]}").upcase %>
+            </label>
+           </li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+    <!-- Filter por renda mínima -->
+    <div class="panel-group" id="accordion-desktop-2" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne-desktop-1">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion-desktop-1" class='fw-bold' href="#collapseOne-desktop-1" aria-expanded="true" aria-controls="collapseOne-desktop-1">
+              <%= t('duration') %>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseOne-desktop-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-desktop-1">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <label>
+                <%= radio_button_tag 'duracao', 'duracao-0-100', params[:path]&.include?('duracao-0-100'), data: { 'search-param': 'duracao-0-100' }%>
+                <%= t('of') %> 0 a 100 <%= t('days') %>
+              </label>
+            </li>
+            <li class="list-group-item">
+              <label>
+                <%= radio_button_tag 'duracao', 'duracao-200-300', params[:path]&.include?('duracao-200-300'), data: { 'search-param': 'duracao-200-300' }%>
+                <%= t('of')%> 200 a 300 <%= t('days')%>
+              </label>
+            </li>
+            <li class="list-group-item">
+             <label>
+                <%= radio_button_tag 'duracao', 'duracao-300-500', params[:path]&.include?('duracao-300-500'), data: { 'search-param': 'duracao-300-500' }%>
+                <%= t('of')%> 300 a 500 <%= t('days')%>
+              </label>
+            </li>
+            <li class="list-group-item">
+              <label>
+                <%= radio_button_tag 'duracao', 'duracao-500-10000', params[:path]&.include?('duracao-500-10000'), data: { 'search-param': 'duracao-500-10000' }%>
+                + <%= t('of')%> 500 <%= t('days')%>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <!-- Dicas -->
+  <div class="panel-group" id="accordion-desktop-4" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne-desktop-4">
+        <h4 class="panel-title fw-bold">
+          <a role="button" data-toggle="collapse" data-parent="#accordion-desktop-4" class='fw-bold' href="#collapseOne-desktop-4" aria-expanded="true" aria-controls="collapseOne-desktop-4">
+            <%= t('tips_triunfei') %>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseOne-desktop-4" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-desktop-4">
+        <ul class="list-group">
+          <%= render partial: 'shared/tip_item', collection: ProductTip.investment.all, as: :item %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+</div>
+</div>

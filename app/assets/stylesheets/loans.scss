@@ -1,0 +1,157 @@
+body.loans {
+  header {
+    background-color: #0D2A3E;
+    height: 70px;
+  }
+
+  h2.card-title {
+    font-size: 1.3em;
+    margin-bottom: 1em;
+  }
+
+  h1.filters__title {
+    font-size: 1em;
+    margin: 1em 0 .5em 0;
+    text-align: center;
+  }
+
+  .tr-btn{
+  font-weight: bold;
+}
+  p.filters__description {
+    font-size: 1em;
+    margin: 0 0 1.5em 0;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  @media(max-width: 500px){
+    p.filters__description {
+      letter-spacing: -0.8px;
+      font-size: 1.0em;
+      margin: 0 20px -0.5em 0 !important;
+      text-align: center;
+      line-height: 1.3;
+      width: 100% !important;
+      color: black;
+    }
+  }
+  @media (min-width: 900px) {
+    h1.filters__title {
+      font-size: 2.0em;
+    }
+    p.filters__description {
+      font-size: 1.3em;
+    }
+  }
+
+  .desktop-sort {
+    padding: 20px;
+  }
+
+  .list-group-item input{
+    position: relative;
+    top: -1px;
+    padding: 7px 5px;
+    margin: 5px 0;
+    font-weight: bold;
+  }
+
+  .list-group-item .loan-value{
+    position: relative;
+  }
+
+  .list-group-item .loan-value input{
+    padding-left: 30px;
+    width: 100%;
+  }
+
+  .list-group-item .loan-value:before{
+    position: absolute;
+    left: 6px;
+    font-weight: 700;
+    top: 14px;
+    color: #000;
+    z-index: 100;
+  }
+
+  .list-group-item label{
+    font-size: 17px;
+    font-weight: 300;
+  }
+
+  .list-group-item .time-years{
+    margin-left: 10px;
+  }
+
+  .mobile-filter{
+    .list-group-item input[type="number"]{
+      width: 100%;
+    }
+
+    .label-time {
+      width: 100%;
+    }
+  }
+
+  #time_type_year {
+    margin-left: .7em;
+  }
+
+  &.show {
+    a.ctas-button:hover {
+     background-color: #F9B61F;
+    }
+
+    .product-text {
+      margin-top: 1.5em;
+    }
+
+    .product-img-container {
+      text-align: center;
+      img {
+        max-width: 250px;
+      }
+    }
+  }
+
+  p.card-description {
+    font-size: 1.0em;
+    margin: .3em 0;
+    color: #696969;
+    text-align: justify;
+
+    i {
+      color: #f4b322;
+      margin-right: .3em;
+    }
+  }
+
+  .loan_info{
+    margin-bottom: -3.5em;
+  }
+
+}
+@media (min-width: 501px) and (max-width: 1150px){
+  .loan-box-filter{
+    background-size: 7em;
+
+  }
+}
+  .loan-box-filter{
+    background-position: center;
+    height: 13em;
+    background-size: 12em;
+    margin-bottom: -2em;
+  }
+  .loan-box-filter{
+    background-image: asset-url('money.png');
+    background-position: right 0 top 0;
+    height: 13em;
+    background-repeat: no-repeat;
+    background-size: 13em;
+
+  }
+  .tr-btn--primary {
+    width: 14em;
+  }

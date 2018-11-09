@@ -1,0 +1,12 @@
+<% cache do %>
+<!-- Buttons -->
+<div class='col-md-12 cta-list-buttons-item'>
+  <%= link_to request_product_label, request_product_path, class: 'btn tr-btn--primary btn fw-bold',
+              data: { 'ga-event-category': item, 'ga-event-action': 'clickout', 'ga-event-label': item.name },
+              target: :_blank %>
+
+  <%=link_to more_info_label, more_info_path, class: 'btn btn-info fw-bold more-details-button',
+              data: { 'ga-event-category': item, 'ga-event-action': 'moreinfo', 'ga-event-label': item.name },
+              target: :_blank if display_more_info_button %>
+</div>
+<%end%>

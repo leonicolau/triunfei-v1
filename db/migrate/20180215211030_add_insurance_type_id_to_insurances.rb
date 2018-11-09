@@ -1,0 +1,5 @@
+class AddInsuranceTypeIdToInsurances < ActiveRecord::Migration[5.1]
+  def change
+    add_column :insurances, :insurance_type_id, :integer
+  end
+end

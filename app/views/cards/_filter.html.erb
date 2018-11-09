@@ -1,0 +1,427 @@
+<div class="col-md-3">
+  <div class="row">
+    <!-- SORT -->
+    <div class="dropdown col-xs-6 mobile-sort">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <i class="fa fa-sort-alpha-asc" aria-hidden="true"></i>
+        <%= t('order') %>
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu sort" aria-labelledby="dropdownMenu1">
+        <li>
+          <a href="#" data-order='ordenado-por-mais-relevantes'><%= t('most_relevant') %></a>
+        </li>
+        <li>
+          <a href="#" data-order='ordenado-por-anuidade'><%= t('annuity') %></a>
+        </li>
+        <li>
+          <a href="#" data-order='ordenado-por-renda-minima'><%= t('minimum_rent') %></a>
+        </li>
+      </ul>
+    </div>
+    <!-- FILTROS (MOBILE) -->
+    <%= form_tag(filter_cards_path, id: 'cards-filter') do %>
+    <div class="dropdown col-xs-6 mobile-filter col-filter">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <i class="fa fa-filter" aria-hidden="true"></i>
+        <%= t('filter') %>
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu filter" aria-labelledby="dropdownMenu2">
+        <!-- Filter por renda mínima -->
+        <div class="panel-group" id="accordion-2" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne-2">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-2" href="#collapseOne-2" aria-expanded="true" aria-controls="collapseOne-2">
+                  <%= t('minimum_rent') %>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne-2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-2">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'renda-minima-mobile', 'renda-minima-naoexigida', params[:path]&.include?('renda-minima-naoexigida'), data: { 'search-param': 'renda-minima-naoexigida' }%>
+                    <%= t('not_required') %>
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'renda-minima-mobile', 'renda-minima-0-1500', params[:path]&.include?('renda-minima-0-1500'), data: { 'search-param': 'renda-minima-0-1500' }%>
+                    <%= t('until')%>
+                    <%= t('money_unit') %>
+                    1500
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'renda-minima-mobile', 'renda-minima-1500-3000', params[:path]&.include?('renda-minima-1500-3000'), data: { 'search-param': 'renda-minima-1500-3000' }%>
+                    <%= t('money_unit') %>
+                    1500 -
+                    <%= t('money_unit') %>
+                    3000
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'renda-minima-mobile', 'renda-minima-3000-5000', params[:path]&.include?('renda-minima-3000-5000'), data: { 'search-param': 'renda-minima-3000-5000' }%>
+                    <%= t('money_unit') %>
+                    3000 -
+                    <%= t('money_unit') %>
+                    5000
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'renda-minima-mobile', 'renda-minima-5000-10000', params[:path]&.include?('renda-minima-5000-10000'), data: { 'search-param': 'renda-minima-5000-10000' }%>
+                    <%= t('money_unit') %>
+                    5000
+                    <%= t('or_more') %>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Filter por anuidade -->
+        <div class="panel-group" id="accordion-1" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne-1">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne-1" aria-expanded="true" aria-controls="collapseOne-1">
+                  <%= t('annuity') %>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-1">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'anuidade-mobile', 'anuidade-gratuita', params[:path]&.include?('anuidade-gratuita'), data: { 'search-param': 'anuidade-gratuita' }%>
+                    <%= t('no_annuity') %>
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'anuidade-mobile', 'anuidade-0-70', params[:path]&.include?('anuidade-0-70'), data: { 'search-param': 'anuidade-0-70' }%>
+                    <%= t('money_unit') %>
+                    0 -
+                    <%= t('money_unit') %>
+                    70
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'anuidade-mobile', 'anuidade-70-100', params[:path]&.include?('anuidade-70-100'), data: { 'search-param': 'anuidade-70-100' }%>
+                    <%= t('money_unit') %>
+                    70 -
+                    <%= t('money_unit') %>
+                    100
+
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'anuidade-mobile', 'anuidade-100-150', params[:path]&.include?('anuidade-100-150'), data: { 'search-param': 'anuidade-100-150' }%>
+                    <%= t('money_unit') %>
+                    100 -
+                    <%= t('money_unit') %>
+                    150
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'anuidade-mobile', 'anuidade-150-200', params[:path]&.include?('anuidade-150-200'), data: { 'search-param': 'anuidade-150-200' }%>
+                    <%= t('money_unit') %>
+                    150 -
+                    <%= t('money_unit') %>
+                    200
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'anuidade-mobile', 'anuidade-200-300', params[:path]&.include?('anuidade-200-300'), data: { 'search-param': 'anuidade-200-300' }%>
+                    <%= t('money_unit') %>
+                    200 -
+                    <%= t('money_unit') %>
+                    300
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'anuidade-mobile', 'anuidade-300-10000', params[:path]&.include?('anuidade-300-10000'), data: { 'search-param': 'anuidade-300-10000' }%>
+                    <%= t('money_unit') %>
+                    300
+                    <%= t('or_more') %>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- filter by flag -->
+        <div class="panel-group" id="accordion-4" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne-4">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-4" href="#collapseOne-4" aria-expanded="true" aria-controls="collapseOne-4">
+                  <%= t('filter_by_flag') %>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne-4" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-4">
+              <ul class="list-group">
+                <% Flag.joins(:cards).distinct.all.each do |flag| %>
+                  <li class="list-group-item">
+                    <label>
+                      <%= check_box_tag flag.id, flag.slug, params[:path]&.include?(flag.slug), data: { 'search-param': flag.slug } %>
+                      <%= flag.name %>
+                    </label>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Filter por Banco -->
+        <div class="panel-group" id="accordion-3" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne-3">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-3" href="#collapseOne-3" aria-expanded="true" aria-controls="collapseOne-3">
+                  <%= t('filter_by_bank') %>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne-3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-3">
+              <ul class="list-group">
+                <% Bank.for_filter.joins(:cards).distinct.all.each do |bank| %>
+                  <li class="list-group-item">
+                    <label>
+                      <%= check_box_tag bank.id, bank.slug, params[:path]&.include?(bank.slug), data: { 'search-param': bank.slug }%>
+                      <%= bank.name %>
+                    </label>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="panel-group" id="accordion-3" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne-3">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-3" href="#collapseOne-3" aria-expanded="true" aria-controls="collapseOne-3">
+                  <%= t('tips_triunfei') %>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne-2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-2">
+              <ul class="list-group">
+                <%= render partial: 'shared/tip_item', collection: ProductTip.card.all, as: :item %>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </ul>
+  </div>
+  <!-- filter desktop -->
+  <div class="dropdown col-xs-12 desktop-filter">
+    <!-- Filter por valor mensal -->
+    <div class="panel-group" id="accordion-desktop-1" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne-desktop-1">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion-desktop-1" class='fw-bold' href="#collapseOne-desktop-1" aria-expanded="true" aria-controls="collapseOne-desktop-1">
+              <%= t('annuity') %>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseOne-desktop-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-desktop-1">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <label>
+                <%= radio_button_tag 'anuidade', 'anuidade-gratuita', params[:path]&.include?('anuidade-gratuita'), data: { 'search-param': 'anuidade-gratuita' }%>
+                <%= t('no_annuity') %>
+              </label>
+            </li>
+            <li class="list-group-item">
+              <label>
+                <%= radio_button_tag 'anuidade', 'anuidade-0-70', params[:path]&.include?('anuidade-0-70'), data: { 'search-param': 'anuidade-0-70' }%>
+                <%= t('money_unit') %>
+                0 -
+                <%= t('money_unit') %>
+                70
+              </label>
+            </li>
+            <li class="list-group-item">
+              <label>
+                <%= radio_button_tag 'anuidade', 'anuidade-70-100', params[:path]&.include?('anuidade-70-100'), data: { 'search-param': 'anuidade-70-100' }%>
+                <%= t('money_unit') %>
+                70 -
+                <%= t('money_unit') %>
+                100
+              </label>
+            </li>
+            <li class="list-group-item">
+              <label>
+                <%= radio_button_tag 'anuidade', 'anuidade-100-150', params[:path]&.include?('anuidade-100-150'), data: { 'search-param': 'anuidade-100-150' }%>
+                <%= t('money_unit') %>
+                100 -
+                <%= t('money_unit') %>
+                150
+              </label>
+            </li>
+            <li class="list-group-item">
+              <label>
+                <%= radio_button_tag 'anuidade', 'anuidade-150-200', params[:path]&.include?('anuidade-150-200'), data: { 'search-param': 'anuidade-150-200' }%>
+                <%= t('money_unit') %>
+                150 -
+                <%= t('money_unit') %>
+                200
+              </label>
+            </li>
+            <li class="list-group-item">
+              <label>
+                <%= radio_button_tag 'anuidade', 'anuidade-200-300', params[:path]&.include?('anuidade-200-300'), data: { 'search-param': 'anuidade-200-300' }%>
+                <%= t('money_unit') %>
+                200 -
+                <%= t('money_unit') %>
+                300
+              </label>
+            </li>
+            <li class="list-group-item">
+              <label>
+                <%= radio_button_tag 'anuidade', 'anuidade-300-10000', params[:path]&.include?('anuidade-300-10000'), data: { 'search-param': 'anuidade-300-10000' }%>
+                <%= t('money_unit') %>
+                300
+                <%= t('or_more') %>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Filter por Banco -->
+    <div class="panel-group" id="accordion-desktop-3" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne-desktop-3">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion-desktop-3" class='fw-bold' href="#collapseOne-desktop-3" aria-expanded="true" aria-controls="collapseOne-desktop-3">
+              <%= t('filter_by_bank') %>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseOne-desktop-3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-desktop-3">
+          <ul class="list-group">
+            <% Bank.for_filter.joins(:cards).distinct.all.each do |bank| %>
+              <li class="list-group-item">
+                <label>
+                  <%= check_box_tag "bank-#{bank.id}", bank.slug, params[:path]&.include?(bank.slug), data: { 'search-param': bank.slug }%>
+                  <%= bank.name %>
+                </label>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Filter por Bandeira-->
+    <div class="panel-group" id="accordion-desktop-4" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne-desktop-4">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion-desktop-4" class='fw-bold' href="#collapseOne-desktop-4" aria-expanded="true" aria-controls="collapseOne-desktop-4">
+              <%= t('filter_by_flag') %>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseOne-desktop-4" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-desktop-4">
+          <ul class="list-group">
+            <% Flag.joins(:cards).distinct.all.each do |flag| %>
+              <li class="list-group-item">
+                <label>
+                  <%= check_box_tag "flag-#{flag.id}", flag.slug, params[:path]&.include?(flag.slug), data: { 'search-param': flag.slug }%>
+                  <%= flag.name %>
+                </label>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Filter por renda mínima -->
+    <div class="panel-group" id="accordion-desktop-2" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne-desktop-2">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion-desktop-2" class='fw-bold' href="#collapseOne-desktop-2" aria-expanded="true" aria-controls="collapseOne-desktop-2">
+              <%= t('minimum_rent') %>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseOne-desktop-2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-desktop-2">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <label>
+                <%= radio_button_tag 'renda-minima', 'renda-minima-naoexigida', params[:path]&.include?('renda-minima-naoexigida'), data: { 'search-param': 'renda-minima-naoexigida' }%>
+                <%= t('not_required') %>
+              </label>
+            </li>
+            <li class="list-group-item">
+              <label>
+                <%= radio_button_tag 'renda-minima', 'renda-minima-0-1500', params[:path]&.include?('renda-minima-0-1500'), data: { 'search-param': 'renda-minima-0-1500' }%>
+                <%= t('until') %>
+                1500
+              </label>
+            </li>
+            <li class="list-group-item">
+              <label>
+                <%= radio_button_tag 'renda-minima', 'renda-minima-1500-3000', params[:path]&.include?('renda-minima-1500-3000'), data: { 'search-param': 'renda-minima-1500-3000' }%>
+                <%= t('money_unit') %>
+                1500 -
+                <%= t('money_unit') %>
+                3000
+              </label>
+            </li>
+            <li class="list-group-item">
+              <label>
+                <%= radio_button_tag 'renda-minima', 'renda-minima-3000-5000', params[:path]&.include?('renda-minima-3000-5000'), data: { 'search-param': 'renda-minima-3000-5000' }%>
+                <%= t('money_unit') %>
+                3000 -
+                <%= t('money_unit') %>
+                5000
+              </label>
+            </li>
+            <li class="list-group-item">
+              <label>
+                <%= radio_button_tag 'renda-minima', 'renda-minima-5000-10000', params[:path]&.include?('renda-minima-5000-10000'), data: { 'search-param': 'renda-minima-5000-10000' }%>
+                <%= t('money_unit') %>5000
+                <%= t('or_more') %>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="panel-group" id="accordion-desktop-3" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne-desktop-3">
+          <h4 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#accordion-desktop-3" class='fw-bold' href="#collapseOne-desktop-3" aria-expanded="true" aria-controls="collapseOne-desktop-3">
+              <%= t('tips_triunfei') %>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseOne-desktop-2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-desktop-2">
+          <ul class="list-group">
+            <%= render partial: 'shared/tip_item', collection: ProductTip.card.all, as: :item %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>
+</div>

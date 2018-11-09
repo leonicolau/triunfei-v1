@@ -1,0 +1,37 @@
+<% content_for :title, @insurance.name %>
+
+  <div class="content-section no-border">
+    <div class="container-lrg_cards flex container-show-plans">
+      <div class="col-6 product-img-container">
+        <%= image_tag @insurance.photo.url, class: 'product-img-plans' %>
+      </div>
+      <div class="col-10 product-text-container">
+        <div class="product-text">
+          <p>
+            <h1><%= @insurance.name %></h1>
+          </p>
+          <p><%= t('insurer') %>
+            <b>:
+              <%= @insurance.insurer.name %></b>
+          </p>
+        </div>
+        <div class="ctas">
+          <%= link_to t('go_to_site'), go_to_site_insurance_path(@insurance, cid: cid_param), class: 'ctas-button primary-bg ctas-xl', target: '_blank', data: { 'ga-event-category': 'planos', 'ga-event-action': 'clickout', 'ga-event-label': @insurance.name }%>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-section">
+    <div class="container-lrg_cards flex">
+      <div class="col-12">
+        <p class="paragraph">
+          <% @insurance.benefits&.split('#').to_a.each do |benefit| %>
+            <p class="benefit-item">
+              <i class="fa fa-check" aria-hidden="true"></i>
+              <b><%= benefit %>
+                <b></p><br>
+              <% end %>
+            </p>
+          </div>
+        </div>
+      </div>

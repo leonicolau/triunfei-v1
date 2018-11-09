@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      <%= content_for?(:title) ? yield(:title) : t('titles.default') %>
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= javascript_pack_tag 'application' %>
+    <%= stylesheet_pack_tag 'application' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render('shared/ganalytics') if Rails.env.production? %>
+    <%= render('shared/facebook_pixel') if Rails.env.production? %>
+    <%= render('shared/smartlook') if Rails.env.production? %>
+    <%= favicon_link_tag 'favicon-amarelo.png', size: '32x32' %>
+    <%= favicon_link_tag 'favicon-amarelo.png', size: '192x192' %>
+    <link rel="apple-touch-icon-precomposed" href="https://blog.triunfei.com/wp-content/uploads/2016/10/favicon.png" />
+    <meta name="msapplication-TileImage" content="https://blog.triunfei.com/wp-content/uploads/2016/10/favicon.png" />
+    <%= render partial: 'meta_tags/meta_tag', collection: MetaTag.where(page: nil).or(MetaTag.where(page: request.fullpath)) %>
+  </head>
+  <body class='<%= controller_name %> <%= action_name %>'>
+    <div>
+      <%= render 'layouts/header' %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
+  </body>
+</html>

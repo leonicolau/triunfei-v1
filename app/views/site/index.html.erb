@@ -1,0 +1,186 @@
+<% content_for :header do %>
+  <div class="container-lrg header-content">
+    <div class="col-12 text-typewriter">
+      <h1 class="heading"><%= t('site_index_html')%>
+    <br/>
+    <p class="subtitle"><%= t('subtitle_html') %></p>
+  </h1>
+    </div>
+<div class="container-fluid financial-products">
+      <nav id="colorNav">
+        <ul>
+          <%= link_to (cards_url(cid: cid_param)), target: :_blank, class: 'link'  do %>
+          <li class="green">
+            <i class="fa fa-credit-card fa-2x" aria-hidden="true"><br><%= content_tag(:div, content_tag(:span, t('card')), class: "box_name")%></i>
+            <%end%>
+          </li>
+          <%= link_to (loans_url(cid: cid_param)), target: :_blank, class: 'link' do %>
+          <li class="red">
+            <i class="fa fa-money fa-2x" aria-hidden="true"><br><%= content_tag(:div, content_tag(:span, 'Empréstimos'), class: "box_name")%></i>
+            <%end%>
+          </li>
+          <%= link_to (accounts_url(cid: cid_param)), target: :_blank, class: 'link' do %>
+          <li class="blue">
+            <i class="fa fa-university fa-2x" aria-hidden="true"><%= content_tag(:div, content_tag(:span, t('accounts_link')), class: "box_name")%></i>
+            <% end %>
+          </li>
+          <%= link_to 'http://ad.zanox.com/ppc/?44781761C1418071057T', class: 'link' do %>
+          <li class="yellow">
+            <i class="fa fa-plane fa-2x" aria-hidden="true"><%= content_tag(:div, content_tag(:span, t('insurance_travel')), class: "box_name")%></i>
+          <%end%>
+          </li>
+          <%= link_to (cell_phone_plans_url(cid: cid_param)), target: :_blank, class: 'link' do %>
+          <li class="purple">
+            <i class="fa fa-mobile fa-2x" aria-hidden="true"><br><%= content_tag(:div, content_tag(:span, t('phone_plans_html')), class: "box_name")%></i>
+            <%end%>
+          </li>
+          <%= link_to (investments_url(cid: cid_param)), target: :_blank, class: 'link' do %>
+          <li class="gray">
+            <i class="fa fa-money fa-2x" aria-hidden="true"><br><%= content_tag(:div, content_tag(:span, t('investment_html')), class: "box_name")%></i>
+            <%end%>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  </div>
+<% end %>
+ <div>
+<section class="work--section " id="process">
+ <div>
+<h2 class="h2_how_it_works display-2" align="center"><%= t('how_it_works')%></h2>
+</div>
+            <div class="work_box">
+              <div class="num_hold">
+                <div class="work_num">1</div>
+              </div><!-- num hold  end-->
+              <div class="work-description">
+                <div class="table_hold">
+                  <div class="verticle_align">
+                    <h4 class="h4"><%= t('choose_the_service')%></h4>
+                    <p class="text-descr"><%= t('financial_services')%></p>
+                    <span class="icon_hold">
+                    <%= image_tag 'choose2.ico'%>
+                    </span>
+                  </div>
+                </div>
+              </div><!-- work description end -->
+            </div><!-- word box end -->
+            <div class="work_box">
+              <div class="num_hold">
+                <div class="work_num">2</div>
+              </div><!-- num hold  end-->
+              <div class="work-description">
+                <div class="table_hold">
+                  <div class="verticle_align">
+                    <h4 class="h4"><%= t('redirect_to_form')%></h4>
+                    <p class="text-descr"><%= t('say_some_things')%></p>
+                    <span class="icon_hold">
+                    <%= image_tag 'form2.png'%>
+                    </span>
+                  </div>
+                </div>
+              </div><!-- work description end -->
+            </div><!-- word box end -->
+            <div class="work_box">
+              <div class="num_hold">
+                <div class="work_num">3</div>
+              </div><!-- num hold  end-->
+              <div class="work-description">
+                <div class="table_hold">
+                  <div class="verticle_align">
+                    <h4 class="h4"><%= t('list_products')%></h4>
+                    <p class="text-descr"><%= t('based_on_the_information')%></p>
+                    <span class="icon_hold">
+                    <%= image_tag 'list.png'%>
+                    </span>
+                  </div>
+                </div>
+              </div><!-- work description end -->
+            </div><!-- word box end -->
+            <div class="work_box">
+              <div class="num_hold">
+                <div class="work_num">4</div>
+              </div><!-- num hold  end-->
+              <div class="work-description">
+                <div class="table_hold">
+                  <div class="verticle_align">
+                    <h4 class="h4"><%= t('now_just_request')%></h4>
+                    <p class="text-descr"><%= t('and_be_happy')%></p>
+                    <span class="icon_hold">
+                    <%= image_tag 'solici2.png'%>
+                    </span>
+                  </div>
+                </div>
+              </div><!-- work description end -->
+            </div><!-- word box end -->
+            </section><!-- content end -->
+<div class="container">
+  <div class="section-title text-center">
+            <h1 class="about_us">BENEFÍCIO DE USAR A TRIUNFEI.COM</h1>
+            <p class="paragraph_services">Selecionamos os principais benefícios de utilizar a nossa plataforma em busca do que você precisa.</p>
+        </div>
+    <div class="row">
+        <div class="col-md-3 col-sm-6 div_benefits">
+           <%= link_to filter_cards_url('bradesco/itau', cid: cid_param), target: :_blank do %>
+            <div class="serviceBox">
+                <div class="service-icon">
+                    <i class="fa fa-film"></i>
+                </div>
+                <%end%>
+                <h3 class="title">Descontos nos cinemas</h3>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 div_benefits">
+          <%= link_to wizard_path('seguro-carro-agora', cid: cid_param), target: :_blank do %>
+            <div class="serviceBox">
+                <div class="service-icon">
+                    <i class="fa fa-car"></i>
+                </div>
+                <%end%>
+                <h3 class="title">Melhores seguros de carro</h3>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 div_benefits">
+          <%= link_to loans_path(cid: cid_param), target: :_blank do %>
+            <div class="serviceBox">
+                <div class="service-icon">
+                    <i class="fa fa-money"></i>
+                </div>
+          <%end%>
+                <h3 class="title">Empréstimos com as melhores taxas</h3>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 div_benefits">
+          <%= link_to cell_phone_plans_path(cid: cid_param), target: :_blank do %>
+            <div class="serviceBox">
+                <div class="service-icon">
+                    <i class="fa fa-mobile"></i>
+                </div>
+            <%end%>
+                <h3 class="title">Planos de celular acessíveis</h3>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 div_benefits">
+          <%= link_to accounts_path(cid: cid_param), target: :_blank do %>
+            <div class="serviceBox">
+                <div class="service-icon">
+                    <i class="fa fa-bank"></i>
+                </div>
+                <%end%>
+                <h3 class="title">Contas com vários benefícios</h3>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6 div_benefits">
+          <%= link_to wizard_path('seguro-de-vida', cid: cid_param), target: :_blank do %>
+            <div class="serviceBox">
+                <div class="service-icon">
+                    <i class="fa fa-life-ring "></i>
+                </div>
+                <%end%>
+                <h3 class="title">Seguro de vida para você ficar tranquilo!</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<%= render 'blog_posts/list', blog_posts: grouped_blog_posts(@blog_posts)%>

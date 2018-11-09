@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+santander:
+  wizard_type: :cards
+  name: Santander wizard
+
+bradesco:
+  wizard_type: :cards
+  name: Bradesco wizard
+  display_thank_you_page: true
+
+itau:
+  wizard_type: :cards_message
+  name: Itau wizard
+  wpp_button: true

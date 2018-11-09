@@ -1,0 +1,4 @@
+<%= render 'shared/empty_list', records: insurances.all %>
+
+<%= render partial: 'insurances/insurance', collection: @insurances, cached: true, as: :item %>
+

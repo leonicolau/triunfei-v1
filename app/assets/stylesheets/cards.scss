@@ -1,0 +1,317 @@
+body.cards{
+
+  h1.filters__title {
+    font-size: 2em;
+    margin: -5em 0px .5em -164px;
+    text-align: center;
+    font-family: -apple-system,BlinkMacSystemFont,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Arial,sans-serif;
+    color: white !important;
+  }
+}
+
+body.cards, body.wizards {
+  header {
+    background-color: #0D2A3E;
+    height: 70px;
+  }
+
+  .col-lg-10 {
+    width: 69.333%;
+    margin-left: 3em;
+}
+
+.tr-btn{
+  font-weight: bold;
+}
+
+.dropdown-menu > li > a{
+  margin-left: 1em;
+}
+
+@media (max-width: 569px) {
+  .col-lg-10{
+  width: 85%;
+  margin-left: 2em;
+  }
+}
+
+.card{
+  border-radius: 4px;
+  position: relative;
+  border: 1px solid rgba(0,0,0,.095);
+  background-color: rgba(255,255,255,.25);
+  box-shadow: 0 2px 2px rgba(0,0,0,.02);
+  margin-left: 1em;
+}
+
+
+  p.filters__description {
+    font-size: 1em;
+    margin: 0 0 -0.5em 0;
+    text-align: center;
+    line-height: 1.3;
+    color: white;
+    width: 86%;
+  }
+
+  @media (min-width: 900px) {
+    h1.filters__title {
+      font-size: 2em;
+    }
+    p.filters__description {
+      font-size: 1.3em;
+    }
+  }
+
+    @media(min-width: 900px){
+    @supports (-webkit-appearance:none) {
+    h1.filters__title{
+    font-size: 2em;
+    }}}
+
+  .desktop-sort {
+    padding: 20px;
+    margin-right: -1em !important;
+  }
+
+  .mobile-filter {
+    .list-group-item {
+      label {
+        display: block;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .big-num {
+      .heading {
+        font-size: 1em;
+        font-weight: bold;
+        line-height: 1;
+      }
+    }
+  }
+  @media (min-width: 769px) {
+    .big-num {
+      .heading {
+        font-size: 2em;
+        line-height: 1;
+      }
+    }
+  }
+  .content-section {
+    padding: 50px 0;
+    background-color: #f3f2f5;
+  }
+
+  h2.card-title {
+    font-size: 1.3em;
+  }
+
+    @supports (-webkit-appearance:none) {
+    h2.card-title{
+    font-size: 1.4em; }}
+
+  .benefit-item {
+    font-size: 1em;
+    margin: .3em 0;
+    margin-top: 1em;
+    color: #696969;
+
+    i {
+      color: #f4b322;
+      margin-right: .3em;
+    }
+
+    &.anuity-description {
+      font-size: .9em;
+    }
+
+    .obs {
+      font-size: 1.2em;
+      top: 5px;
+      position: relative;
+    }
+  }
+
+
+@supports (-webkit-appearance:none){
+  .benefit-item {
+    font-size: 1em;
+    margin: .3em 0;
+    color: #696969;
+
+    i {
+      color: #f4b322;
+      margin-right: .3em;
+    }
+
+    &.anuity-description {
+      font-size: .9em;
+    }
+    &.description_brand{
+     font-size: .9em;
+    }
+    .obs {
+      font-size: 1.2em;
+      top: 5px;
+      position: relative;
+    }
+  }}
+
+  &.show {
+    a.ctas-button:hover {
+    background-color: #F9B61F;
+    }
+  }
+
+  i.fa-quote-left {
+    color: #9dab9b;
+  }
+}
+
+.card-paragraph {
+  text-align: justify;
+}
+
+.container-index{
+  background-color: #41c9e6;
+  padding-top: 8px;
+}
+.box-filter{
+  background-image: asset-url('kredi-karti2.png');
+  background-position: right 0 top 0;
+  height: 13em;
+  background-repeat: no-repeat;
+  background-size: 13em;
+
+}
+
+
+
+@media (max-width: 500px) {
+.filters__title{
+  font-size: 1.5em !important;
+  margin: 1em -1px 0.5em -4px !important;
+  text-align: center;
+}
+ p.filters__description{
+  letter-spacing: -0.8px;
+  font-size: 1.0em;
+  margin: 0 20px -0.5em 0 !important;
+  text-align: center;
+  line-height: 1.3;
+  color: white;
+  width: 100% !important;
+}
+.box-filter{
+  background-position: center;
+  height: 13em;
+  background-size: 12em;
+  margin-bottom: -2em;
+}
+#btn-toggle{
+  font-size: 1em;
+  margin: 0 0 1.5em 0 !important;
+  margin-left: 2% !important;
+  margin-right: -1% !important;
+  line-height: 1.3;
+}
+}
+
+@media (min-width: 501px) and (max-width: 1150px){
+.box-filter{
+  background-size: 7em;
+
+}
+.filters__title{
+  font-size: 1.7em !important;
+  margin: -5em 0px .5em -122px !important;
+  text-align: center !important;
+}
+
+p.filters__description{
+  margin: 0 0 1.5em -22px !important;
+  text-align: center !important;
+  line-height: 1.3 !important;
+}
+
+#btn-toggle{
+  margin-left: 3% !important;
+  margin-right: 2% !important;
+}
+}
+a.tr-btn{
+  font-weight: bold;
+  line-height: 0.8;
+}
+
+a.ctas-button{
+  width: 100%;
+}
+
+.tr-btn{
+  font-weight: bold;
+}
+
+@media (max-width: 501px){
+  .card-wrap .fs20{
+    font-size: 14px;
+  }
+
+  .card-wrap .mt10 {
+    margin-top: 0;
+  }
+
+  .card-text-block {
+    margin: 5px 0;
+  }
+
+  .card-wrap{
+    padding: 5px;
+    margin: 5px 0 5px;
+  }
+
+  .img-card {
+    height: 4em;
+    margin-top: 4%;
+  }
+
+  .card-text-block>p {
+    font-size: 12px;
+  }
+
+  .card-text-block>h2 {
+    font-size: 12px;
+  }
+
+  .card-buttons-block .btn {
+    padding: 2px 12px;
+    margin-top: 2px;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  .container-index{
+    padding: 0 !important;
+  }
+
+  .main-title-page{
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #000 !important;
+  }
+
+  .container-index{
+    background: none;
+  }
+
+
+
+}
+.product-text > h1 {
+  margin-bottom: 5px;
+  color: #787878;
+  font-size: 17px;
+}

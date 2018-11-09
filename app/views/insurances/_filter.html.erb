@@ -1,0 +1,174 @@
+<div class="col-md-3">
+  <div class="row">
+    <!-- SORT -->
+    <div class="dropdown col-xs-6 mobile-sort">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <i class="fa fa-sort-alpha-asc" aria-hidden="true"></i>
+        <%= t('order') %>
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu sort" aria-labelledby="dropdownMenu1">
+        <li>
+          <a href="#" data-order='ordenado-por-mais-relevantes'><%= t('most_relevant') %></a>
+        </li>
+        <li>
+          <a href="#" data-order='ordenado-por-insurance'><%= t('insurance') %></a>
+        </li>
+        <li>
+          <a href="#" data-order='ordenado-por-insurer'><%= t('insurer') %></a>
+        </li>
+      </ul>
+    </div>
+    <!-- FILTROS (MOBILE) -->
+    <%= form_tag(filter_insurances_path, id: 'insurances-filter') do %>
+    <div class="dropdown col-xs-6 mobile-filter col-filter">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <i class="fa fa-filter" aria-hidden="true"></i>
+        <%= t('filter') %>
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu filter" aria-labelledby="dropdownMenu2">
+        <!-- Filter por renda mínima -->
+        <div class="panel-group" id="accordion-2" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne-2">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-2" href="#collapseOne-2" aria-expanded="true" aria-controls="collapseOne-2">
+                  <%= t('filter_by_insurer') %>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne-2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-2">
+              <ul class="list-group">
+                <% Insurer.joins(:insurances).distinct.all.each do |insurer| %>
+                  <li class="list-group-item">
+                    <label>
+                      <%= check_box_tag insurer.id, insurer.slug, params[:path]&.include?(insurer.slug), data: { 'search-param': insurer.slug }%>
+                      <%= insurer.name %>
+                    </label>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Filter by insurance_type -->
+        <div class="panel-group" id="accordion-1" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne-1">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne-1" aria-expanded="true" aria-controls="collapseOne-1">
+                  <%= t('filter_by_insurance_type') %>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-1">
+              <ul class="list-group">
+                <% InsuranceType.joins(:insurances).distinct.all.each do |insurance_type| %>
+                  <li class="list-group-item">
+                    <label>
+                      <%= check_box_tag insurance_type.id, insurance_type.slug, params[:path]&.include?(insurance_type.slug), data: { 'search-param': insurance_type.slug } %>
+                      <%= insurance_type.name %>
+                    </label>
+                  </li>
+                <%end%>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Dicas -->
+        <div class="panel-group" id="accordion-4" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne-4">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-4" href="#collapseOne-4" aria-expanded="true" aria-controls="collapseOne-4">
+                  <%= t('tips_triunfei') %></a>
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne-4" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-4">
+            <ul class="list-group">
+              <% ProductTip.insurance.all.each do |tip| %><br>
+                <li class="list-group-item">
+                  <label>
+                    <%= render partial: 'shared/tip_item', collection: ProductTip.insurance.all, as: :item %>
+                  </label>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </ul>
+</div>
+<!-- filter desktop -->
+<div class="dropdown col-xs-12 desktop-filter">
+  <!-- Filter por insurer -->
+  <div class="panel-group" id="accordion-desktop-1" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne-desktop-1">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion-desktop-1" class='fw-bold' href="#collapseOne-desktop-1" aria-expanded="true" aria-controls="collapseOne-desktop-1">
+            <%= t('filter_by_insurer') %>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseOne-desktop-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-desktop-1">
+        <ul class="list-group">
+          <% Insurer.joins(:insurances).distinct.all.each do |insurer| %>
+            <li class="list-group-item">
+              <label>
+                <%= check_box_tag "insurer-#{insurer.id}", insurer.slug, params[:path]&.include?(insurer.slug), data: { 'search-param': insurer.slug }%>
+                <%= insurer.name %>
+              </label>
+            </li>
+          <%end%>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Filter por insurance_type -->
+  <div class="panel-group" id="accordion-desktop-3" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne-desktop-3">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion-desktop-3" class='fw-bold' href="#collapseOne-desktop-3" aria-expanded="true" aria-controls="collapseOne-desktop-3">
+            <%= t('filter_by_insurance_type') %>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseOne-desktop-3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-desktop-3">
+        <ul class="list-group">
+          <% InsuranceType.joins(:insurances).distinct.all.each do |insurancetype| %>
+            <li class="list-group-item">
+              <label>
+                <%= check_box_tag "insurancetype-#{insurancetype.id}", insurancetype.slug, params[:path]&.include?(insurancetype.slug), data: { 'search-param': insurancetype.slug }%>
+                <%= insurancetype.name %>
+              </label>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Dicas -->
+  <div class="panel-group" id="accordion-desktop-4" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne-desktop-4">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion-desktop-4" class='fw-bold' href="#collapseOne-desktop-4" aria-expanded="true" aria-controls="collapseOne-desktop-4">
+            <%= t('tips_triunfei') %>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseOne-desktop-4" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-desktop-4">
+        <ul class="list-group">
+          <%= render partial: 'shared/tip_item', collection: ProductTip.insurance.all, as: :item %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+</div>
+</div>

@@ -1,0 +1,49 @@
+<% cell_phone_plans.each do |cell_phone_plan| %>
+  <div class="row card">
+    <div class="col-xs-12">
+      <h2 class="card-title"><%= cell_phone_plan.name %></h2>
+    </div>
+      <!-- Card Image -->
+      <div class="col-xs-4 col-sm-2 card-image">
+        <%= image_tag cell_phone_plan.photo.url, class: 'card-image__elem' %>
+      </div>
+      <!-- Card Text -->
+      <div class="col-xs-8 col-sm-7 card-text">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 text-center_list">
+              <div class="card-text-block hidden-sm hidden-xs">
+                <h1 class="card-text-title"><%= t('feature') %>:</h1>
+              </div>
+              <div class="card-text-block">
+                <p><span><%= t('internet')%></span></p>
+                <p class="card-text-block__subtitle"><b><%= cell_phone_plan.gb %>GB</b></p>
+              </div>
+              <div class="card-text-block">
+                <p><span><%= t('minutes_talk')%></span></p>
+                <p class="card-text-block__subtitle"><b><%= cell_phone_plan.minutes%> MIN</b></p>
+              </div>
+               <div class="card-text-block">
+                <p><span><%= t('price')%></span></p>
+                <p class="card-text-block__subtitle"><b>R$<%= cell_phone_plan.price %></b></p>
+              </div>
+            </div>
+            <div class="col-xs-8 card-text-vantagens">
+              <ul>
+                <% cell_phone_plan.description&.split('#').to_a.each do |benefit| %>
+                  <p class="benefit-item"><i class="fa fa-check" aria-hidden="true"></i><b><%= benefit %><b></p><br>
+                <% end %>
+                <% cell_phone_plan.description_brand&.split('#').to_a.each do |benefit| %>
+                  <p class="benefit-item"><i class="fa fa-check" aria-hidden="true"></i><b><%= benefit %><b></p><br>
+                <% end %>
+            </div>
+          </div>
+      </div>
+      <!-- Card Buttons -->
+          <div class="col-xs-12 col-sm-3 card-buttons">
+        <%= link_to t('go_to_plan'), go_to_site_cell_phone_plan_path(cell_phone_plan, cid: cid_param, amount: params[:amount]), class: 'btn btn-md tr-btn tr-btn--primary', target: :_blank ,
+             data: { 'ga-event-category': 'planos', 'ga-event-action': 'clickout', 'ga-event-label': cell_phone_plan.name }%>
+        <%= link_to t('more_info'), cell_phone_plan_path(cell_phone_plan, cid: cid_param), class: 'btn btn-md tr-btn tr-btn--ghost', target: :_blank ,
+             data: { 'ga-event-category': 'planoss', 'ga-event-action': 'moreinfo', 'ga-event-label': cell_phone_plan.name } %>
+      </div>
+  </div>
+<% end %>

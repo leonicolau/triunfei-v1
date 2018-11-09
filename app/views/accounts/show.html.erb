@@ -1,0 +1,51 @@
+<% content_for :title, @account.name%>
+
+<div class="content-section no-border">
+  <div class="container-lrg_cards flex container-show">
+    <div class="col-6 product-img-container">
+      <%= image_tag @account.bank.photo.url, class: 'product-img' %>
+    </div>
+    <div class="col-10 product-text-container">
+	    <div class="product-text">
+  			<p><h1><%= @account.name %></h1></p>
+  			<p><%= t('minimum_rent') %>: <b><%= minimun_rent(@account)%></b></p>
+        <p><%= t('taxe') %>: <b><%= taxes_account(@account)%></b></p>
+        <p><%= t('minimum_deposit') %>: <b><%= minimun_deposit(@account) %></b></p>
+	    </div>
+	    <div class="ctas">
+        <%= link_to t('go_to_site'), go_to_site_account_path(@account, cid: cid_param),
+            class: 'ctas-button primary-bg ctas-xl', target: '_blank',
+            data: { 'ga-event-category': 'contas', 'ga-event-action': 'clickout', 'ga-event-label': @account.name } %>
+	    </div>
+    </div>
+  </div>
+</div>
+<div class="content-section">
+	<div class="container-lrg_cards flex">
+		<div class="col-6">
+      <%= t('accounts.show.paragraph_one_html', name: @account.name)%>
+		</div>
+		<div class="col-6">
+			<p class="paragraph">
+        <%= t('accounts.show.paragraph_two_html', name: @account.name)%>
+      </p>
+      <p class="paragraph">
+        <% if @account.transfer %>
+          <%= t('accounts.show.paragraph_three_html', name: @account.name, transfer: @account.transfer)%>
+        <% else %>
+          <%= t('accounts.show.paragraph_four_html', name: @account.name)%>
+        <% end %>
+      </p>
+      <p class="paragraph">
+        <% if @account.statement %>
+         <%= t('accounts.show.paragraph_five_html', account_statement: @account.statement, account_name: @account.name)%>
+        <% else %>
+          <%= t('accounts.show.paragraph_six_html', name: @account.name)%>
+        <% end %>
+      </p>
+      <p class="paragraph">
+          <%= t('accounts.show.paragraph_seven_html', account_name: @account.name, account_taxes: number_to_currency(@account.taxes), minimum_rent: minimun_rent(@account))%>
+			</p>
+		</div>
+	</div>
+</div>

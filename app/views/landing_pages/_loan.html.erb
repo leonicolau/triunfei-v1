@@ -1,0 +1,65 @@
+<body>
+	<div class="header-content">
+		<h1 class="h1_lp"><%= @landing.name %></h1>
+	<div class="lp-content">
+    	<h2 class="paragraph h1_paragraph" id='landing-text1'><%= @landing.text1.html_safe %></h2>
+	<div class="product_image">
+		<%= image_tag @landing.photo.url, size: "480x380" %>
+	</div><br>
+	<div class="container-lrg flex">
+    <div class="col-16">
+        <p class="paragraph" id='landing-text2'><%= @landing.text2.html_safe %></p>
+    </div>
+	</div>
+	</div>
+    <div class="ctas flex">
+        <%= link_to 'COMECE SUA BUSCA!', (wizard_url('assistente-emprestimo', cid: cid_param)), class: 'ctas-button ctas-xl ctas-lp' %>
+    </div>
+    </div>
+<!--	<br><br><br><br><br>-->
+<div class="content-section no-border no-padding cards-section">
+	<div class="container-xlrg container-cards">
+	    <div class="flex">
+	        <div class="col-4">
+	            <div class="box">
+	                <div class="flex flexvert">
+	                    <h2 class="subheading"><%= t('loan.minimum_rent_less') %></h2>
+	                </div>
+	                <div class="box-content">
+                    <p class="paragraph"><%= t('loan.no_problem') %></p>
+	                </div>
+	                <div class="ctas ctas-lp">
+				        <%= link_to link_to t('loan.check_it'), (wizard_url('assistente-emprestimo', cid: cid_param)), class: 'ctas-button ctas-xl' %>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="col-4">
+	            <div class="box">
+	                <div class="flex flexvert">
+                    <h2 class="subheading"><%= t('loan.see_for_rewards') %></h2>
+	                </div>
+	                <div class="box-content">
+                    <p class="paragraph"><%= t('loan.look_for_loan') %></p>
+	                </div>
+	                <div class="ctas ctas-lp">
+				        <%= link_to t('loan.found_it'), (wizard_url('assistente-emprestimo', cid: cid_param)), class: 'ctas-button ctas-xl' %>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="col-4">
+	            <div class="box">
+	                <div class="flex flexvert">
+                    <h2 class="subheading"><%= t('loan.long_term') %></h2>
+	                </div>
+	                <div class="box-content">
+                    <p class="paragraph"><%= t('loan.our_assistance') %></p>
+	                </div>
+	                <div class="ctas ctas-lp">
+				        <%= link_to t('loan.less_spend'), (wizard_url('assistente-emprestimo', cid: cid_param)), class: 'ctas-button ctas-xl' %>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</div>
+</body>

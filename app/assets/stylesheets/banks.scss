@@ -1,0 +1,52 @@
+body.banks {
+  header {
+    background-color: #0D2A3E;
+    height: 70px;
+  }
+
+  .header-bank {
+    margin: 2em 0;
+
+    .logo {
+      text-align: center;
+      box-shadow: 5px 0px 8px -7px rgba(13,42,62,0.62);
+    }
+
+    img {
+      display: inline-block;
+      text-align: right;
+      max-width: 12em;
+    }
+
+    .description {
+      p {
+        text-align: center;
+        margin: 2em
+      }
+    }
+  }
+
+  h1.bank-description{
+    text-align: center;
+    font-weight: normal;
+    margin-top: .2em;
+    padding: 1em 2em;
+  }
+
+  h2.card-title {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+  }
+
+  .benefit-item {
+    font-size: 1.1em;
+    margin: .3em 0;
+    color: #696969;
+
+    i {
+      color: #f4b322;
+      margin-right: .3em;
+    }
+  }
+ 
+}

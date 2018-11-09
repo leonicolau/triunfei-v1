@@ -1,0 +1,29 @@
+.card-wrap{
+  border: 1px solid rgba(0,0,0,.095);
+  background-color: #fff;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.08);
+  margin: 10px 0 15px;
+  padding: 15px;
+}
+
+ul.list-item{
+  padding-left:18px;
+}
+
+ul.list-item > li{
+ display: list-item;
+ font-weight: 100;
+ padding: 3px 0;
+ font-size: 15px;
+ line-height: 30px;
+}
+
+ul.info-card > li{
+  display: block;
+  padding: 3px 0;
+}
+
+ul.list-item > li:hover, ul.info-card > li:hover {
+  text-decoration: none;
+  color: inherit;
+}

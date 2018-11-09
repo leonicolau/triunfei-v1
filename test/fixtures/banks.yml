@@ -1,0 +1,21 @@
+itau:
+  name: Itau
+  slug: itau
+  card_description: O cartao do itau e o melhor que tem
+  show_at_wizard: true
+
+bradesco:
+  name: Bradesco
+  slug: bradesco
+  card_description: O cartao do bradesco e muito bom
+  affiliate_link: 'http://clicks.eficads.com?aff_id=44&offer_id=157&url_path=%{url_path}&aff_sub=%{card_id}'
+
+original:
+  name: Original
+  slug: original
+  card_description: O cartao do original nem existe
+
+banco_do_brasil:
+  name: Banco do brasil
+  slug: banco-do-brasil
+  card_description: O banco do brasil tem o melhor cartao

@@ -1,0 +1,32 @@
+<% content_for :title, @loan.name %>
+
+<div class="content-section no-border bg-white">
+  <div class="container-lrg_cards flex">
+    <div class="col-6 product-img-container">
+      <%= image_tag @loan.bank.photo.url, class: 'product-img' %>
+    </div>
+    <div class="col-10 product-text-container">
+      <div class="product-text">
+        <p><h1><b><%= @loan.name %></b></h1></p>
+        <p><%= t('provided_by') %><b>: <%= @loan.bank.name %></b></p>
+        <p><%= t('minimum_installment') %>: <b><%= number_to_currency(@loan.min_payment) %></b></p>
+        <p><%= t('max_installment') %>: <b><%= number_to_currency(@loan.max_payment) %></b></p>
+        <p><%= t('min_value') %>: <b><%= number_to_currency(@loan.min_amount) %></b></p>
+        <p><%= t('max_value') %>: <b><%= number_to_currency(@loan.max_amount) %></b></p>
+	    </div>
+	    <div class="ctas">
+        <%= link_to t('go_to_site'), go_to_site_loan_path(@loan, cid: cid_param), class: 'ctas-button primary-bg ctas-xl cta-show', target: '_blank',
+          data: { 'ga-event-category': 'emprestimos', 'ga-event-action': 'clickout', 'ga-event-label': @loan.name }%>
+	    </div>
+    </div>
+  </div>
+</div>
+<div class="p10 br3 bg-light-gray fs16 text-align-justify loan_info">
+	<div class="container-lrg_cards flex">
+		<div class="col-12">
+		  	<p class="paragraph">
+		  	  <%= @loan.description %>
+		  	</p>
+		</div>
+	</div>
+</div>

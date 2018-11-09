@@ -1,0 +1,18 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+itau_emprestimo:
+  order: 1
+  bank: itau
+  name: Itau emprestimo
+  link: http://itau.com
+  slug: itau-emprestimo
+  wizard_link: http://local.triunfei.com:3000/wizard/teste
+  interest_rate: 1.5
+
+bradesco_emprestimo:
+  order: 2
+  bank: bradesco
+  name: Bradesco emprestimo
+  link: http://bradesco.com
+  slug: bradesco-emprestimo
+  interest_rate: 1

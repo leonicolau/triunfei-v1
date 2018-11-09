@@ -1,0 +1,27 @@
+<% if blog_posts.any? %>
+  <div class="content-section">
+    <div class="container-lrg_blog flex text-center">
+      <div class="col-12">
+        <h2 class="heading blog-heading"><%= t('blog_posts.title')%></h2>
+      </div>
+    </div>
+  </div>
+<div class="container-fluid container-blog flex">
+ <% @blog_posts.each do |blog| %>
+      <div class="col-md-4 blog-content">
+       <div class="blog-post">
+       <h2 class="blog-post__title"><%= blog.title %></h2>
+       <p class="blog-post__description">
+        <%= process_blog_content(blog) %>
+      </p>
+      <p class="hide" id="show">
+        <%= blog.content %>
+      </p>
+      <div class="link-container">
+        <a href="<%= blog.url %>" class="blog-post__link" target='_blank'><%= t('blog_posts.see_more') %></a>
+      </div>
+      </div>
+    </div>
+ <% end %>
+   </div>
+<%end%>

@@ -1,0 +1,38 @@
+<%  content_for :title, title_for_cell_phone_plans_index %>
+<section>
+  <div class="container-fluid">
+    <h1 class="filters__title">
+      <% if @product_tip&.title.present? %>
+      <%= @product_tip&.title%>
+      <%else%>
+      <%= h1_for_cell_phone_plans_index %>
+      <%end%>
+    </h1>
+    <p class="filters__description">
+      <% if @product_tip&.description.present? %>
+        <%= @product_tip&.description %>
+      <%end%>
+      <%if @product_tip&.text.present? %>
+        <%= @product_tip&.text%>
+      <%end%>
+    </p>
+    <div class="row">
+      <%= render 'filter' %>
+      <div class="col-xs-12 col-md-9 col-lg-10">
+        <div class="row desktop-sort">
+          <div class="col-md-4 col-lg-2 dropdown pull-right">
+            <button class="btn btn-default dropdown-toggle" type="button"
+              id="dropdownMenu-desktop-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <%= t('order') %> <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu sort" aria-labelledby="dropdownMenu-desktop-1">
+              <li><a href="#" data-order='ordenado-por-mais-relevantes'><%= t('most_relevant') %></a></li>
+              <li><a href="#" data-order='ordenado-por-internet'><%= t('internet') %></a></li>
+              <li><a href="#" data-order='ordenado-por-operator'><%= t('operator') %></a></li>
+            </ul>
+          </div>
+        </div>
+        <%= render 'list', cell_phone_plans: @cell_phone_plans %>
+    </div>
+  </div>
+</section>

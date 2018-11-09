@@ -1,0 +1,67 @@
+<% content_for :title, t(:'titles.cards.show', name: @card.name) %>
+
+<div class='content-section no-border bg-white'>
+  <div class='container-lrg_cards flex container-show'>
+    <div class='col-6 product-img-container'>
+      <%= image_tag @card.photo.url, class: 'product-img' %>
+    </div>
+    <div class='col-10 product-text-container'>
+      <div class="product-text">
+        <p><h1><%= raw card_type_show(@card) %></h1></p>
+        <p><% if @card.company_name.present?%><%= @card.company_name%><% else %><%= t('bank') %>: <b><%= @card.bank.name %><%end%></b></p>
+        <p><%= t('flag') %>: <b><%= @card.flag.name %></b></p>
+        <p><%= t('annuity') %>: <b><%= anuity(@card) %></b></p>
+        <%if @card.card_type == 'pre_paid'%>
+        <p>Limite de recarga mensal: <b>R$ <%= @card.monthly_recharge%></b></p>
+        <%else%>
+        <p><%= t('annuity_installment') %>: <b><%= anuity_multiple(@card) %></b></p><%end%>
+        <p><%= t('minimum_rent') %>: <b><%= minimun_rent(@card)%></b></p>
+      </div>
+      <div class='ctas'>
+        <%= link_to t(:'go_to_site'), @card.link_to_view(cid: cid_param), class: 'ctas-button primary-bg ctas-xl cta-show', target: '_blank', data: { 'ga-event-category': 'cartoes', 'ga-event-action': 'clickout', 'ga-event-label': @card.name }%>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='content-section'>
+  <div class='container'>
+    <div class='p10 br3 bg-light-gray fs16 text-align-justify'>
+      <div class='paragraph pb20'>
+        <% if @card.text_of_column_one.present? %>
+          <%= raw @card.text_of_column_one %>
+        <% else %>
+        <%= t(:'cards.show.paragraph_one_html', name: @card.name, flag: @card.flag.name, bank: @card.bank.name,
+                                               anuity: anuity(@card), anuity_multiple: @card.anuity_multiple,
+                                               anuity_description: @card.anuity_description)%>
+        <% end%>
+	    </div>
+      <div class='paragraph pb20'>
+        <% if @card.text_of_column_two.present? %>
+          <%= raw @card.text_of_column_two %>
+        <% else %>
+          <%= t(:'cards.show.paragraph_two_html', name: @card.name, flag: @card.flag.name, bank: @card.bank.name,
+                                             minimum_rent: minimun_rent(@card))%>
+        <% end %>
+		 </div>
+      <div class='paragraph pb20'>
+        <% if @card.text_of_column_three.present? %>
+          <%= raw @card.text_of_column_three %>
+        <% else %>
+          <p class='fs16'><%= @card.bank_usp1 %></p>
+          <p class='fs16'><%= @card.bank_usp2 %></p>
+          <p class='fs16'><%= @card.discount %></p>
+          <p class='fs16'><%= @card.points %></p>
+          <p class='fs16'><%= @card.design %></p>
+          <p class='fs16'><%= @card.insurance %></p>
+          <p class='fs16'><%= @card.insurance2 %></p>
+          <p class='fs16'><%= @card.flag_call_center %></p>
+          <p class='fs16'><%= @card.flag_prem1 %></p>
+          <p class='fs16'><%= @card.flag_prem2 %></p>
+          <p class='fs16'><%= @card.flag_prem3 %></p>
+          <p class='fs16'><%= @card.flag_prem4 %></p>
+          <p class='fs16'><%= @card.anuity_discount %></p>
+        <% end %>
+      </div>
+	  </div>
+  </div>
+</div>

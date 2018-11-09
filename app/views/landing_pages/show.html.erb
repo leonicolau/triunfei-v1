@@ -1,0 +1,4 @@
+<%= content_for :title, @landing.title %>
+<%= render @landing.page_type %>
+
+<%= render 'blog_posts/list', blog_posts: grouped_blog_posts(@blog_posts)%>

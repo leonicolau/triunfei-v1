@@ -1,0 +1,175 @@
+<div class="col-md-3">
+  <div class="row">
+    <!-- SORT -->
+    <div class="dropdown col-xs-6 mobile-sort">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <i class="fa fa-sort-alpha-asc" aria-hidden="true"></i>
+        <%= t('order') %>
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu sort" aria-labelledby="dropdownMenu1">
+        <li>
+          <a href="#1"><%= t('most_searched') %>
+          </a>
+        </li>
+        <li>
+          <a href="#2"><%= t('interest_rate') %></a>
+        </li>
+        <li>
+          <a href="#3"><%= t('Initial_rate') %></a>
+        </li>
+        <li>
+          <a href="#3"><%= t('initial_term') %></a>
+        </li>
+        <li>
+          <a href="#3"><%= t('minimum_term') %></a>
+        </li>
+      </ul>
+    </div>
+    <!-- FILTROS (MOBILE) -->
+    <%= form_tag(filter_loans_path, id: 'loans-filter') do %>
+    <div class="dropdown col-xs-6 mobile-filter">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <i class="fa fa-filter" aria-hidden="true"></i>
+        <%= t('filter') %>
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu filter" aria-labelledby="dropdownMenu2">
+        <!-- Filter de valor e prazo -->
+        <div class="panel-group" id="accordion-1" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne-1">
+              <h4 class="panel-title fw-bold">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne-1" aria-expanded="true" aria-controls="collapseOne-1">
+                  <%= t('value_and_term') %>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-1">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <div class="loan-value">
+                    <%= number_field_tag :amount, params[:amount] || Loan::DEFAULT_VALUE_FOR_FILTER, class: 'amount' %>
+                    <label for="text-amount"><%= t('loan_value')%></label>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <%= number_field_tag :amount, params[:time_value] || 12, class: 'time_value desktop' %>
+                  <%= radio_button_tag :time_type_mobile, 'month', params[:time_type].nil? || params[:time_type] == 'month', class: 'time_type'%>
+                  <label for="radio-desktop-months"><%= t('months') %></label>
+                  <%= radio_button_tag :time_type_mobile, 'year', params[:time_type] == 'year', class: 'time_type'%>
+                  <label for="radio-desktop-years"><%= t('years') %></label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Filter por Banco -->
+        <div class="panel-group" id="accordion-1" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne-1">
+              <h4 class="panel-title fw-bold">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne-1" aria-expanded="true" aria-controls="collapseOne-1">
+                  <%= t('loan_type') %>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-1">
+              <ul class="list-group">
+                <% Bank.joins(:loans).distinct.all.each do |bank| %>
+                  <li class="list-group-item">
+                    <label>
+                      <%= check_box_tag "bank-#{bank.id}", bank.slug, params[:path]&.include?(bank.slug), data: { 'search-param': bank.slug }%>
+                      <%= bank.name %>
+                    </label>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="panel-group" id="accordion-1" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne-1">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne-1" aria-expanded="true" aria-controls="collapseOne-1">
+                  <%= t('tips_triunfei') %></a>
+              </h4>
+            </div>
+            <div id="collapseOne-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-1">
+              <%= render partial: 'shared/tip_item', collection: ProductTip.loan.all, as: :item %>
+            </div>
+          </div>
+        </div>
+    </ul>
+  </div>
+  <div class="dropdown col-xs-12 desktop-filter">
+    <!-- Filter por Banco -->
+    <div class="panel-group" id="accordion-desktop-1" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne-desktop-1">
+          <b>
+            <h4 class="panel-title fw-bold"></b>
+            <a role="button" data-toggle="collapse" data-parent="#accordion-desktop-1" href="#collapseOne-desktop-1" aria-expanded="true" aria-controls="collapseOne-desktop-1">
+              <%= t('value_and_term') %>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseOne-desktop-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-desktop-1">
+          <ul class="list-group">
+            <li class="list-group-item" data-intro='<%= t('intro.loans.step3') %>'>
+              <div class="loan-value">
+                <%= number_field_tag :amount, params[:amount] || Loan::DEFAULT_VALUE_FOR_FILTER, class: 'amount' %>
+                <label for="text-amount"><%= t('loan_value') %></label>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <%= number_field_tag :amount, params[:time_value] || 12, class: 'time_value desktop' %>
+              <%= radio_button_tag :time_type, 'month', params[:time_type].nil? || params[:time_type] == 'month', class: 'time_type'%>
+              <label for="radio-desktop-months"><%= t('months') %></label>
+              <%= radio_button_tag :time_type, 'year', params[:time_type] == 'year', class: 'time_type'%>
+              <label for="radio-desktop-years"><%= t('years') %></label>
+            </li>
+          </ul>
+        </div>
+        <div class="panel-heading" role="tab" id="headingOne-desktop-1">
+          <h4 class="panel-title fw-bold">
+            <a role="button" data-toggle="collapse" data-parent="#accordion-desktop-1" data-intro='<%= t('intro.loans.step4') %>' data-position='right' href="#collapseOne-desktop-1" aria-expanded="true" aria-controls="collapseOne-desktop-1">
+              <%= t('banks') %>
+            </a>
+          </h4>
+        </div>
+        <div id="collapseOne-desktop-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-desktop-1">
+          <ul class="list-group">
+            <% Bank.joins(:loans).distinct.all.each do |bank| %>
+              <li class="list-group-item">
+                <label>
+                  <%= check_box_tag "bank-#{bank.id}", bank.slug, params[:path]&.include?(bank.slug), data: { 'search-param': bank.slug }%>
+                  <%= bank.name %>
+                </label>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+        <div class="panel-group" id="accordion-desktop-3" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne-desktop-3">
+              <h4 class="panel-title fw-bold">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-desktop-3" href="#collapseOne-desktop-3" aria-expanded="true" aria-controls="collapseOne-desktop-3">
+                  <%= t('tips_triunfei') %>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne-desktop-2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-desktop-2">
+              <ul class="list-group">
+                <%= render partial: 'shared/tip_item', collection: ProductTip.loan.all, as: :item %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>
+</div>

@@ -1,0 +1,73 @@
+visa_credit:
+  order: 1
+  card_type: :credit
+  name: Visa credit do Itau
+  bank: itau
+  anuity: 300
+  anuity_multiple: 12
+  minimum_rent: 600
+  flag: visa
+  points: YES
+  insurance: YES
+  discount: YES
+  international: true
+  link: 'http://test.com/'
+  slug: 'visa-credito-do-itau'
+
+master_debit:
+  order: 2
+  card_type: :debit
+  name: Master debit
+  bank: bradesco
+  flag: master
+  minimum_rent: 800
+  anuity_multiple: 0
+  anuity: 600
+  international: false
+  bank_usp1: bank usp 1
+  bank_usp2: bank usp 2
+  slug: 'master-debito'
+
+original:
+  order: 2
+  card_type: :pre_paid
+  name: Original prepaid
+  bank: original
+  flag: master
+  minimum_rent: 800
+  anuity_multiple: 0
+  anuity: 600
+  international: false
+  bank_usp1: bank usp 1
+  bank_usp2: bank usp 2
+  slug: 'original-prepaid'
+  monthly_recharge: 99.9
+
+cartao_original:
+  order: 3
+  card_type: :debit
+  name: Cartao Original
+  bank: original
+  flag: master
+  minimum_rent: 800
+  anuity_multiple: 0
+  anuity: 600
+  international: false
+  bank_usp1: bank usp 1
+  bank_usp2: bank usp 2
+  slug: 'o-melhor-cartao-de-credito'
+  landing_url: 'o-melhor-cartao-de-credito'
+
+promotion:
+  order: 0
+  card_type: :promotion
+  name: Promocao livelo
+  bank: bradesco
+  flag: master
+  minimum_rent: 0
+  anuity_multiple: 0
+  anuity: 0
+  international: false
+  bank_usp1: bank usp 1
+  bank_usp2: bank usp 2
+  slug: 'promocao-livelo'

@@ -1,0 +1,164 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>http://www.triunfei.com/</loc>
+  <changefreq>daily</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://blog.triunfei.com</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>http://blog.triunfei.com/sobre/</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.85</priority>
+</url>
+<% BlogPost.all.each do |blog_post|%>
+  <url>
+    <loc><%= blog_post.url%></loc>
+    <changefreq>daily</changefreq>
+    <priority>0.50</priority>
+  </url>
+<% end %>
+<% Bank.all.each do |bank| %>
+  <url>
+    <loc><%= bank_url(bank)%></loc>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+<% end %>
+<url>
+  <loc>http://www.triunfei.com/contas-corrente</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>http://www.triunfei.com/cartoes-de-credito</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.85</priority>
+</url>
+<url>
+  <loc>http://www.triunfei.com/emprestimos</loc>
+  <changefreq>daily</changefreq>
+  <priority>0.85</priority>
+</url>
+<% LandingPage.all.each do |landing| %>
+<url>
+  <loc><%= landing_url(id: landing.slug) %></loc>
+  <changefreq>daily</changefreq>
+  <priority>0.85</priority>
+</url>
+<% end %>
+<% Bank.joins(:cards).distinct.all.each do |bank|%>
+  <url>
+    <loc>
+      <%= filter_cards_url(path: bank.slug) %>
+    </loc>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+<% end %>
+
+<% Bank.joins(:accounts).distinct.all.each do |bank|%>
+  <url>
+    <loc>
+      <%= filter_accounts_url(path: bank.slug) %>
+    </loc>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+<% end %>
+
+<% Bank.joins(:loans).distinct.all.each do |bank|%>
+  <url>
+    <loc>
+      <%= filter_loans_url(path: bank.slug) %>
+    </loc>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+<% end %>
+
+<% Card.all.each do |card| %>
+<url>
+  <loc>
+  <%= card_url(card) %>
+  </loc>
+  <changefreq>daily</changefreq>
+  <priority>0.69</priority>
+</url>
+<% end %>
+
+<% Account.all.each do |account| %>
+<url>
+  <loc>
+  <%= account_url(account) %>
+  </loc>
+  <changefreq>daily</changefreq>
+  <priority>0.69</priority>
+</url>
+<% end %>
+
+<% Loan.all.each do |loan| %>
+<url>
+  <loc>
+  <%= loan_url(loan) %>
+  </loc>
+  <changefreq>daily</changefreq>
+  <priority>0.69</priority>
+</url>
+<% end %>
+
+<% ProductTip.card.all.each do |tip| %>
+<url>
+  <loc>
+  <%= filter_cards_url(tip: tip.slug) %>
+  </loc>
+  <changefreq>daily</changefreq>
+  <priority>0.69</priority>
+</url>
+<% end %>
+
+<% ProductTip.account.all.each do |tip| %>
+<url>
+  <loc>
+  <%= filter_accounts_url(tip: tip.slug) %>
+  </loc>
+  <changefreq>daily</changefreq>
+  <priority>0.69</priority>
+</url>
+<% end %>
+
+<% ProductTip.loan.all.each do |tip| %>
+<url>
+  <loc>
+  <%= filter_loans_url(tip: tip.slug) %>
+  </loc>
+  <changefreq>daily</changefreq>
+  <priority>0.69</priority>
+</url>
+<% end %>
+
+<% ProductTip.cell_phone_plan.all.each do |tip| %>
+<url>
+  <loc>
+  <%= filter_cell_phone_plans_url(tip: tip.slug) %>
+  </loc>
+  <changefreq>daily</changefreq>
+  <priority>0.69</priority>
+  </url>
+<% end %>
+
+<% ProductTip.insurance.all.each do |tip| %>
+<url>
+  <loc>
+  <%= filter_insurances_url(tip: tip.slug) %>
+  </loc>
+  <changefreq>daily</changefreq>
+  <priority>0.69</priority>
+  </url>
+<% end %>
+</urlset>

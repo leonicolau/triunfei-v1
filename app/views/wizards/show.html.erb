@@ -1,0 +1,15 @@
+<div class="background_show">
+<br><br><br>
+<%= form_for(@wizard) do %>
+  <% @wizard.wizard_fields.where(field_type: :hidden).each do |field|%>
+    <input type='hidden' name="user_wizard[user_wizard_answers_attributes][<%=field.id%>][wizard_field_id]" value="<%= field.id %>" />
+    <input type="hidden" name='user_wizard[user_wizard_answers_attributes][<%=field.id%>][value]'
+          class="form-control" value='<%= field.default_value %>'
+          id='user_wizard_answers_<%= field.name %>'>
+  <% end %>
+  <input type='hidden' name='cid' id='cid' value='<%= params[:cid] %>' />
+  <input type='hidden' name='user_wizard[params]' id='params' value='<%= user_wizard_params %>'/>
+
+  <wizard wizard-id='<%= @wizard.id %>'></wizard>
+<% end %>
+</div>

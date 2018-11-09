@@ -1,0 +1,14 @@
+seguro:
+  name: Seguro de teste
+  insurer: santander
+  benefits: sei la
+  link: 'http://test.com/'
+  slug: 'seguro-de-teste'
+  order: 0
+seguro_vida:
+  name: Seguro de vida
+  insurer: bradesco
+  benefits: a muitos beneficios
+  link: 'http://test.com/'
+  slug: 'seguro-de-vida'
+  order: 1

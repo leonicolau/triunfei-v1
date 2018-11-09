@@ -1,0 +1,29 @@
+conta_itau:
+  order: 1
+  name: Conta itau
+  bank: itau
+  link: http://itau.com
+  slug: conta-itau
+  taxes: 4
+  minimum_rent: 1200
+
+conta_bradesco:
+  order: 2
+  name: Conta bradesco
+  bank: bradesco
+  link: http://bradesco.com
+  slug: conta-bradesco
+  taxes: 5
+  minimum_deposit: 9000
+  minimum_rent: 2000
+
+conta_original:
+  order: 0
+  name: Conta original
+  bank: original
+  link: http://original.com
+  wizard_link: http://local.triunfei.com:3000/wizards/teste
+  slug: conta-original
+  taxes: 5
+  minimum_deposit: 9000
+  minimum_rent: 2000

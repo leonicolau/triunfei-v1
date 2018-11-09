@@ -1,0 +1,121 @@
+body.accounts {
+  header {
+    background-color: #0D2A3E;
+    height: 70px;
+  }
+  h2.card-title {
+    font-size: 1.4em;
+    margin-bottom: 1em;
+  }
+
+  .tr-btn{
+  font-weight: bold;
+  }
+
+  h1.filters__title {
+    font-size: 1em;
+    margin: 1em 0 .5em 0;
+    text-align: center;
+  }
+
+  p.filters__description {
+    font-size: 1em;
+    margin: 0 0 1.5em 0;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  @media(max-width: 500px){
+    p.filters__description {
+      letter-spacing: -0.8px;
+      font-size: 1.0em;
+      margin: 0 20px -0.5em 0 !important;
+      text-align: center;
+      line-height: 1.3;
+      width: 100% !important;
+      color: black;
+    }
+  }
+  @media (min-width: 900px) {
+    h1.filters__title {
+      font-size: 2.0em;
+    }
+    p.filters__description {
+      font-size: 1.3em;
+    }
+  }
+  .desktop-sort {
+    padding: 20px;
+  }
+
+  .mobile-filter {
+    .list-group-item {
+      label {
+        display: block;
+      }
+    }
+  }
+
+  &.show {
+    a.ctas-button:hover {
+      background-color: #F9B61F;
+    }
+
+    .product-text {
+      margin-top: 1.5em;
+    }
+
+    .product-img-container {
+      text-align: center;
+      img {
+        max-width: 250px;
+      }
+    }
+  }
+
+  .benefit-item {
+    font-size: 1.1em;
+    margin: .3em 0;
+    color: #696969;
+
+    i {
+      color: #f4b322;
+      margin-right: .3em;
+    }
+  }
+
+  &.show {
+    p.paragraph {
+      margin: 1em 0;
+    }
+  }
+
+  i.fa-money {
+    color: #23c966;
+  }
+
+  i.fa-paper-plane-o {
+    color: #3093da;
+  }
+
+  i.fa-print {
+    color: #797979;
+  }
+
+  .box-filter-account{
+    background-image: asset-url('bank.png');
+    background-position: right 0 top 0;
+    height: 13em;
+    background-repeat: no-repeat;
+    background-size: 13em;
+
+  }
+
+  ul{
+    list-style-type: none;
+  }
+
+  .panel-title > a {
+    font-weight: bold;
+  }
+}

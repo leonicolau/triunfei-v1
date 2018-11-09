@@ -1,0 +1,219 @@
+.header-content {
+  min-height: 105vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar-right a {
+  text-decoration: none;
+  padding:  10px;
+  color: #fff;
+}
+
+.navbar-right a:hover {
+  color: rgb(248, 244, 120);
+  text-decoration: none;
+}
+.significant {
+  color: rgb(248, 244, 120);
+}
+
+.significant2 {
+  font-weight: bold;
+}
+.heading {
+  font-family: sofia-pro,sans-serif;
+  color: white;
+  text-align: center;
+  margin-top: 100px;
+  font-weight: 10000 !important;
+}
+
+.subtitle {
+  font-family: sofia-pro,sans-serif;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.box_name{
+  margin-top: 0.3em;
+font-size: 0.5em;
+}
+
+.link{
+  height: 100%;
+}
+@media (max-width: 824px) {
+  .subtitle {
+    display: none;
+  }
+}
+
+.financial-products {
+  padding: 50px;
+  max-width: 1000px !important;
+
+}
+
+
+#colorNav > ul{
+  width: 100%; /* Increase when adding more menu items */
+  margin:0 auto;
+  padding: 0 !important;
+  text-align: center;
+}
+
+#colorNav > ul > li{ /* will style only the top level li */
+  list-style: none;
+  box-shadow: 3px 5px 10px 2px rgba(70,70,70,.8);
+  display: inline-block;
+  line-height: 1;
+  margin: 10px;
+  border-radius: 3px;
+  position:relative;
+  width: 120px;
+  height: 110px;
+  padding-top: 30px;
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms,
+  -webkit-transform 200ms;
+}
+
+#colorNav > ul > li > a{
+  color:inherit;
+  text-decoration:none !important;
+  font-size:17px;
+  display: flex;
+  justify-content: center;
+}
+
+#colorNav li ul{
+  position:absolute;
+  list-style:none;
+  text-align:center;
+  width:180px !important;
+  left:50%;
+  margin-left:-110px;
+  top:115px;
+  font:bold 10px 'Open Sans Condensed', sans-serif;
+
+  /* This is important for the show/hide CSS animation */
+  max-height:0px;
+  overflow:hidden;
+
+  -webkit-transition:max-height 0.4s linear;
+  -moz-transition:max-height 0.4s linear;
+  transition:max-height 0.4s linear;
+}
+
+#colorNav li ul li{
+  background-color:#313131;
+}
+
+#colorNav li ul li a{
+  padding:8px;
+  color:#fff !important;
+  text-decoration:none !important;
+  display:block;
+}
+
+
+#colorNav li ul li:nth-child(odd){ /* zebra stripes */
+  background-color:#363636;
+}
+
+#colorNav li ul li:hover{
+  background-color:#444;
+}
+
+#colorNav li ul li:first-child{
+  border-radius:3px 3px 0 0;
+  position:relative;
+}
+
+#colorNav li ul li:first-child:before{ /* the pointer tip */
+  content:'';
+  position:absolute;
+  width:1px;
+  height:1px;
+  border:5px solid transparent;
+  border-bottom-color:#313131;
+  left:50%;
+  top:-10px;
+  margin-left:-5px;
+}
+
+#colorNav li ul li:last-child{
+  border-bottom-left-radius:3px;
+  border-bottom-right-radius:3px;
+}
+
+#colorNav li:hover {
+  transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+
+/* This will trigger the CSS */
+/* transition animation on hover */
+
+#colorNav li:hover ul{
+  max-height:200px; /* Increase when adding more dropdown items */
+}
+
+#colorNav li.green{
+  /* This is the color of the menu item */
+  background-color:#00c08b;
+
+  /* This is the color of the icon */
+  color:#127a5d;
+}
+
+#colorNav li.red {
+  background-color:#ea5080;color:#aa2a52;
+}
+.blue {
+  background-color:#53bfe2;color:#2884a2;
+}
+#colorNav li.yellow {
+  background-color:#f8c54d;color:#ab8426;
+}
+#colorNav li.purple {
+  background-color:#df6dc2;color:#9f3c85;
+}
+#colorNav li.gray {
+  background-color:#d6d4d5;color:#8c8c8c;
+}
+
+.yellow{
+z-index: 99999}
+
+.square {
+  position: relative;
+  top: -55px;
+  width: 120px;
+  height: 110px;
+  border-radius: 5px 40px 40px 5px;
+  background-image: linear-gradient(45deg, rgba(15, 200, 240, 0.8), rgba(30, 159, 194, 0.8));
+  color:#2884a2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h2_how_it_works {
+  padding: 100px;
+  color: rgba(15, 200, 240, 1);
+  font-family: sofia-pro,sans-serif;
+}
+
+.how {
+  flex: flex;
+  justify-content: center;
+}
+
+.financial-products{
+  margin-top: 13em;
+}

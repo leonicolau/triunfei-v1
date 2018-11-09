@@ -1,0 +1,13 @@
+gol:
+  insurer: santander
+  name: gol
+  link: http://gol.com
+  slug: gol
+  benefits: 'o melhor'
+  manufacturer: honda
+palio:
+  insurer: santander
+  name: palio
+  link: http://www.palio.com.br
+  slug: palio
+  insurance_type: carro

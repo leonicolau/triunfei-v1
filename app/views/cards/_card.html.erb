@@ -1,0 +1,155 @@
+<% cache [item, item.bank, item.flag] do %>
+
+  <div class='card-wrap' id="card-<%= item.id %>">
+    <%= render partial:'shared/highlighted' if item.highlighted? %>
+    <div class='row'>
+            <!-- Title -->
+          <div class='col-xs-12 hidden-lg hidden-md'>
+            <h2 class='fs20 fw-bold mt10'> <%= item.name %> </h2>
+          </div>
+          <!-- Image -->
+         <div class='col-xs-6 col-sm-6 col-md-3 br-r'>
+           <%= image_tag item.photo.url, class: 'img-card center-block' %>
+         </div>
+          <!-- Title -->
+          <div class='col-xs-12 col-sm-6 col-md-9 hidden-sm hidden-xs'>
+            <h2 class='fs20 fw-bold mt10'> <%= item.name %> </h2>
+          </div>
+          <!-- Text -->
+          <div class='col-xs-6 col-sm-6 col-md-6'>
+            <div class='card-text-block'>
+              <p><%= t(:'annuity') %></p>
+              <h2 class='fw-bold'><%= anuity(item) %></h2>
+            </div>
+            <div class='card-text-block'>
+              <p><%= t(:'minimum_rent') %></p>
+              <h2 class='fw-bold'><%= minimun_rent(item) %></h2>
+            </div>
+          </div>
+          <!-- Buttons -->
+          <div class='col-xs-12 col-sm-6 col-md-3 card-buttons-block'>
+            <% if item.promotion? %>
+              <%= link_to t(:go_to_promotion), link_to_list(item), class: 'btn tr-btn--primary btn-block fw-bold',
+              data: { 'ga-event-category': 'promoção', 'ga-event-action': 'clickout', 'ga-event-label': item.name },
+              target: :_blank%>
+            <% else %>
+            <%= link_to t(:'go_to_card'), link_to_list(item), class: 'btn tr-btn--primary btn-block fw-bold',
+                  data: { 'ga-event-category': 'cartoes', 'ga-event-action': 'clickout', 'ga-event-label': item.name },
+                  target: :_blank %>
+            <%end%>
+            <%= link_to "#card-wrap-info-#{item.id}", class: 'btn btn-block', data: { toggle: :collapse },
+                  'aria-expanded': false, 'aria-controls': "#card-wrap-info-#{item.id}" do %>
+                  <span class='display-inline'>Saiba mais</span>
+                  <span class='display-inline'>
+                    <i class='fa fa-chevron-down toggle-wrap-open'></i>
+                    <i class='fa fa-chevron-up toggle-wrap-close'></i>
+                  </span>
+            <% end %>
+          </div>
+    </div>
+    <!-- More Info -->
+    <div id="card-wrap-info-<%= item.id %>" class='collapse'>
+      <div class='row'>
+        <div class='col-md-12'>
+          <hr>
+          <div class='p10 br3 bg-light-gray'>
+            <ul class='info-card'>
+              <li>
+                <% if item.company_name.present? %>
+                  <%= item.company_name %>
+                <% else %>
+                  <span class='fw-bold'><%= t(:bank) %>:</span> <%= item.bank.name %>
+                <% end %>
+              </li>
+              <li>
+                <span class='fw-bold'><%= t(:flag) %>:</span> <%= item.flag.name %>
+              </li>
+              <li>
+                <% if item.card_type == 'pre_paid' %>
+                  <span class='fw-bold'>Limite de recarga mensal:</span> R$ <%= item.monthly_recharge %>
+                <% else %>
+                <span class='fw-bold'><%= card_installment(item) %></span>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-md-12'>
+          <div class='p10 br3 fs15 text-align-justify more-info-bank'>
+            <%= card_modal_description(item).html_safe %>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-md-12'>
+          <hr>
+          <div class='fw-bold pt10 pb10'>Benefícios</div>
+          <ul class='list-item'>
+            <% benefits_for(item).each do |benefit| %>
+              <li><%= benefit %></li>
+            <% end %>
+            <% if item.anuity_description.present? %>
+              <li><%= item.anuity_description %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-md-12'>
+          <hr>
+           <% if item.description_promo.present? %>
+            <%= item.description_promo %>
+          <%else%>
+          <div class='p10 br3 bg-light-gray fs15 text-align-justify'>
+            <div class='paragraph pb20'>
+              <% if item.text_of_column_one.present? %>
+                <%= raw item.text_of_column_one %>
+              <% else %>
+                <%= t(:'cards.show.paragraph_one_html', name: item.name, flag: item.flag.name, bank: item.bank.name,
+                                                  anuity: anuity(item), anuity_multiple: item.anuity_multiple,
+                                                  anuity_description: item.anuity_description)%>
+              <% end%>
+            </div>
+            <div class='paragraph pb20'>
+              <% if item.text_of_column_two.present? %>
+                <%= raw item.text_of_column_two %>
+              <% else %>
+                <%= t(:'cards.show.paragraph_two_html', name: item.name, flag: item.flag.name, bank: item.bank.name,
+                                                      minimum_rent: minimun_rent(item))%>
+              <% end %>
+            </div>
+            <div class='paragraph pb20'>
+              <% if item.text_of_column_three.present? %>
+                <%= raw item.text_of_column_three %>
+              <% else %>
+                <p class='fs15'><%= item.bank_usp1 %></p>
+                <p class='fs15'><%= item.bank_usp2 %></p>
+                <p class='fs15'><%= item.discount %></p>
+                <p class='fs15'><%= item.points %></p>
+                <p class='fs15'><%= item.design %></p>
+                <p class='fs15'><%= item.insurance %></p>
+                <p class='fs15'><%= item.insurance2 %></p>
+                <p class='fs15'><%= item.flag_call_center %></p>
+                <p class='fs15'><%= item.flag_prem1 %></p>
+                <p class='fs15'><%= item.flag_prem2 %></p>
+                <p class='fs15'><%= item.flag_prem3 %></p>
+                <p class='fs15'><%= item.flag_prem4 %></p>
+                <p class='fs15'><%= item.anuity_discount %></p>
+              <% end %>
+            </div>
+          </div>
+          <%end%>
+        </div>
+      </div>
+      <!-- Buttons -->
+      <br/>
+      <div class='row'>
+      <%= render partial: 'shared/cta_list_buttons_item', locals: {item: item, request_product_label: request_product(item),
+                                              request_product_path: link_to_list(item), more_info_label: more_info_product(item),
+                                              more_info_path: item.link_more_info(cid_param), display_more_info_button: !item.promotion?}   %>
+      </div>
+    </div>
+   </div>
+<% end %>

@@ -1,0 +1,53 @@
+<% if @wizard.redirect_to_first_result && @result.any? %>
+  <label class="message_before_redirect">
+    <%= t('thanks')%>, <%= name_for_current_user%>!<br> <%= t('text_before_redirect')%>
+  </label>
+  <timer-redirect mseconds='5000' url='<%= @result.first.go_to_site_path %>'></timer-redirect>
+<% else %>
+  <toggle-timer mseconds='5000' message='<%= "#{t('thanks')}, #{name_for_current_user}! #{t('text_pre_loader')}" %>'>
+      <% if @wizard.wpp_button && @result.any? %>
+      <div class="container-fluid" id="container-result">
+        <div class="result__title text-center">
+          <%= image_tag 'check.png', size: '90x90', class: 'thanks-image'%>
+          <h2 class="h1-thanks"><%= t(:thank_you)%></h2>
+        </div>
+        <h6 class="thanks_result" id="thanks_user_container"><%= @wizard.thank_you_message%></h6>
+        <hr>
+        <div class="text-center w-lead mb2">
+        <div class="">
+            <a class="btn btn-md button-wpp fs5 mt-5" href="<%= @result.first.go_to_site_path %>"><%= t(:see_results)%></a>
+
+            <a class="btn btn-md button-wpp fs5 mt-5" href="whatsapp://send?text=<%= @result.first.link %>" data-ga-event-category="whatsapp" data-ga-event-action="clickout" data-ga-event-label="whatsapp-wizard">
+              <i class="fa fa-whatsapp"><%= t(:save_on_whatsapp)%></i>
+           </a>
+        </div>
+       </div>
+      </div>
+      <div class="background-result">
+      </div>
+      <% elsif @wizard.display_thank_you_page? %>
+        <div class="container-fluid" id="container-result">
+          <div class="result__title text-center">
+            <%= image_tag 'check.png', size: '90x90', class: 'thanks-image'%>
+            <h1 class="h1-thanks"><%= t(:thank_you)%></h1>
+          </div>
+          <h6 class="thanks_result" id="thanks_user_container"><%= @wizard.thank_you_message%></h6>
+          <hr>
+          <div class="text-center w-lead">
+            <p class="continue-button">
+              <%= t(:continue_site)%>
+            </p>
+            <p>
+              <a class="btn btn-primary btn-md" href="<%= root_url %>"><%= t(:go_homepage)%></a>
+            </p>
+         </div>
+        </div>
+        <div class="background-result">
+        </div>
+    <% else %>
+      <%= render "wizards/#{@wizard.wizard_type}/result" %>
+    <% end %>
+  </toggle-timer>
+<% end %>
+
+<%= @wizard.pixel_code.html_safe if @wizard.pixel_code.present? %>

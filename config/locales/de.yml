@@ -1,0 +1,370 @@
+---
+de:
+  about_us: Über uns
+  project_name: Triunfei
+  order: Bestellen
+  no_annuity: Ohne Provision
+  money_unit: €
+  or_more: mehr
+  until: bis
+  months: Monate
+  anuity_free: Kostenlos *
+  years: Jahre
+  without_installment: 'Nich'
+  type_email: Geben Sie Ihre E-Mail
+  please_inform_valid_email: Bitte geben Sie eine gültige E-Mail
+  filter: Filter
+  card: karte
+  credit_card_request: Kreditkarte anfordern
+  make_credit_card: Kreditkarte machen
+  make_card_online: Karte über das Internet machen
+  best_cards: Beste Kreditkarten
+  card_without_anuity: Kreditkarte ohne Rente
+  card_with_restriction: Kreditkarte mit Beschränkungen
+  tips_triunfei: Tipps
+  most_wanted: Mehr gesucht nach
+  request_accounts: Girokonto eröffnen
+  text_index_cards_html: 'Die <strong> Kreditkarten-</strong> besitzen einen Vorteil: die Möglichkeit einer zukünftigen Erholung, um ein Produkt oder eine Dienstleistung zu erwerben. Wenn Sie etwas mit der Kreditkarte kaufen, nehmen wir sofort das Produkt nach Hause und die Zahlung wird nur auf der nächsten Rechnung gemacht werden, aber der Gesamtbetrag wird in der Tat des Kaufs, durch den Shop oder Dienstleister. Kurz gesagt, bedeutet dies: das konsumieren vor und zahlt nach. Aber Vorsicht, weil mit solch Leichtigkeit, können Sie am Ende Ausgaben mehr als Sie sollten. Hier bei <b> Triunfei.com </b> können Sie unsere Werkzeuge für <b>-Suche </b>, <b> vergleichen </b> und <strong> fordern Kreditkarten-</strong> verwenden. Bei der Auswahl der Kreditkarte, um ein Unternehmen zu erreichen, müssen wir uns bewusst sein, dass der ausgehandelte Wert aufgeladen wird und daher in unserer Finanzkontrolle programmiert werden muss. Kredit mit Kreditkarte verbunden ist Teil des Werkzeugs und bedeutet nicht, zusätzliches Geld, sondern kann einfach kaufen, konsumieren und die Zahlung für ein zukünftiges Datum zu verlassen.'
+  text_index_accounts_html: 'Das Girokonto ist das häufigste Konto, da es für monetäre Transaktionen und kommerzielle Charakter existiert. Für die <b> Eröffnung des aktuellen Kontos </b> ist es erforderlich, einen Vertrag zwischen Bank und Client-Institution über 18 Jahre zu unterzeichnen, die Einnahmen und Wohn-Adresse bescheinigt. Diese Art von Konto wird verwendet, um Geld zu erhalten und Rechnungen bezahlen, indem Sie Transaktionen mit Kredit-oder Debitkarte und über das Internet. Der Besitz eines aktuellen Kontos ist erforderlich, um eine monatliche Gebühr zu zahlen, die den Wert der Dienstleistungen abdecken wird, dass der Kunde berechtigt ist. Also, umso mehr Dienstleistungen der Kunde nutzen, umso teurer wird der Tarif sein. Der Inhaber des aktuellen Kontos hat Anspruch auf eine <b> Debit-Karte </b> (die auch Kredit sein kann), um Transaktionen über das Internet, Geldautomaten, Kästen 24 Stunden und andere Tankstellen durchzuführen.'
+  text_index_loans_html: 'Die <strong> Loan </strong> ist ein Service für diejenigen, die brauchen schnelles Geld und einfach für Sie zu bauen, zu reformieren oder wenn es negativ ist! Indem Sie ein Darlehen, wird das Finanzinstitut Ihnen den Betrag, den Sie benötigen, und Sie werden schrittweise Zahlen, mit dem Interesse des Finanzinstitut. Aber Vorsicht! Die mehr Zeit, die es braucht, um zu bezahlen, umso mehr Zinsen werden! Die meisten Banken haben ein paar Voraussetzungen, wenn Sie ein Darlehen zu machen. Zum Beispiel, Sie vermeiden Kreditvergabe an die Menschen, die diese Schulden in der Filiale, Scheck zurückgegeben oder schmutzigen Namen auf dem Platz. Die Finanzinstitute können leihen, aber vielleicht ist es nicht der Betrag, den Sie möchten. Inzwischen variiert es von Bank zu Bank. Es gibt Arten von Darlehen, wo Sie Ihr Auto oder Eigentum als Sicherheiten geben können! Hier bei <b> Triunfei.com </b>, Sie Wille Potenz <b> Suche </b>, <b> vergleichen </b> und <b> bittet </b> Darlehen gemäß ihrer Bedarf am Augenblick zu aussuchen die Best Option!'
+  payment_term: Frist
+  record_not_found: Keine Option gefunden. Versuchen Sie, andere Filter für Ihre Suche zu verwenden.
+  loan_type: Art des Darlehens.
+  banks: Banken
+  monthly_cost: Monatliche Kosten
+  go_to_card: Zur Karte
+  accounts_link: Girokonten
+  minimum_rent: Mindesteinkommen
+  most_searched: Meistgesucht
+  most_wanted: Meistgesucht
+  free: Kostenlos
+  check_it: überprüfen
+  and_more: und vieles mehr
+  minimum_deposit: Mindestanzahlung
+  not_required: Nicht erforderlich
+  taxe: Gebühr
+  teto: Beitrag zu Techo
+  loans: Darlehen
+  provided_by: von
+  minimum_installment: Mindestrate
+  min_value: Mindestwert
+  annuity_installment: Annuitätenrate
+  credit_card: Kreditkarte
+  credit_cards: KreditKarten
+  bank: Bank
+  flag: Gesellschaft
+  interest_rate: Zinssatz
+  initial_rate: Anfangsvergütung
+  installments: Raten
+  installment: Raten
+  annuity: Jahresbeitrag
+  deadline: Maximale Laufzeit
+  max_installment: Maximale Rate
+  max_value: Höchstwert
+  initial_term: Erstlaufzeit
+  minimum_term: Mindestlaufzeit
+  most_relevant: Die Wichtigsten
+  value_and_term: Wert und Laufzeit
+  filter_by_bank: Nach Bank filtern
+  go_to_account: ZUM KONTO
+  more_info: WEITERE INFORMATIONEN
+  filter_by_flag: Nach Bank filtern
+  feature: Kriterien
+  go_to_loan: Zum DARLEHEN
+  go_to_site: Gehen Sie zur Bank
+  loan_value: Darlehenswert (€)
+  credit_cards_for_bank: 'Kreditkarten %{bank}'
+  credit_cards_for_flag: 'Kreditkarten %{flag}'
+  credit_cards_by_bank: 'Kreditkarten pro Bank'
+  credit_cards_by_flag: 'Kreditkarten pro Gesellschaft'
+  loans_by_bank: Darlehen pro Bank
+  loans_for_bank: 'Darlehen % {bank}'
+  text_footer: 'Triunfei.com Teil GO Digitales Service Digital-LTD (CNPJ: 23.614.038 / 0001-50)'
+  titles:
+    default: 'Triunfei ist die beste Lösung für die Suche nach und Kreditkarten, kredit und Girokonten.'
+    accounts:
+      index: 'Girokonten der wichtigsten Banken in Deutschland: Sparkasse, DKB, Commerzbank und viele mehr.'
+    banks:
+      show: 'Kreditkarten%{name}'
+    cards:
+      index: 'Kreditkarten von Sparkasse, DKB, Commerzbank, ING, Barclaycard und viele mehr, hier können Sie finden, die am besten zu Ihrem Profil passt'
+      show:  'Kreditkarten %{name}'
+    loans:
+      index:  'Kommen Sie, um herauszufinden, dass Darlehen an Ihre Einkäufe besser geeignet ist'
+  site:
+    title: '[" Hallo, willkommen in der Revolution der Finanzmacht!", "Sag uns, was du suchst und wir helfen dir, die beste Lösung zu finden!"]'
+  footer:
+    landing_pages: Bemerkenswertes
+  blog_posts:
+    title: Bemerkenswertes aus unserem Blog.
+    see_more: Weiter lesen…
+  cards:
+    minimum_rent_less: Durchschnittliches oder geringes Einkommen?
+    no_problem: Kein Problem! Unser Suchassistent zeigt, Ihnen wo Sie die für Sie passende Karte finden.
+    our_assistance: Verwenden Sie die Suchfilter, um Ihr persönliches Darlehen zu finden.
+    check_it: ÜBERPRÜFEN
+    see_for_rewards: Suche nach Prämien?
+    found_it: Gefunden
+    long_term: Benötigen Sie etwas Langfristiges?
+    look_for_card: Finden Sie eine Karte mit unterschiedlichen Raten und vielen Vorteilen!
+    less_spend: SPAREN SIE
+    index:
+      title: Wir wählen die beste Kreditkarte für Sie!
+      subtitle_html: 'Jede Person hat ein einzigartiges finanzielles Profil: Wir helfen Ihnen, die perfekte Kreditkarte für Sie zu finden. Nutzen Sie die Filter, um sich durch die verschiedenen Bankkarten zu klicken, wie z.B.:'
+    show:
+      paragraph_one_html: 'Um Ihre Karte % {name} der Bank % {bank} nutzen zu können, müssen Sie eine jährliche Gebühr von % {anuity} zahlen. Diese Gebühr kann oder kann nicht in verschiedene Raten aufgeteilt werden. Im Falle % {name} der Bank % {bank} der Gesellschaft % {flag}, können Sie die Gebühr in % {anuity_multiple} x.<br> * % {anuity_description} zahlen.'
+      paragraph_two_html: 'Um die Kreditkarte % {name} von Bank % {bank} zu beantragen, müssen Sie ein Online-Formular ausfüllen oder persönlich mit Ihrem Personalausweis in einer Niederlassung der Bank vorstellig werden. Damit Sie die Karte % {name} der Bank % {bank} auch auf jeden Fall erhalten, müssen Sie sich bewusst sein, dass Ihr Einkommensnachweis über einem von der Bank festgelegten Mindestwert liegt % {minimum_rent}, damit eine Kreditkarte % {name} ausgestellt wird.'
+  loan:
+    minimum_rent_less: Sie haben ein geringes monatliches Einkommen?
+    no_problem: Kein Problem! Unser Suchassistent zeigt Ihnen, welche Darlehen Sie benötigen.
+    our_assistance: Mit unserem Assistenten zeigen wir Ihnen, welche Karten Optionen zum Sparen anbieten.
+    check_it: PRÜFEN SIE ES NACH!
+    see_for_rewards: Suchen Sie Belohnungen?
+    found_it: Gefunden
+    cash_out: Möchten Sie am Monatsende Geld sparen?
+    look_for_loan: Mit unserem Suchassistenten können Sie Garantien und niedrige Gebühren finden.
+    less_spend: SPAREN SIE
+    index:
+      title: Wir wählen die besten Darlehen für Sie!
+      subtitle_html: Jede Person hat ein einzigartiges Finanzprofil, deswegen helfen wir Ihnen dabei, das ideale Darlehen für Sie zu finden!<br>Verwenden Sie die Filter, um zu den einzelnen Krediten der unterschiedlichen Finanzinstitute zu gelangen, wie z.B.:'
+  accounts:
+    minimum_rent_less: Haben Sie ein geringes monatliches Einkommen?
+    no_problem: Kein Problem! Unser Suchassistent zeigt Ihnen, wo Sie das ideale Konto für Sie finden..
+    check_it: Finden Sie es!
+    see_for_rewards: Suchen Sie Prämien?
+    look_for_account: Finden Sie ein Konto mit differenzierten Gebühren, Premium-Kreditkarten und vielem mehr!
+    found_it: Finden Sie es!
+    cash_out: Möchten Sie am Monatsende Geld sparen?
+    our_assistance: Mit unserem Suchassistenten können Sie Garantien und niedrige Gebühren finden.
+    less_spend: SPAREN SIE
+    index:
+      title: Wir wählen die besten Konten für Sie aus
+      subtitle_html: Jede Person hat einzigartige Finanzprofil, deswegen helfen wir Ihnen das ideale Girokonto für Sie zu finden!<br>Verwenden Sie Filter um zu den verschiedenen Bankkonten zu gelangen, wie z.:'
+      paragraph_one_html: <p class="paragraph">; Ein Girokonto zu eröffnen, ist ganz einfach! Sie können es heute noch vorläufig beantragen, um die Eröffnung Ihres Bankkontos zu beschleunigen.</p>;<p class="paragraph">Mit dem <b>,% {name}</b>können Sie Ihre Überweisungen bequem online von Ihrem Computer aus erledigen.</p>;<p class="paragraph">;Verschiedene Dienste erleichtern Ihnen den Alltag und verschiedene Pakete stehen Ihnen zur Verfügung, um den Umgang mit Ihrem <b>% {name}</b> zu erleichtern.</p>;'
+      paragraph_two_html: 'Mit dem<b>% {name}</b> können Sie <b>viele Auszahlungen </b> monatlich durchführen.'
+      paragraph_three_html: 'Mit dem % <b>{name}</b>können Sie bis zu <b>% {transfer} Überweisungen </b> monatlich tätigen.'
+      paragraph_four_html: 'Das <b>; {name}</b> ermöglicht<b>verschiedene Überweisungen</b> im monatlichen Paket.'
+      paragraph_five_html: 'Sie können bis zu<b>%{account_statement} Kontoauszüge</b> monatlich bei dem <b>% {account_name}</b> bekommen.'
+      paragraph_six_html: 'Sie können<b>; verschiedene Kontoauszüge</b> monatlich bei dem <b;>,% {name}</b>; bekommen.'
+      paragraph_seven_html: 'Beantragen Sie das <b>%{account_name}</b> für nur <b>%{account_taxes} </b> monatlich und bei einem Mindesteinkommen von <b>%{minimum_rent}</b>.'
+    withdrawal_message: 'Sie können bis zu % {count} Auszahlungen vornehmen.'
+    transfer_message: 'Sie können bis zu % {count} Überweisungen tätigen.'
+    statement_message: 'Sie können bis zu % {count} Kontoauszüge erhalten'
+    banks_message: und vieles mehr...
+    title.cards_message: Wählen Sie beste Kreditkarte für sich!
+    loan.title_message: Wählen Sie das beste Darlehen für sich!
+    filter_description_card: Jede Person hat ein einzigartiges Finanzprofil, deswegen helfen wir Ihnen, Ihre ideale Kreditkarte zu finden!<br>;
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 'Ungültige Eingabe: %{errors}'
+        restrict_dependent_destroy:
+         has_one: Der Eintrag kann nicht gelöscht werden, da noch eine %{record} aussteht.
+         has_many: Der Eintrag kann nicht gelöscht werden, da noch mehrere %{record} ausstehen.
+  date:
+    abbr_day_names:
+    - SO
+    - M0
+    - DI
+    - MI
+    - DO
+    - FR
+    - SA
+    abbr_month_names:
+    - JAN
+    - FEB
+    - MÄR
+    - APR
+    - MAI
+    - JUN
+    - JUL
+    - AUG
+    - SEP
+    - OKT
+    - NOV
+    - DEZ
+    day_name:
+    - Sonntag
+    - Montag
+    - Dienstag
+    - Mittwoch
+    - Donnerstag
+    - Freitag
+    - Samstag
+    formats:
+      default: "%d/%m/%Y"
+      long: "%d de %B de %Y"
+      short: "%d de %B"
+    month_names:
+    - Januar
+    - Februar
+    - März
+    - April
+    - Mai
+    - Juni
+    - Juli
+    - August
+    - September
+    - Oktober
+    - November
+    - Dezember
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: ungefähr 1 Stunde
+        other: ungefähr % {count} Stunden
+      about_x_months:
+        one: ungefähr 1 Monat
+        other: ungefähr % {count} Monate
+      about_x_years:
+        one: ungefähr 1 Jahr
+        other: ungefähr % {count} Jahre
+      almost_x_years:
+        one: fast 1 Jahr
+        other: fast %{count} Jahre
+      half_a_minute: eine halbe Minute
+      less_than_x_minutes:
+        one: unter einer Minute
+        other: unter % {count} Minuten
+      less_than_x_seconds:
+        one: unter 1 Sekunde
+        other: unter % {count} Sekunden
+      over_x_years:
+        one: über 1 Jahr
+        other: über % {count} Jahre
+      x_days:
+        one: 1 Tag
+        other: "% {count} Tage"
+      x_minutes:
+        one: 1 Minute
+        other: "% {count} Minuten"
+      x_months:
+        one: 1 Monat
+        other: "% {count} Monate"
+      x_seconds:
+        one: 1 Sekunde
+        other: "% {count} Sekunden"
+    prompts:
+      day: Tag
+      hour: Stunde
+      minute: Minute
+      month: Monat
+      second: Sekunde
+      year: Jahr
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: Muss akzeptiert werden.
+      blank: Dieses Feld darf nicht leer sein.
+      present: Dieses Feld muss leer bleiben.
+      confirmation: Das entspricht nicht % {attribute}
+      empty: Dieses Feld darf nicht leer bleiben.
+      equal_to: Dies muss muss gleich % {count} sein
+      even: Es muss eine gerade Zahl sein.
+      exclusion: Nicht verfügbar.
+      greater_than: Mehr als % {count}
+      greater_than_or_equal_to: Mehr oder gleich % {count}
+      inclusion: Das ist nicht in der Liste enthalten.
+      invalid: Ungültiger Eintrag.
+      less_than: Weniger als % {count}
+      less_than_or_equal_to: Weniger oder gleich % {count}
+      model_invalid: 'Ungültige Eingabe: %{errors}'
+      not_a_number: Das ist keine Zahl.
+      not_an_integer: Das ist keine ganze Zahl.
+      odd: Das muss eine ungerade Zahl sein.
+      required: Das muss existieren.
+      taken: Das wird bereits verwendet.
+      too_long:
+        one: Zu lang (maximal 1 Zeichen)'
+        other: Zu lang (maximal % {count} Zeichen)'
+      too_short:
+        one: Zu kurz (mindestens 1 Zeichen)'
+        other: Zu kurz (mindestens % {count} Zeichen)'
+      wrong_length:
+        one: Nicht die gewünschte Länge (1 Zeichen)
+        other: Nicht die gewünschte Länge (%{count} Zeichen)
+      other_than: muss anders als % {count} sein
+    template:
+      body: 'Bitte überprüfen Sie das oder die folgende(n) Feld(er):'
+      header:
+        one: 'Der Eintrag konnte nicht gespeichert werden % {model}: 1 Fehler'
+        other: 'Der Eintrag konnte nicht gespeichert werden % {model}: % {count} Fehler'
+  helpers:
+    select:
+      prompt: Bitte wählen Sie
+    submit:
+      create: Erstellen % {model}
+      submit: Speichern % {model}
+      update: Aktualisieren % {model}
+  number:
+    currency:
+      format:
+        delimiter: "."
+        format: "%u %n"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: €
+    format:
+      delimiter: "."
+      precision: 3
+      separator: ","
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion:
+            one: Millidarde
+            other: Millidarden
+          million:
+            one: Million
+            other: Millionen
+          quadrillion:
+            one: Quadrillion
+            other: Quadrillionen
+          thousand: Tausend
+          trillion:
+            one: Trillion
+            other: Trillionen
+          unit: ''
+      format:
+        delimiter: ""
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: "."
+        format: "%n%"
+    precision:
+      format:
+        delimiter: "."
+  support:
+    array:
+      last_word_connector: " e "
+      two_words_connector: " e "
+      words_connector: ", "
+  time:
+    am: ''
+    formats:
+      default: "%a, %d de %B de %Y, %H:%M:%S %z"
+      long: "%d de %B de %Y, %H:%M"
+      short: "%d de %B, %H:%M"
+    pm: ''

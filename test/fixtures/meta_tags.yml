@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+brazil_language:
+  name: language
+  value: 'pt-BR'
+
+property_language:
+  property: pt-BR
+  value: 'test'
+
+card_description:
+  page: '/cartoes-de-credito/visa-credito-do-itau'
+  value: 'test_card_description'
+  name: description
+
+card_keywords:
+  page: '/cartoes-de-credito/visa-credito-do-itau'
+  value: 'test_card_keywords'
+  name: keywords
+
+loan_description:
+  page: '/emprestimos/bradesco-emprestimo'
+  value: 'test_loan_description'
+  name: description
+
+account_description:
+  page: '/contas-corrente/conta-itau'
+  value: 'test_account_description'
+  name: description
+
+raw_text:
+  raw_text: 'teste'

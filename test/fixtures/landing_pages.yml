@@ -1,0 +1,50 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+o_melhor_cartao_para_voce:
+  order: 1
+  name: 'O melhor cartao de credito para voce'
+  title: 'Esse é o melhor cartao de credito para voce'
+  text1: 'O texto 1 é legal'
+  text2: 'O texto 2 é muito mais legal'
+  slug: 'o-melhor-cartao-de-credito'
+  page_type: :card
+  show_landing: true
+
+a_melhor_conta_para_voce:
+  order: 2
+  name: 'A melhor conta para voce'
+  title: 'Essa eh a melhor conta para voce'
+  text1: 'O texto 1 é legal'
+  text2: 'O texto 2 é muito mais legal'
+  slug: 'a-melhor-conta-para-voce'
+  page_type: :account
+  show_landing: false
+
+melhor_conta_para_voce:
+  order: 3
+  name: 'A melhor account para voce'
+  title: 'Essa eh a melhor da melhor conta para voce'
+  text1: 'O texto 1 é legal'
+  text2: 'O texto 2 é muito mais legal'
+  slug: 'melhor-conta-para-voce'
+  page_type: :account
+  show_landing: true
+
+o_melhor_emprestimo_para_voce:
+  order: 4
+  name: 'O Melhor emprestimo para voce'
+  title: 'Esse é o melhor emprestimo para voce'
+  text1: 'O texto 1 é legal'
+  text2: 'O texto 2 é muito mais legal'
+  slug: 'o-melhor-emprestimo-para-voce'
+  page_type: :loan
+
+melhor_emprestimo_para_voce:
+  order: 5
+  name: 'O Melhor do melhor emprestimo para voce'
+  title: 'Esse é o melhor loan para voce'
+  text1: 'O texto 1 é legal'
+  text2: 'O texto 2 é muito mais legal'
+  slug: 'melhor-emprestimo-para-voce'
+  page_type: :loan
+  show_landing: true

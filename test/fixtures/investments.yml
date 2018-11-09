@@ -1,0 +1,30 @@
+investimento_santander:
+  name: Investimento Santander
+  broker: santander
+  duration: 130
+  profitability: 7
+  gross_profitability: 0.95
+  fixed_remuneration: treasury_direct
+  cdi_return: 0
+  gross_return: 6.39
+  expected_return: 1200
+  profitability_category_name: 'Pré'
+  description: 'o melhor investimento do brasil'
+  link: 'http://test.com/'
+  slug: 'investimento-santander'
+
+investimento_xp:
+  name: Investimento xp
+  broker: xp
+  duration: 250
+  profitability: 7
+  fixed_remuneration: Letter of credit
+  gross_profitability: 0.95
+  cdi_return: 90
+  gross_return: 0
+  year_return_expectation_value: 6.7
+  profitability_category_name: 'Pós'
+  expected_return: 1200
+  description: 'o melhor investimento do brasil'
+  link: 'http://test.com?cid=%{cid}'
+  slug: 'investimento-xp'

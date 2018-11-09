@@ -1,0 +1,117 @@
+<% cache :footer do %>
+	<%= insert_tracking_code %>
+	<footer class="footer">
+		<div class="container">
+			<div class="imagem">
+				<%= image_tag 'logo.svg', alt: "Logo Triunfei.com", :size => "180x180"%>
+			</div>
+		<div class='col-sm-10 footer-links' id="chrome">
+				<p><a target="_blank" alt="Blog Triunfei" href="//blog.triunfei.com/sobre" class="font_title"><%= t('about_us') %></p>
+		</div>
+		<div class="row">
+			<div class="col-sm-3">
+				<h4 class="title"><%= link_to t('featured'), landing_url(id: "em-destaque-na-triunfei", cid: cid_param), target: :_blank %></a></h4>
+				<ul class="font">
+					<li class="footer_li"><%= link_to "Abrir conta de investimentos", landing_path(id: 'abrir-conta-de-investimentos', cid: cid_param), target: :_blank %></li>
+					<li class="footer_li"><%= link_to "Solicitar cartão de crédito", landing_path(id: 'Solicitar-cartao-de-credito', cid: cid_param), target: :_blank %></li>
+					<li class="footer_li"><%= link_to "Solicitar cartão Visa", landing_path(id: 'solicite-seu-cartao-visa', cid: cid_param), target: :_blank %></li>
+					<li class="footer_li"><%= link_to "Solicitar Empréstimo", landing_path(id: 'emprestimo', cid: cid_param), target: :_blank %></li>
+					<li class="footer_li"><%= link_to "Empréstimo com imóvel em garantia BV", landing_path(id: 'credito-com-imovel-em-garantia-bv', cid: cid_param), target: :_blank %></li>
+				</ul>
+			</div>
+			<div class="col-sm-3">
+				<h4 class="title"><%= link_to t('credit_cards_by_bank'), cards_path(cid: cid_param), target: :_blank %></a></h4>
+				<ul class="font">
+					<li class="footer_li"><%= link_to 'Cartão de crédito Credicard', (filter_cards_url('credicard', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Cartão de crédito Santander', (filter_cards_url('santander', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Cartão de crédito Votorantim', (filter_cards_url('votorantim', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Cartão de crédito Itau', (filter_cards_url('itau', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Cartão de crédito Original', (filter_cards_url('original', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Cartão de crédito Bradesco', (filter_cards_url('bradesco', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Cartão de crédito Inter', (filter_cards_url('inter', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Outros Cartões', (filter_cards_url(cid: cid_param)), target: :_blank %></li>
+				</ul>
+			</div>
+			<div class="col-sm-3">
+				<h4 class="title"><%= link_to t('credit_cards_by_flag'), cards_path(cid: cid_param), target: :_blank %></a></h4>
+				<ul class="font">
+					<li class="footer_li"><%= link_to 'Cartão de crédito Mastercard', (filter_cards_url('mastercard', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Cartão de crédito Visa', (filter_cards_url('visa', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Cartão de crédito AmericanExpress', (filter_cards_url('american-express', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Cartão de crédito Elo', (filter_cards_url('elo', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Outras Bandeiras', (filter_cards_url(cid: cid_param)), target: :_blank %></li>
+				</ul>
+			</div>
+			<div class="col-sm-3">
+				<h4 class="title"><%= link_to t('accounts_by_bank'), accounts_path(cid: cid_param), target: :_blank  %></h4>
+				<ul class="font">
+					<li class="footer_li"><%= link_to 'Contas correntes Original', (filter_accounts_url('original', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Contas correntes Caixa', (filter_accounts_url('caixa', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Contas correntes Santander', (filter_accounts_url('santander', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Contas correntes Bradesco', (filter_accounts_url('bradesco', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Contas correntes Itau', (filter_accounts_url('itau', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Contas correntes Next', (filter_accounts_url('next', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Contas correntes Inter', (filter_accounts_url('inter', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Outras Contas correntes', (filter_accounts_url(cid: cid_param)), target: :_blank %></li>
+				</ul>
+			</div>
+			<div class="col-sm-3">
+				<h4 class="title"><%= link_to t('insurances_by_insurer'), insurances_path(cid: cid_param), target: :_blank  %></h4>
+				<ul class="font">
+					<li class="footer_li"><%= link_to 'Seguros Mapfre', (filter_insurances_url('mapfree', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Seguros Porto Seguro', (filter_insurances_url('porto-seguro', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Seguros Azul Seguros', (filter_insurances_url('azul-seguros', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Seguros Allianz', (filter_insurances_url('allianz', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Seguros Liberty Seguros', (filter_insurances_url('liberty-seguros', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Seguros Bradesco Seguros', (filter_insurances_url('bradesco-seguros', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Seguros SulAmerica', (filter_insurances_url('sulamerica', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Outros Seguros', filter_insurances_url(cid: cid_param), target: :_blank %></li>
+				</ul>
+			</div>
+			<div class="col-sm-3" id="loans">
+				<h4 class="title"><%= link_to t('loans_by_bank'), loans_path(cid: cid_param), target: :_blank  %></h4>
+				<ul class="font">
+					<li class="footer_li"><%= link_to 'Empréstimo Votorantim', (filter_loans_url('votorantim', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Empréstimo Banco do Brasil', (filter_loans_url('banco-do-brasil', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Empréstimo Creditas', (filter_loans_url('creditas', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Empréstimo Simplic', (filter_loans_url('simplic', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Empréstimo Just', (filter_loans_url('justonline', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Empréstimo Bradesco', (filter_loans_url('bradesco', cid: cid_param)), target: :_blank %></li>
+					<li class="footer_li"><%= link_to 'Outros Empréstimos', (filter_loans_url(cid: cid_param)), target: :_blank %></li>
+				</ul>
+			</div>
+			<div class="col-sm-3">
+				<h4 class="title"><%= link_to t('faq'), common_questions_path, target: :_blank %></a></h4>
+			</div>
+		</div>
+		<hr/>
+		<div class="container1">
+			<div class="row1">
+				<div class="col-md-3">
+					<ul class="list-inline social-buttons" id="icone_footer">
+						<p class="font_news">Precisa entrar em contato?</p><br>
+						<p class="font_news">contato@triunfei.com</p>
+						<li><a href="http://www.facebook.com/triunfei" target="_blank"><i class="fa fa-facebook"></i></a>
+						</li>
+						<li><a href="https://www.linkedin.com/company-beta/17881171/" target="_blank"><i class="fa fa-linkedin"></i></a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-5" class="copyright">
+					<span class="copyright"><% t('copyright')%></span>
+				</div>
+				<div class="col-md-3">
+					<ul class="list-inline quicklinks" id="privacidade">
+						<%= link_to t('privacy_policies'), term_of_uses_path, class: 'font_privacy-policy', target: :_blank %>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</div>
+		<div class="container-fluid" id="footprint">
+			<p id="footprint-text"><%= t('text_footer_html')%>
+		</div>
+	</div>
+	</footer>
+<% end %>

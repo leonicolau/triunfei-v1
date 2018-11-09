@@ -1,0 +1,31 @@
+machine:
+  ruby:
+    version: 2.4.1
+  node:
+    version: 8.11.2
+  environment:
+    POSTGRES_HOST: localhost
+    POSTGRES_PASSWORD: postgres
+database:
+  override:
+    - bundle exec rails db:drop db:create db:migrate
+test:
+  override:
+    - bundle exec rails test
+    - bundle exec rails test test/system
+  post:
+    - bundle exec rubocop
+dependencies:
+  override:
+    - yarn install
+    - bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
+compile:
+  pre:
+    - bundle exec rubocop
+    - yarn lint
+    - yarn test
+  override:
+    - bundle exec rails webpacker:compile
+general:
+  artifacts:
+    - tmp/screenshots/

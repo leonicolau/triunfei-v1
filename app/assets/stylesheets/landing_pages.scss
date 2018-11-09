@@ -1,0 +1,298 @@
+body.landing_pages {
+  header {
+    position: relative;
+    background: asset-url("bg-card.jpg") repeat center center;
+    background-size: cover;
+
+    #landing-text1 {
+      color: white;
+      font-family: sofia-pro, sans-serif;
+      margin-top: 3em;
+      font-size: 32px;
+      line-height: 1.3em;
+      margin-right: 0.3em;
+      text-align: initial;
+    }
+    .wpp_mobile {
+      display: none;
+    }
+    .h1_paragraph {
+      text-align: center;
+
+    }
+    @media (max-width: 500px) {
+      #landing-text1 {
+        font-size: 20px;
+      }
+    }
+
+    #landing-text2 {
+      color: white;
+      font-family: sofia-pro, sans-serif;
+      margin-top: 4em;
+      font-size: 35px;
+      line-height: 1.5em;
+    }
+
+  }
+
+  .cards-section {
+    position: relative;
+    top: 0;
+  }
+
+  a.ctas-button {
+    padding-top: 0;
+    margin: 0 3.5% !important;
+    width: 93%;
+  }
+
+  .ctas-button {
+    color: #0D2A3E;
+
+    &:hover {
+      background-color: #F9B61F;
+      border: 1px solid #F9B61F;
+    }
+  }
+  .ctas {
+    margin-left: 0 !important;
+  }
+
+  .header-content {
+    padding: 40px 0;
+    min-height: auto;
+  }
+
+  @media (min-width: 900px) {
+    .header-content {
+      padding: 50px 15px;
+    }
+  }
+
+  .subheading {
+    font-size: 27px;
+    font-weight: 500;
+    line-height: 40px;
+  }
+  h1 {
+    margin-bottom: 0.5em;
+  }
+
+  .lp-content {
+    margin: 0 auto;
+  }
+
+  .product_image {
+    width: 40%;
+    margin: 3% auto 7em auto;
+    text-align: center;
+  }
+
+  .container-blog{
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .blog-post h2{
+    height: 5em;
+  }
+
+  @media (max-width: 840px) {
+
+    .header-content {
+      padding: 40px 15px 10px;
+    }
+
+
+    .product_image {
+      width: 80%;
+      margin: 3% auto;
+    }
+
+    .container-lrg {
+      margin: 0 auto;
+    }
+
+    .content-section .flex{
+      justify-content: center;
+    }
+
+    .content-section .col-4:not(:nth-of-type(1)){
+      padding: 0 15px;
+      margin-top: 0;
+    }
+
+    .subheading{
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    .paragraph{
+      font-size: 1em;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    .ctas-lp {
+      margin: 39px 0 0 !important;
+    }
+
+    .blog-heading{
+      line-height: 1.4;
+      margin: 2em 0 1em 0;
+      padding: 10px;
+    }
+
+    .container-blog{
+      margin: 0;
+    }
+
+    .blog-content{
+      margin-bottom: 3em;
+    }
+
+  }
+
+  .ctas-lp {
+    margin-left: 8%;
+  }
+
+  .blog-post__description{
+    text-align: justify;
+  }
+
+  .blog-post__link{
+    color: #4BA5BD;
+  }
+
+
+  @media (max-width: 501px) {
+
+    .header-content {
+      padding: 40px 10px 10px 10px;
+    }
+
+    .h1_lp {
+      margin-top: 1em !important;
+      font-size: 28px;
+    }
+
+    .lp-content {
+      margin: 0;
+    }
+
+    .h1_paragraph {
+      line-height: 1.4;
+      font-size: 0.9em;
+    }
+
+    .product_image {
+      margin: 5px auto;
+    }
+
+    .container-lrg {
+      margin: 0;
+    }
+
+    .paragraph {
+      text-align: center;
+      line-height: 1.4;
+      font-size: 0.9em;
+    }
+
+    .ctas {
+      margin-top: 2px;
+    }
+
+    a.ctas-button {
+      margin: 5px 0 !important;
+      padding: 4px 12px;
+      font-size: 12px;
+      line-height: 1.2;
+      height: auto;
+      width: 100%;
+    }
+
+    .cards-section {
+      top: 0;
+    }
+
+    .cards-section .col-4, .col-12 {
+      padding: 0 10px;
+    }
+
+    .box {
+      margin-top: 20px;
+      padding: 10px;
+    }
+
+    .content-section .flex {
+      justify-content: center;
+    }
+
+    .content-section .col-4:not(:nth-of-type(1)) {
+      margin: 0;
+    }
+
+    .subheading {
+      font-size: 18px;
+      line-height: 1.4;
+    }
+
+    .box-content {
+      margin-top: 5px;
+    }
+
+    .ctas-lp {
+      margin: 5px auto !important;
+    }
+
+    .blog-heading {
+      margin: 0;
+      padding: 20px 0 5px 0;
+      line-height: 1.4;
+    }
+
+    .container-blog {
+      padding: 0 10px;
+      margin: 0;
+      flex-direction: column;
+    }
+
+    .blog-content {
+      padding: 0;
+      margin-bottom: 1em;
+    }
+
+    .blog-post {
+      padding: 10px;
+    }
+
+    h2.blog-post__title {
+      padding: 0;
+      line-height: 1.4;
+      font-size: 18px;
+      font-weight: 500;
+      height: auto;
+    }
+
+    .blog-post__description {
+      padding: 0;
+      margin-top: 5px;
+      text-align: justify;
+      line-height: 1.4;
+      font-size: 0.9em;
+      height: 8em;
+    }
+
+    .link-container {
+      padding: 20px 0 0;
+      margin-top: 5px;
+    }
+
+  }
+
+}

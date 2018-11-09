@@ -1,0 +1,46 @@
+/* ---UTILITY CLASSES--- */
+.container-xlrg{
+	margin: auto;
+	width: 100%;
+    max-width: 1440px;
+}
+.ctas-md{
+	width: 100%;
+	margin: auto;
+}
+@media screen and (min-width: 500px){
+	.ctas-md{
+		width: 50%;
+	}
+}
+/* //---UTILITY CLASSES--- */
+
+.header{
+	position: relative;
+    background: radial-gradient(ellipse at center, #4988b4 0%, #225f8a 100%);
+    background: asset-url('bg-card.jpg') repeat center center;
+    background-size: cover;
+}
+.header-content{
+    padding: 80px 0;
+}
+.box-content {
+    margin-top: 15px;
+}
+.box {
+    margin-top: 40px;
+    border-radius: 3px;
+    padding: 20px;
+    border: 1px solid rgba(0,0,0,.1);
+    min-height: 240px;
+    background: #FFF;
+}
+@media (max-width: 750px) {
+    .box {
+        min-height: inherit;
+    }
+}
+.content-section{
+	padding: 40px 0;
+}
+

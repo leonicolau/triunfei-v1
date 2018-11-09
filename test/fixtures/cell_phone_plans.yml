@@ -1,0 +1,15 @@
+claro_controle:
+  name: Claro controle
+  plan_type: :control
+  description: Claro controle permite voce ter controle
+  slug: claro-controle
+  gb: 20
+  order: 2
+
+vivo_mais:
+  name: Vivo mais
+  plan_type: :paid
+  description: Vivo mais voce vive mais
+  slug: vivo-mais
+  gb: 30
+  order: 1

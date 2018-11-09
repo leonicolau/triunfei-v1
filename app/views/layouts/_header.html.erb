@@ -1,0 +1,40 @@
+<!-- Header + Main content  -->
+<header class="header new_header">
+  <% cache 'header' do %>
+    <nav class="navbar navbar-default bg-scrolled">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="<%= root_url %>">
+            <%= image_tag 'logo.svg', alt: "Logo Triunfei.com"%>
+          </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://blog.triunfei.com" target="_blank">Blog</a></li>
+            <li>
+              <%= link_to t('credit_cards'), cards_path, target: :_blank %>
+            </li>
+            <li>
+              <%= link_to t('loans'), loans_path, target: :_blank%>
+            </li>
+            <li>
+            <%= link_to  t('accounts_link'), accounts_path, target: :_blank  %>
+            </li>
+            <li><%= link_to  t('cell_phone_plans_link'), cell_phone_plans_path, target: :_blank%></li>
+            <li>
+            <%= link_to  t('investment_link'), investments_path, class: 'hidden-md hidden-lg', target: :_blank  %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <% end %>
+  <%= yield :header %>
+</header>

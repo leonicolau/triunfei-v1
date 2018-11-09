@@ -1,0 +1,38 @@
+<%  content_for :title, t('titles.banks.show', name: @bank.name)%>
+
+<section class="header-bank header-landing row">
+  <div class="logo col-xs-12 col-md-6 col-lg-6">
+    <figure class="bank-image">
+      <%= image_tag @bank.photo.url, width: '400px' %>
+    </figure>
+  </div>
+  <div class="description col-xs-12 col-md-6 col-lg-6">
+    <h1 class="bank-description">
+      <%= @bank.card_description %>
+    </h1>
+  </div>
+</section>
+<section>
+  <div class="container-fluid">
+    <div class="row">
+      <%= render 'filter' %>
+      <div class="col-xs-12 col-md-9 col-lg-10">
+        <div class="row desktop-sort">
+          <div class="col-md-4 col-lg-2 dropdown pull-right">
+            <button class="btn btn-default dropdown-toggle" type="button"
+              id="dropdownMenu-desktop-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <%= t('order') %> <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu sort" aria-labelledby="dropdownMenu-desktop-1">
+              <li><a href="#" data-order='ordenado-por-mais-relevantes'><%= t('most_relevant') %></a></li>
+              <li><a href="#" data-order='ordenado-por-anuidade'><%= t('annuity') %></a></li>
+              <li><a href="#" data-order='ordenado-por-renda-minima'><%= t('minimum_rent') %></a></li>
+            </ul>
+          </div>
+        </div>
+        <%= render 'cards/list', cards: @cards %>
+    </div>
+  </div>
+</section>
+
+<%= render 'shared/adwords' if Rails.env.production? && @bank.slug == 'santander' %>

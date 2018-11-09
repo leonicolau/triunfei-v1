@@ -1,0 +1,564 @@
+---
+pt-BR:
+  wizard:
+    basic_data: Dados básicos
+    more_info: + info
+    result: Resultado
+    error_message: Por favor preencha todos os campos!
+    show:
+      hello_message_html: "Bem vindo ao nosso assistente inteligente! <br/>Aqui você irá preencher seus dados e nós te ajudaremos a encontrar o que precisa!"
+      first_say_who_are_you: "Primeiro, nos diga quem é, através do seu e-mail:"
+      mobile_message: Bem vindo ao assistente da triunfei.com!<br/>Identificamos que você está em um %{value}, iremos otimizar os resultados para de acordo com seu celular.
+      sign_in_as_facebook: "Entrar com o facebook"
+      type_email: Olá! para começar qual o seu e-mail?
+      continue: Triunfar!
+      hello: "Olá %{email}!"
+      loans:
+        title: Responda as perguntas abaixo e selecionaremos o melhor empréstimo para você!
+        banks: Possui conta em algum banco?
+      cards:
+        title: Responda as perguntas abaixo e selecionaremos o melhor cartão para você!
+      accounts:
+        title: Responda as perguntas abaixo e selecionaremos a melhor conta para você!
+    step_two:
+      title: Encontramos 10000 resultados para você
+      subtitle: Informe mais dados para podermos melhorar a busca
+      continue: Mostre-me os resultados!
+    final_step:
+      title: Parabéns essas sao as ofertas que selecionamos para você.
+  about_us: Sobre nós
+  privacy_policies: Políticas de privacidade
+  thanks_user: Obrigado! Entraremos em contato logo mais!
+  project_name: Triunfei
+  news: Fique por dentro das novidades
+  order: Ordenar
+  no_annuity: Sem anuidade
+  money_unit: R$
+  insurances_by_insurer: Seguros por seguradora
+  or_more: ou mais
+  prepaid_card: Cartão Pré-Pago
+  Copyright: Copyright © 2017 Triunfei.com. Todos os direitos reservados.
+  recharge_limit: Limite de Recarga Mensal
+  text_footer: 'Brasil e Europa | Triunfei.com parte de GO Digital Servicos Digitais LTDA (CNPJ: 23.614.038/0001-50) - SP'
+  until: até
+  free_unit: R$ 0,00
+  insurance_travel: Seguro Viagem
+  filter_by_insurance_type: Filtrar por tipo de seguro
+  months: meses
+  years: anos
+  insurance_benefits: 'Benefícios'
+  insurance: Seguros
+  insurer: Seguradora
+  investment_html: Investimento
+  tips_triunfei: Dicas Triunfei
+  without_installment: Não
+  with_installment: Sim
+  card: cartão
+  internet: Pacote de internet
+  continue_site: Deseja continuar no site? Clique no botão abaixo
+  go_homepage: Ir para a página inicial
+  minutes_talk: Minutos para falar
+  request_accounts: abrir conta corrente
+  insurance_car_html: 'Seguro <br> Carro'
+  text_before_redirect: Estamos te redirecionando ao serviço desejado conforme sua resposta!
+  text_index_accounts_html: 'Conta corrente é a conta mais comum, pois existe para transações monetárias e de caráter comercial. Para a <b>abertura de conta corrente</b> será necessário assinar um contrato entre instituição bancária e cliente maior de 18 anos, comprovar renda e endereço residencial. Este tipo de conta é usado para receber dinheiro e pagar contas fazendo transações com cartão de crédito ou débito e através da internet. Para possuir uma conta corrente é necessário pagar uma taxa mensal que irá cobrir o valor dos serviços a qual o cliente tem direito. Portanto, quanto mais serviços o cliente utilizar, mais cara será a tarifa. O dono da conta corrente terá direito a um <b>cartão de débito</b> (que também pode ser crédito) para realizar transações através da internet, caixas eletrônicos, caixas 24 horas e outros postos de atendimento.</p></p>'
+  teto: Contribua com a TETO
+  text_index_cards_html: 'Os <strong>cartões de crédito</strong> possuem uma vantangem que é: a possibilidade de cobrança futura para adquirir um produto ou serviço. Ao comprar algo com o cartão de crédito, levamos imediatamente o produto para casa e o pagamento só será feito na próxima fatura, podendo ainda o valor total ser parcelado, no ato da compra, junto à loja ou prestador de serviço. Resumidamente, isso significa o seguinte: consumir antes e pagar depois. Mas cuidado, pois com tal facilidade, você pode acabar gastando mais do que deveria.<br/><br/>Aqui na <b>Triunfei.com</b> você poderá utilizar nossas ferramentas para <b>pesquisar</b>, <b> comparar</b> e <strong>solicitar cartão de crédito</strong>. Ao optar pelo cartão de crédito para realizar um negócio, precisamos estar cientes de que o valor negociado será cobrado e, portanto, precisa estar programado em nosso controle financeiro. O crédito associado ao cartão de crédito é parte da ferramenta e não significa dinheiro extra, mas simplesmente poder comprar, consumir e deixar o pagamento para uma data futura.</p></p>'
+  anuity_free: Grátis *
+  most_wanted: Mais procurados
+  go_to_plan: Solicitar Plano
+  operator: Operadora
+  gb_internet: Gigas de internet
+  see_results: Ver resultado agora
+  save_on_whatsapp: Salvar no WhatsApp
+  text_index_loans_html: 'O <strong>empréstimo</strong> é um serviço para quem está precisando de  dinheiro rápido e de maneira fácil para você construir, reformar ou se caso estiver negativado! Ao fazer um empréstimo, a instituição financeira te dará a quantia que necessita, e você vai pagando aos poucos, com os juros estabelecidos pela instituição financeira. Porém, cuidado! Quanto mais tempo levar para pagar, mais juros terá! A maioria dos bancos apresentam alguns pré-requisitos ao fazerem um empréstimo. Por exemplo, eles evitam emprestar para aquelas pessoas que tem aquela dívida na loja, cheque devolvido ou nome sujo na praça. As instituições financeiras podem emprestar, mas talvez não será a quantia que você gostaria. Entretanto, isso varia de banco para banco. Há modalidades de empréstimos onde você pode dar seu carro ou imóvel como garantia! Aqui na <b>Triunfei.com</b>, você irá poder <b>pesquisar</b>, <b>comparar</b> e <b>solicita empréstimos</b> de acordo com a sua necessidade no momento para escolher a melhor opção! </p></p>'
+  text_pre_loader:  'Conforme as suas respostas estamos comparando milhares de serviços!'
+  text_pre_loader_redirect: 'Conforme as suas respostas estamos te redirecionando para o cartão ideal!'
+  text_index_cell_phone_plans: O plano de internet bla bla bla
+  type_email: Informe seu e-mail
+  more_info_bank: + Info Banco
+  text_footer_html: <b>Triunfei.com</b> não é uma instituição financeira, somos uma plataforma online que facilita o acesso das pessoas a produtos e serviços financeiros ofertados por empresas. Testamos milhares de combinações para lhe indicar o serviço que melhor se adequa a você.
+  close: Fechar
+  minutes: Minutos
+  price: Preço
+  thank_you: Obrigado!
+  welcome_to_triunfei: Bem vindo ao assistente da triunfei.com
+  soon: Em breve traremos mais informações para você!
+  coming_soong: Mais informações em breve...
+  please_inform_valid_email: Por favor informe um e-mail válido
+  filter: Filtrar
+  best_option_your_email: As melhores opções de crédito no seu e-mail
+  payment_term: Prazo para o pagamento
+  record_not_found: Nenhum registro encontrado. Tente a busca com novos filtros.
+  loan_type: Tipo de Empréstimo
+  banks: Bancos
+  featured: Em destaque na triunfei
+  monthly_cost: Custo Mensal
+  go_to_card: Solicitar Cartão
+  go_to_investment: Conferir Corretora
+  accounts_link: Contas Correntes
+  minimum_rent: Renda mínima
+  most_searched: Mais Pesquisadas
+  filter_by_operator: Filtrar por operadora
+  filter_by_insurer: Filtrar por seguradora
+  go_to_insurance: Solicitar Seguro
+  search: Pesquisar
+  most_wanted: Mais procurados
+  check_it: CONFIRA
+  check_it_out: Confira tudo sobre Cartões de Crédito do Banco
+  check_it_out_accounts: Confira tudo sobre Contas Correntes do Banco
+  check_it_out_loans: Confira tudo sobre Empréstimos do Banco
+  free: Gratuíto
+  faq: Perguntas Frequentes
+  and_more: e muito mais
+  minimum_deposit: Depósito mínimo
+  not_required: Não Requer
+  taxe: Taxa
+  loans: Empréstimos
+  provided_by: Fornecido por
+  minimum_installment: Parcela mínima
+  min_value: Valor mínimo
+  annuity_installment: Parcelamento de anuidade
+  credit_card: Cartão de Crédito
+  credit_cards: Cartões de Crédito
+  bank: Banco
+  flag: Bandeira
+  go_to_promotion: Conferir
+  promotion_product: Este item é uma promoção*
+  more_details: + Detalhes
+  more_card_details: + Detalhes do Cartão
+  interest_rate: Taxa de juros
+  initial_rate: Taxa inicial
+  installments: Parcelas
+  installment: Parcela
+  annuity: Anuidade
+  deadline: Prazo Máximo
+  max_installment: Parcela Máxima
+  insurance_life: Seguro Vida
+  insurance_health: Seguro Saúde
+  max_value: Valor máximo
+  initial_term: Prazo inicial
+  phone_plans_html: 'Plano <br>celular'
+  accounts_link_html: 'Conta <br> correntes'
+  minimum_term: Prazo mínimo
+  card: Cartão
+  insurance_life_html: Seguro <br> Vida
+  credit_card_request: solicitar cartão de crédito
+  card_without_anuity: cartão de crédito sem anuidade
+  card_with_restriction: cartão com nome sujo
+  most_relevant: Mais Relevantes
+  how_it_works: COMO FUNCIONA A TRIUNFEI.COM?
+  choose_the_service: Escolha o serviço que está procurando
+  financial_services: Temos diversos serviços financeiros para te ajudar, escolha entre eles e indicaremos o que se encaixa no seu perfil!
+  redirect_to_form: Você será redirecionado para um rápido questionário
+  say_some_things: onde precisará nos dizer algumas informações pessoais.
+  list_products: Listaremos os melhores produtos para você!
+  based_on_the_information: Com base nas informações fornecidas
+  now_just_request: Agora é só solicitar o de sua preferência!
+  and_be_happy: E ser feliz!
+  about_us_html: SOBRE NÓS
+  of: De
+  calculator: Calculadora
+  days: dias
+  income_value: Digite um valor para simular
+  value_and_term: Valor e prazo para pagamento
+  filter_by_bank: Filtrar por banco
+  go_to_account: Solicitar Conta
+  more_info: Mais informações
+  filter_by_flag: Filtrar por bandeira
+  feature: Característica
+  investment_link: Investimentos
+  go_to_loan: Solicitar Empréstimo
+  cell_phone_plans_link: Planos de celular
+  go_to_site: Visite o site
+  make_credit_card: fazer cartão de crédito
+  make_card_online: fazer cartão online
+  best_cards: melhores cartões de crédito
+  thanks: Obrigado
+  loan_value: Valor do empréstimo (R$)
+  filter_by_broker: Corretora
+  fixed_remuneration: Remuneração Fixa
+  duration: Duração
+  profitability: Rentabilidade
+  investment_description: 'Descrição:'
+  ipca_taxe: 'Taxa IPCA:'
+  cdi_taxe: 'Taxa CDI:'
+  investment_duration: Duração
+  expected_return: Retorno esperado
+  filter_by_investment_type: Tipo de investimento
+  filter_by_investment_subtype: Filtrar por Subtipo
+  credit_cards_for_bank: Cartões de crédito %{bank}
+  credit_cards_for_flag: Cartões de crédito %{flag}
+  credit_cards_by_bank: Cartões de crédito por banco
+  credit_cards_by_flag: Cartões de crédito por bandeira
+  accounts_for_bank: Contas Correntes %{bank}
+  insurances_for_insurer: Seguros %{insurer}
+  accounts_by_bank: Contas Correntes por banco
+  loans_by_bank: Empréstimos por banco
+  site_index_html: 'Procure os <span class="significant">melhores produtos financeiros</span> do Brasil!'
+
+  subtitle_html: 'Mais de <span class="significant2">3.000.000 de pessoas</span> tem confiado na <span class="significant2">Triunfei.com</span> para procurar <span class="significant2">seguros, cartões ou empréstimos</span>. Em que podemos te ajudar hoje?'
+  loans_for_bank: Empréstimo %{bank}
+  intro:
+    loans:
+      step1: 'Bem-vindo a pagina de Empréstimos da Triunfei'
+      step2: 'Esse é o nosso filtro. Selecione as opções de acordo com suas preferências.'
+      step3: 'Valor e Prazo: insira aqui o valor máximo para seu empréstimo e o prazo do mesmo.'
+      step4: 'Banco: selecione o(s) banco(s) caso tenha alguma preferência.'
+  titles:
+    default: 'Encontre o melhor Cartão de Crédito, Empréstimo e Conta Corrente aqui.'
+    accounts:
+      index: 'Conta Corrente %{bank}: como solicitar, fazer, conseguir, tirar Conta Corrente %{bank} online'
+    banks:
+      show: 'Cartões de crédito banco %{name}'
+    cell_phone_plans:
+      index: 'Plano %{operator}: como solicitar, fazer, conseguir, tirar'
+    cards:
+      index: 'Cartão de Crédito %{bank} %{flag}: como solicitar, fazer, conseguir, tirar Cartões de Crédito %{bank} online'
+      show: 'Cartão de Crédito %{name}'
+      card_tip: '%{tip} '
+    insurances:
+      index: 'Seguro %{insurer}: como solicitar, fazer, conseguir, tirar Seguros %{insurer} online'
+      show: 'Seguro %{name}'
+      insurance_tip: '%{tip}'
+    investments:
+      index: 'Investimentos %{broker}: compare os melhores investimentos %{broker} %{fixed_remuneration} %{duration}'
+      investment_tip: '%{tip}'
+    loans:
+      index: 'Empréstimos %{bank}: como solicitar, fazer, conseguir, tirar Empréstimos %{bank} online'
+      say_amount: 'Olá! Insira o valor de empréstimo desejado:'
+  site:
+    title_html: '["cartão?", "conta?", "empréstimo?"]'
+  footer:
+    landing_pages: Em destaque no nosso site
+  blog_posts:
+    title: Em destaque no nosso blog
+    see_more: 'Ver mais...'
+  cards:
+    with_anuity:
+      no_anuity: com anuidade gratuita
+      until: com anuidade até R$ %{value}
+    with_minimum_rent:
+      no_minimum_rent: sem exigir renda minima
+      until: com renda minima até R$ %{value}
+    with_tip:
+      until: Preparamos as melhores dicas de %{value}
+    with_title_tip:
+      title_tip: '%{value}'
+    meta_tag: 'Corra e venha já fazer seu %{name} com a triunfei, aproveite nossos comparadores e encontre outras ofertas que foram feitas sob medida para você.'
+    keywords_meta_tag: '%{name}, cartões sem renda'
+    minimum_rent_less: Renda mensal baixa?
+    no_problem: Sem problema! Nosso assistente de pesquisa mostrará onde terá o cartão ideal pra você.
+    our_filter: Utilize os filtro da pesquisa e encontre o cartão com o benefício que você precisa.
+    check_it: CONFIRA
+    see_for_rewards: Procura por recompensas?
+    look_facilities: Procura por Facilidades?
+    found_it: DESCUBRA
+    long_term: Precisa a longo prazo?
+    look_for_card: Encontre um cartão com taxas diferenciadas e muitos beneficios.
+    less_spend: POUPE
+
+    index:
+      title: "Compare e solicite cartões de crédito %{bank} %{flag} %{anuity} %{minimum_rent} que selecionamos pra você!"
+      title_tips: "  %{tip} pra você!"
+      subtitle_html: 'Cada pessoa tem um perfil financeiro único, por isso te ajudaremos a encontrar o cartão de crédito ideal!<br> Utilize os filtros para navegar pelos cartões de diversos bancos como:'
+    show:
+      paragraph_one_html: 'Para poder usar o seu cartão de crédito %{name} do banco %{bank} você tem que pagar uma anuidade de %{anuity}. Esta anuidade poderá ou nao ser dividida em várias parcelas. No caso do %{name} do banco %{bank} com bandeira %{flag} você poderá dividir em %{anuity_multiple}x.<br> * %{anuity_description}'
+      paragraph_two_html: 'Para solicitar o Cartão de Crédito %{name} do banco %{bank} você terá que apresentar o seu RG ou RNE caso seja estrangeiro, e o seu número de CPF. Para ter a certeza que você vai poder conseguir o cartao de credito %{name} do banco %{bank} tenha a certeza que seu comprovante de renda esta acima de %{minimum_rent}, que é o mínimo indispensável para a concessão do cartão de crédito %{name}.'
+  loan:
+    meta_tag: 'Corra e venha já fazer seu %{name} com a triunfei, Aproveite nossos comparadores e encontre outras ofertas que foram feitas sob medida para você.'
+    minimum_rent_less: Renda mensal baixa?
+    no_problem: Nosso assistente de pesquisa indicará onde terá o empréstimo que precisa.
+    our_assistance: Nosso assistente indicará quais cartões de crédito oferecem serviços para poupar.
+    check_it: CONFIRA
+    see_for_rewards: Procura por recompensas?
+    found_it: DESCUBRA
+    long_term: Precisa a longo prazo?
+    cash_out: Quer economizar dinheiro?
+    look_for_loan: Com nosso assistente, é possível oferecer garantias e encontrar a menor taxa.
+    less_spend: POUPE
+    index:
+      title: "Compare e solicite empréstimos %{bank} que selecionamos pra você!"
+      subtitle_html: 'Cada pessoa tem um perfil financeiro único, por isso te ajudaremos a encontrar o empréstimo ideal!<br> Utilize os filtros para navegar pelos empréstimos de diversas financeiras como: '
+  insurances:
+    index:
+      title: "Compare e solicite seguros %{insurer} que selecionamos pra você!"
+      subtitle_html: 'Cada pessoa tem um perfil financeiro único, por isso te ajudaremos a encontrar o seguro ideal!'
+    no_problem: Sem problema! Nosso assistente de pesquisa mostrará onde terá o seguro ideal pra você.
+    doubt: Não sabe qual escolher?
+    our_filter: Utilize os filtro da pesquisa e encontre o seguro com o benefício que você precisa.
+    look_for_insurance: Encontre seguros com ótimos programas de recompensas.
+  cell_phone_plans:
+    index:
+      title: "Compare e solicite planos %{operator} que selecionamos pra você!"
+  accounts:
+    meta_tag: 'Corra e venha já fazer sua %{name} com a triunfei, Aproveite nossos comparadores e encontre outras ofertas que foram feitas sob medida para você.'
+    minimum_rent_less: Renda mensal baixa?
+    no_problem: Sem problema! Nosso assistente de pesquisa mostrará onde terá a conta ideal pra você.
+    check_it: CONFIRA
+    see_for_rewards: Procura por recompensas?
+    look_for_account: Encontre uma conta com taxas diferenciadas, com ótimos cartões e facilidades!
+    found_it: DESCUBRA
+    cash_out: Quer economizar dinheiro?
+    our_assistance: Nosso assistente te indicará contas correntes com as menores taxas existentes no mercado.
+    less_spend: POUPE
+    index:
+      title: "Compare e solicite contas correntes %{bank} que selecionamos pra você!"
+      subtitle_html: 'Cada pessoa tem um perfil financeiro único, por isso te ajudaremos a encontrar a conta corrente ideal!<br> Utilize os filtros para navegar pelas contas de diversos bancos como:'
+    show:
+      paragraph_one_html: '<p class="paragraph">É muito fácil abrir uma conta corrente. Hoje é possível realizar um pré-cadastro antecipadamente pela internet, agilizando a abertura de sua conta bancária.</p><p class="paragraph">Com a <b>%{name}</b> você terá a comodidade de poder realizar suas transações pela internet, em seu computador ou celular.</p><p class="paragraph">Você terá diversos serviços para facilitar o seu dia a dia e as opções de pacotes para movimentar sua <b>%{name}</b>.</p>'
+      paragraph_two_html: 'Na <b> %{name}</b> você poderá realizar <b>muitos saques</b> no pacote mensal.'
+      paragraph_three_html: 'A <b>%{name}</b> ainda permite fazer até <b>%{transfer} transferências</b> no pacote mensal.'
+      paragraph_four_html: 'A <b>%{name}</b> ainda permite fazer até <b>diversas transferências</b> no pacote mensal.'
+      paragraph_five_html: 'É possível consultar até <b>%{account_statement} extratos</b> dentro do pacote mensal da <b>%{account_name}</b>.'
+      paragraph_six_html: 'É possível consultar <b>vários extratos</b> dentro do pacote mensal da <b>%{name}</b>.'
+      paragraph_seven_html: 'Tenha a sua <b>%{account_name}</b> pagando apenas <b>%{account_taxes}</b> por mês e uma renda mínima de <b>%{minimum_rent}</b>.'
+    withdrawal_message: Permite realizar até %{count} saques no pacote.
+    transfer_message: Permite realizar até %{count} transferências no pacote.
+    statement_message: Permite consultar até %{count} extratos no pacote.
+    banks_message: e muito mais.
+    title.cards_message: Selecionamos os melhores cartões de crédito pra você!
+    loan.title_message: Selecionamos os melhores empréstimos pra você!
+    filter_description_card: Cada pessoa tem um perfil financeiro único, por isso te ajudaremos a encontrar o cartão de crédito ideal!<br>
+  investments:
+    no_problem: Sem problema! A Triunfei.com te ajudará a encontrar o investimento ideal!
+    our_filter: Nossos filtros indicarão o investimento com o rendimento que você precisa.
+    look_for_investment: Encontre investimentos com as melhoras taxas do mercado.
+    doubt: Não sabe qual escolher?
+    good_profitability: Procura bom rendimento?
+    good_taxes: Procura as melhoras taxas?
+    invest: Invista
+    index:
+      title: "Compare e faça investimentos %{broker} %{duration} %{fixed_remuneration} que selecionamos pra você!"
+    with_fixed_remuneration:
+      no_fixed_remuneration:
+      until: '%{value}'
+    with_duration:
+      no_duration:
+      until: com duração de %{value} dias
+  enum:
+    fixed_remunerations:
+      letter_of_credit: titulo lci
+      treasury_direct: tesouro direto
+      bankary_deposit_receipt: titulo cdb
+      agribusiness_credit_letter: titulo lca
+      bill_of_exchange: titulo l c
+    type_of_profitabilities:
+      high_yield: maior rendimento
+      more_risk: maior risco
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 'A validação falhou: %{errors}'
+        restrict_dependent_destroy:
+          has_one: Não é possível excluir o registro pois existe um %{record} dependente
+          has_many: Não é possível excluir o registro pois existem %{record} dependentes
+  date:
+    abbr_day_names:
+    - Dom
+    - Seg
+    - Ter
+    - Qua
+    - Qui
+    - Sex
+    - Sáb
+    abbr_month_names:
+    -
+    - Jan
+    - Fev
+    - Mar
+    - Abr
+    - Mai
+    - Jun
+    - Jul
+    - Ago
+    - Set
+    - Out
+    - Nov
+    - Dez
+    day_names:
+    - Domingo
+    - Segunda-feira
+    - Terça-feira
+    - Quarta-feira
+    - Quinta-feira
+    - Sexta-feira
+    - Sábado
+    formats:
+      default: "%d/%m/%Y"
+      long: "%d de %B de %Y"
+      short: "%d de %B"
+    month_names:
+    -
+    - Janeiro
+    - Fevereiro
+    - Março
+    - Abril
+    - Maio
+    - Junho
+    - Julho
+    - Agosto
+    - Setembro
+    - Outubro
+    - Novembro
+    - Dezembro
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: aproximadamente 1 hora
+        other: aproximadamente %{count} horas
+      about_x_months:
+        one: aproximadamente 1 mês
+        other: aproximadamente %{count} meses
+      about_x_years:
+        one: aproximadamente 1 ano
+        other: aproximadamente %{count} anos
+      almost_x_years:
+        one: quase 1 ano
+        other: quase %{count} anos
+      half_a_minute: meio minuto
+      less_than_x_minutes:
+        one: menos de um minuto
+        other: menos de %{count} minutos
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      over_x_years:
+        one: mais de 1 ano
+        other: mais de %{count} anos
+      x_days:
+        one: 1 dia
+        other: "%{count} dias"
+      x_minutes:
+        one: 1 minuto
+        other: "%{count} minutos"
+      x_months:
+        one: 1 mês
+        other: "%{count} meses"
+      x_seconds:
+        one: 1 segundo
+        other: "%{count} segundos"
+    prompts:
+      day: Dia
+      hour: Hora
+      minute: Minuto
+      month: Mês
+      second: Segundo
+      year: Ano
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: deve ser aceito
+      blank: não pode ficar em branco
+      present: deve ficar em branco
+      confirmation: não é igual a %{attribute}
+      empty: não pode ficar vazio
+      equal_to: deve ser igual a %{count}
+      even: deve ser par
+      exclusion: não está disponível
+      greater_than: deve ser maior que %{count}
+      greater_than_or_equal_to: deve ser maior ou igual a %{count}
+      inclusion: não está incluído na lista
+      invalid: não é válido
+      less_than: deve ser menor que %{count}
+      less_than_or_equal_to: deve ser menor ou igual a %{count}
+      model_invalid: 'A validação falhou: %{errors}'
+      not_a_number: não é um número
+      not_an_integer: não é um número inteiro
+      odd: deve ser ímpar
+      required: deve existir
+      taken: já está em uso
+      too_long:
+        one: 'é muito longo (máximo: 1 caracter)'
+        other: 'é muito longo (máximo: %{count} caracteres)'
+      too_short:
+        one: 'é muito curto (mínimo: 1 caracter)'
+        other: 'é muito curto (mínimo: %{count} caracteres)'
+      wrong_length:
+        one: não possui o tamanho esperado (1 caracter)
+        other: não possui o tamanho esperado (%{count} caracteres)
+      other_than: deve ser diferente de %{count}
+    template:
+      body: 'Por favor, verifique o(s) seguinte(s) campo(s):'
+      header:
+        one: 'Não foi possível gravar %{model}: 1 erro'
+        other: 'Não foi possível gravar %{model}: %{count} erros'
+  helpers:
+    select:
+      prompt: Por favor selecione
+      submit:
+        create: Criar %{model}
+        submit: Salvar %{model}
+        update: Atualizar %{model}
+  number:
+    currency:
+      format:
+        delimiter: "."
+        format: "%u %n"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: R$
+    format:
+      delimiter: "."
+      precision: 3
+      separator: ","
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion:
+            one: bilhão
+            other: bilhões
+          million:
+            one: milhão
+            other: milhões
+          quadrillion:
+            one: quatrilhão
+            other: quatrilhões
+          thousand: mil
+          trillion:
+            one: trilhão
+            other: trilhões
+          unit: ''
+      format:
+        delimiter: ""
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: Byte
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: "."
+        format: "%n%"
+    precision:
+      format:
+        delimiter: "."
+  support:
+    array:
+      last_word_connector: " e "
+      two_words_connector: " e "
+      words_connector: ", "
+  time:
+    am: ''
+    formats:
+      default: "%a, %d de %B de %Y, %H:%M:%S %z"
+      long: "%d de %B de %Y, %H:%M"
+      short: "%d de %B, %H:%M"
+    pm: ''

@@ -1,0 +1,389 @@
+---
+es-mx:
+  about_us: Quiénes somos
+  project_name: Triunfei
+  order: Ordenar
+  no_annuity: Sin comisiones
+  money_unit: $
+  or_more: más
+  until: hasta
+  months: Meses
+  anuity_free: Gratis *
+  years: Años
+  without_installment: 'No'
+  with_installment: Sí
+  type_email: Introduce tu correo
+  most_wanted: Más buscadas
+  text_index_loans_html: '¡ <strong>el préstamo</strong> es un servicio para aquellos que necesitan dinero rápido y fácil para que usted construya, reforma o si es negativo! Al hacer un préstamo, la institución financiera le dará la cantidad que usted necesita, y usted pagará gradualmente, con el interés establecido por la institución financiera. ¡ pero cuidado! ¡ cuanto más tiempo se tarda en pagar, más interés tendrá! La mayoría de los bancos tienen algunos prerrequisitos cuando hacen un préstamo. Por ejemplo, evitan prestar a aquellas personas que tienen esa deuda en la tienda, el cheque devuelto o el nombre sucio en la Plaza. Las instituciones financieras pueden prestar, pero tal vez no sea la cantidad que te gustaría. Mientras tanto, varía de banco a Banco. ¡ Hay modos de préstamos donde usted puede dar su coche o propiedad como garantía! ¡ aquí en <b> Triunfei.com </b>, que se potencia <b> Buscar </b>, <b> comparar </b> y <b> pide préstamos </b> según su necesidad en el momento de elegir la mejor opción!'
+  text_index_cards_html: 'Las <strong>tarjetas de crédito</strong> tienen una ventaja que es: la posibilidad de recuperación futura para adquirir un producto o servicio. Al comprar algo con la tarjeta de crédito, inmediatamente llevamos el producto a casa y el pago sólo se realizará en la próxima factura, sin embargo, el importe total será Parcelado, en el acto de compra, por la tienda o proveedor de servicios. Brevemente, esto significa lo siguiente: consumir antes y pagar después. Pero ten cuidado, porque con tal facilidad, puede terminar gastando más de lo que debería. Aquí en <b> Triunfei.com </b> puede utilizar nuestras herramientas para <b> Buscar </b>, <b> comparar </b> y <strong> solicitar tarjeta de crédito </strong>. Al elegir la tarjeta de crédito para realizar un negocio, necesitamos ser conscientes de que el valor negociado será cargado y por lo tanto necesita ser programado en nuestro control financiero. El crédito asociado con la tarjeta de crédito es parte de la herramienta y no significa dinero extra, pero simplemente puede comprar, consumir y dejar el pago para una fecha futura. </p> </p> '
+  text_index_accounts_html: 'La cuenta corriente es la cuenta más común, porque existe para las transacciones monetarias y el carácter comercial. Para la apertura <b> de la cuenta corriente </b> será necesario firmar un contrato entre el Banco y la institución del cliente durante 18 años, atestiguando renta y la dirección residencial. Este tipo de cuenta se utiliza para recibir dinero y pagar facturas haciendo transacciones con tarjeta de crédito o débito y a través de Internet. Poseer una cuenta corriente se requiere pagar una cuota mensual que cubra el valor de los servicios a los que el cliente tiene derecho. Así que cuantos más servicios utilice el cliente, más caro será el precio. El titular de la cuenta corriente tendrá derecho a una tarjeta de débito <b> </b> (que también puede ser crédito) para realizar transacciones a través de Internet, cajeros automáticos, cajas 24 horas y otras estaciones de servicio.'
+  card: tarjeta
+  request_accounts: abrir cuenta corriente
+  please_inform_valid_email: Por favor, escribe una dirección de correo válida.
+  filter: Filtrar
+  payment_term: Plazo
+  text_footer_html: <b>Triunfei.com</b no es una institución financiera, somos una plataforma en línea que facilita el acceso de las personas a los productos y servicios financieros ofrecidos por las empresas. Hemos probado miles de combinaciones para mostrarle el servicio que más le convenga.
+  best_option_your_email: Los mejores servicos y condiciones en tu email.
+  record_not_found: Ninguna opción encontrada. Intenta buscar con otros filtros.
+  loan_type: Tipo de préstamo.
+  banks: Bancos
+  make_credit_card: Hacer tarjeta de crédito
+  credit_card_request: solicitar tarjeta de crédito
+  make_card_online: Hacer la tarjeta en Internet
+  privacy_policies: Políticas de privacidad
+  filter_by_insurance_type: Filtrar por tipo de seguro
+  best_cards: Mejores tarjetas de crédito
+  news: Mantente actualizado de nuestras novedades
+  card_without_anuity: Tarjeta de crédito sin anualidad
+  card_with_restriction: tarjeta de crédito con restricciones
+  tips_triunfei: Consejos
+  featured: Destacados
+  Copyright: Copyright © 2017 Triunfei.com. Todos los derechos reservados.
+  prepaid_card: Tarjeta de crédito prepagada
+  recharge_limit: Límite de recarga mensual
+  faq: Preguntas Frecuentes
+  monthly_cost: Coste Mensual
+  go_to_card: Ir a la tarjeta
+  accounts_link: Cuentas Corrientes
+  minimum_rent: Renta mínima
+  most_searched: Más buscadas
+  most_wanted: Más buscadas
+  free: Gratuito
+  check_it: COMPROBAR
+  and_more: y mucho más
+  minimum_deposit: Depósito mínimo
+  not_required: No Requerido
+  taxe: Tasa
+  loans: Préstamos
+  teto: Contribuya al techo
+  provided_by: por
+  minimum_installment: cuota mínima
+  min_value: Valor mínimo
+  annuity_installment: División de la tasa
+  credit_card: Tarjeta de Crédito
+  credit_cards: Tarjetas de Crédito
+  bank: Banco
+  flag: Bandera
+  interest_rate: Tasa de interés
+  initial_rate: Tasa inicial
+  installments: Cuotas
+  installment: Cuotas
+  annuity: Anualidad
+  deadline: Plazo Máximo
+  max_installment: Cuotas Máximas
+  max_value: Valor Máximo
+  initial_term: Plazo inicial
+  minimum_term: Plazo mínimo
+  most_relevant: Más Relevantes
+  value_and_term: Valor y plazo
+  filter_by_bank: Filtrar por banco
+  go_to_account: IR A LA CUENTA
+  more_info: MÁS INFORMACIÓN
+  filter_by_flag: Filtrar por bandera
+  feature: Características
+  go_to_loan: IR al PRÉSTAMO
+  go_to_site: Visite el banco
+  loan_value: Valor del préstamo($)
+  credit_cards_for_bank: Tarjetas de crédito %{bank}
+  credit_cards_for_flag: Tarjetas de crédito %{flag}
+  credit_cards_by_bank: Tarjetas de crédito por banco
+  credit_cards_by_flag: Tarjetas de crédito por bandera
+  text_footer: 'Copyright (c) 2017 P.V. S.L | Todos los derechos reservados.'
+  loans_by_bank: Préstamos por banco
+  loans_for_bank: Préstamos %{bank}
+  site_index_typewriter: ¿ Estás buscando
+  site_index_typewriter_part_two: ¡ Seleccione la opción deseada y encontraremos la mejor solución!
+  text_footer: ''
+  titles:
+    default: 'Triunfei es la mejor solución para encontrar las mejores tarjetas, préstamos y cuentas.'
+    accounts:
+      index: 'Cuentas corrientes de los principales bancos de España: Santander, BBVA, Caixa y muchos más.'
+    banks:
+      show: 'Tarjetas de crédito del banco %{name}'
+    cards:
+      index: 'Tarjetas de crédito de Bankia, BBVA, Santander, CaixaBank, ING, Barclaycard y muchos más, aquí puedes encontrar la que mejor se adapta a tu perfil'
+      show: 'Tarjeta de crédito %{name}'
+    loans:
+      index: 'Ven a descubrir que préstamo se adapta más a tus compras.'
+  site:
+    title_html: '["tarjeta?", "cuenta?", "préstamo?"]'
+  footer:
+    landing_pages: Destacados
+  blog_posts:
+    title: Destacados en nuestro blog.
+    see_more: 'Ver más...'
+  cards:
+    minimum_rent_less: Renta media o mínima?
+    no_problem: Sin problema! Nuestro asistente de búsqueda mostrará donde encontrara su tarjeta ideal.
+    our_assistance: Utilice el filtro de búsqueda y encontrar el préstamo que necesita.
+    check_it: COMPROBAR
+    see_for_rewards: búsqueda por recompensas?
+    found_it: DESCUBRIR
+    long_term: Necesidad a largo plazo?
+    look_for_card: Encuentra una tarjeta con diferentes tasas y muchos beneficios
+    less_spend: AHORRAR
+    index:
+      title: "¡Seleccionamos la mejor tarjeta de crédito para ti!"
+      subtitle_html: 'Cada persona tiene un perfil financiero único, te ayudamos a encontrar la tarjeta de crédito perfecto Usa los filtros para navegar a través de las diversas tarjetas de bancos como:'
+    show:
+      paragraph_one_html: 'Para ser capaz de utilizar su tarjeta %{name} del banco %{bank} tienes que pagar una tasa de %{anuity}. Esta tasa podrá o no ser dividida en varias cuotas. En el caso de %{name} del banco %{bank} de la bandera %{flag} podrás dividir el pago de la tasa en %{anuity_multiple}x.<br> * %{anuity_description}'
+      paragraph_two_html: 'Para solicitar la tarjeta de crédito %{name} del banco %{bank} tendrás que completar un formulario web o presentare en una entidad bancaria con tu DNI. Para estar seguro de que vas a conseguir la tarjeta %{name} del banco %{bank} tendrías que saber que tu nivel de renta está por encima del mínimo exigido por el banco 		%{minimum_rent}, que es mínimo indispensable para la concesión de la tarjeta de crédito %{name}.'
+  loan:
+    minimum_rent_less: Tu renta mensual es baja?
+    no_problem: Sin problemas! Nuestro asistente de búsqueda te indicara que préstamos necesitas.
+    our_assistance: Con nuestro asistente te iremos a mostrar que tarjetas ofrecen servicios de ahorro.
+    check_it: CONFIRA
+    see_for_rewards: Buscas por recompensas?
+    found_it: DESCUBRA
+    cash_out: Quieres economizar a fin de mes?
+    look_for_loan: Con nuestro asistente es posible encontrar las garantías y una tasa menor.
+    less_spend: AHORRE
+    index:
+      title: ¡Seleccionamos los mejores préstamos para ti!
+      subtitle_html: 'Cada persona tiene un perfil financiero único, por eso te ayudaremos a encontrar un préstimo ideal!<br> Utilice los filtros para navegar por los diferentes préstamos de las diferentes instituciones financieras como: '
+  accounts:
+    minimum_rent_less: Tu renta es baja?
+    no_problem: Sin problemas! Nuestro asistente de búsqueda te mostrará donde tendrás la cuenta ideal para ti.
+    check_it: Descúbrela
+    see_for_rewards: Buscas recompensas?
+    look_for_account: Encuentre una cuenta con tasas diferenciadas, acceso a tarjetas de crédito premium y mucho más.
+    found_it: Descúbrela
+    cash_out: Quieres economizar a fin de mes?
+    our_assistance: Con nuestro asistente es posible encontrar las garantías y una tasa menor.
+    less_spend: AHORRE
+    index:
+      title: Seleccionamos las mejores cuentas para ti!
+      subtitle_html: 'Cada persona tiene un perfil financiero único, por eso te ayudaremos a encontrar la cuenta corriente ideal.<br> Utilice los filtros para navegar por las cuentas de diversos bancos como:'
+    show:
+      title: Seleccionamos las mejores cuentas para ti!
+      subtitle_html: 'Cada persona tiene un perfil financiero único, por eso te ayudaremos a encontrar la cuenta corriente ideal!<br> Utilice los filtros para navegar por las cuentas de diversos bancos como:'
+      paragraph_one_html: '<p class="paragraph">es muy fácil abrir una cuenta corriente. Hoy es posible realizar un registro anticipadamente por internet, agilizando la apertura de tu cuenta bancaria.</p><p class="paragraph">Con la <b>%{name}</b> Tendrá la comodidad de poder realizar sus transacciones por internet, desde su computador.</p><p class="paragraph">Tendrás diversos servicios para facilitar el día a día y verá las opciones de paquetes para mover su <b>%{name}</b>.</p>'
+      paragraph_two_html: 'Con la <b> %{name}</b> podrá efectuar <b> retiradas</b> en el en el paquete mensual.'
+      paragraph_three_html: 'La Evo <b>%{name}</b> permite hacer hasta <b>%{transfer} transferencias</b> en el paquete mensual.'
+      paragraph_four_html: 'A <b>%{name}</b> 	permite hacer hasta <b>diversas transferencias</b> en el paquete mensual.'
+      paragraph_five_html: 'Es posible consultar hasta <b>%{account_statement} extractos</b> dentro del paquete mensual de <b>%{account_name}</b>.'
+      paragraph_six_html: 'Es posible consultar <b>varios extractos</b> dentro del paquete mensual <b>%{name}</b>.'
+      paragraph_seven_html: 'Tenga la <b>%{account_name}</b> pagando apenas <b>%{account_taxes}</b> por mes y con una renta mínima de <b>%{minimum_rent}</b>.'
+    withdrawal_message: 'Permite realizar hasta %{count} retiradas en el paquete.'
+    transfer_message: 'Permite realizar hasta %{count} transferencias en el paquete.'
+    statement_message: 'Permite consultar hasta %{count} extractos en el paquete.'
+    banks_message: 'y mucho más.'
+    title.cards_message: Seleccionamos las mejores tarjetas de crédito para ti!
+    loan.title_message: Seleccionamos los mejores préstamos para ti!
+    filter_description_card: '¡Cada persona tiene un perfil financiero único, por eso te ayudamos a encontrar la tarjeta de crédito ideal!<br>'
+  activerecord:
+    errors:
+      messages:
+        record_invalid: 'A validação falhou: %{errors}'
+        restrict_dependent_destroy:
+          has_one: 'Não é possível excluir o registro pois existe um %{record} dependente'
+          has_many: 'Não é possível excluir o registro pois existem %{record} dependentes'
+  date:
+    abbr_day_names:
+    - Dom
+    - Lun
+    - Mar
+    - Mie
+    - Jue
+    - Vie
+    - Sáb
+    abbr_month_names:
+    -
+    - En
+    - Feb
+    - Mar
+    - Abr
+    - May
+    - Jun
+    - Jul
+    - Ago
+    - Sep
+    - Oct
+    - Nov
+    - Dic
+    day_names:
+    - Domingo
+    - Lunes
+    - Martes
+    - Miércoles
+    - Jueves
+    - Viernes
+    - Sábado
+    formats:
+      default: "%d/%m/%Y"
+      long: "%d de %B de %Y"
+      short: "%d de %B"
+    month_names:
+    -
+    - Enero
+    - Febrero
+    - Marzo
+    - Abril
+    - Mayo
+    - Junio
+    - Julio
+    - Agosto
+    - Septiembre
+    - Octubre
+    - Noviembro
+    - Diciembre
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: aproximadamente 1 hora
+        other: aproximadamente %{count} horas
+      about_x_months:
+        one: aproximadamente 1 mes
+        other: aproximadamente %{count} meses
+      about_x_years:
+        one: aproximadamente 1 año
+        other: aproximadamente %{count} años
+      almost_x_years:
+        one: quase 1 año
+        other: quase %{count} años
+      half_a_minute: medio minuto
+      less_than_x_minutes:
+        one: menos de un minuto
+        other: menos de %{count} minutos
+      less_than_x_seconds:
+        one: menos de 1 segundo
+        other: menos de %{count} segundos
+      over_x_years:
+        one: mais de 1 año
+        other: mais de %{count} años
+      x_days:
+        one: 1 día
+        other: "%{count} días"
+      x_minutes:
+        one: 1 minuto
+        other: "%{count} minutos"
+      x_months:
+        one: 1 mes
+        other: "%{count} meses"
+      x_seconds:
+        one: 1 segundo
+        other: "%{count} segundos"
+    prompts:
+      day: Día
+      hour: Hora
+      minute: Minuto
+      month: Mes
+      second: Segundo
+      year: 'Año'
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      accepted: debe ser aceptado
+      blank: no puede estar en blanco
+      present: debe estar en blanco
+      confirmation: no es igual a %{attribute}
+      empty: no puede estar vacío
+      equal_to: debe ser igual a %{count}
+      even: debe ser par
+      exclusion: no está disponible
+      greater_than: debe ser mayor que %{count}
+      greater_than_or_equal_to: debe ser mayor o igual a %{count}
+      inclusion: no está incluido en la lista
+      invalid: no es válido
+      less_than: debe ser menor que %{count}
+      less_than_or_equal_to: debe ser menor o igual a %{count}
+      model_invalid: 'la validación fallo: %{errors}'
+      not_a_number: no es un número
+      not_an_integer: no é un número entero
+      odd: debe ser impar
+      required: debe existir
+      taken: ya está en uso
+      too_long:
+        one: 'es muy largo (máximo: 1 caracter)'
+        other: 'es muy largo (máximo: %{count} caracteres)'
+      too_short:
+        one: 'es muy corto (mínimo: 1 caracter)'
+        other: 'es muy corto (mínimo: %{count} caracteres)'
+      wrong_length:
+        one: no tiene el tamaño adequado (1 caracter)
+        other: no tiene el tamaño esperado (%{count} caracteres)
+      other_than: debe ser diferente de %{count}
+    template:
+      body: 'Por favor, comprueba lo(s) siguiente(s) campo(s):'
+      header:
+        one: 'No fue posible guardar %{model}: 1 error'
+        other: 'No fue posible guardar %{model}: %{count} errores'
+  helpers:
+    select:
+      prompt: Por favor seleccione
+      submit:
+        create: 'Crear %{model}'
+        submit: 'Guardar %{model}'
+        update: 'Actualizar %{model}'
+  number:
+    currency:
+      format:
+        delimiter: "."
+        format: "%n %u"
+        precision: 2
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: $
+    format:
+      delimiter: "."
+      precision: 3
+      separator: ","
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion:
+            one: billón
+            other: billón
+          million:
+            one: millón
+            other: millones
+          quadrillion:
+            one: cuatrillón
+            other: cuatrillones
+            thousand: mil
+            trillion:
+              one: trillón
+              other: trillones
+            unit: ''
+      format:
+        delimiter: ""
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+        storage_units:
+          format: "%n %u"
+          units:
+            byte:
+              one: Byte
+              other: Bytes
+            gb: GB
+            kb: KB
+            mb: MB
+            tb: TB
+      percentage:
+        format:
+          delimiter: "."
+          format: "%n%"
+      precision:
+        format:
+          delimiter: "."
+  support:
+    array:
+      last_word_connector: " e "
+      two_words_connector: " e "
+      words_connector: ", "
+  time:
+    am: ''
+    formats:
+      default: "%a, %d de %B de %Y, %H:%M:%S %z"
+      long: "%d de %B de %Y, %H:%M"
+      short: "%d de %B, %H:%M"
+    pm: ''

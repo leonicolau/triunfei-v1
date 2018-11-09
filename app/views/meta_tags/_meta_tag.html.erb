@@ -1,0 +1,7 @@
+<% if meta_tag.raw_text.present? %>
+  <%= meta_tag.raw_text.html_safe %>
+<% elsif meta_tag.name.present?%>
+   <meta name="<%= meta_tag.name %>" content="<%= meta_tag.value %>" />
+<% else %>
+   <meta property="<%= meta_tag.property %>" content="<%=meta_tag.value %>" />
+<% end %>

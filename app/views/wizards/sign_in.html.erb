@@ -1,0 +1,27 @@
+
+<div class="background_sign_in">
+<div class="container-fluid" id="container-result">
+  <h1 class="filters__title signin_title" id="thanks_user_container">
+    <% if @wizard.welcome_message? %>
+      <p><%= t(:welcome_to_triunfei)%></p>
+      <%= @wizard.welcome_message %>
+    <% else %>
+      <%= raw correct_welcome_message %>
+    <%end%>
+  </h1>
+  <div class='content container' align='center' style='height: 500px;'>
+    <div class='row' style='margin-top:40px;'>
+      <div><%= t('wizard.show.first_say_who_are_you') %></div>
+      <br/>
+      <%= form_for(User.new) do |f| %>
+        <div class='col-md-offset-2 col-md-6 col-lg-offset-3'>
+            <input type='email' name='user[email]' class='form-control' placeholder='E-mail' />
+          <div class='col-md-6 submit-button'>
+            <%= f.submit 'Começar a triunfar', class: 'btn btn-steps btn-block' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,351 @@
+<div class="col-xs-12 col-md-3 col-lg-2">
+  <div class="row">
+    <!-- SORT -->
+    <div class="dropdown col-xs-6 mobile-sort">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <%= t('order') %>
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu sort" aria-labelledby="dropdownMenu1">
+        <li>
+          <a href="#" data-order='ordenado-por-mais-relevantes'><%= t('most_relevant') %></a>
+        </li>
+        <li>
+          <a href="#" data-order='ordenado-por-internet'><%= t('internet') %></a>
+        </li>
+        <li>
+          <a href="#" data-order='ordenado-por-price'><%= t('price') %></a>
+        </li>
+      </ul>
+    </div>
+    <!-- FILTROS (MOBILE) -->
+    <%= form_tag(filter_cell_phone_plans_path, id: 'cell_phone_plans-filter') do %>
+    <div class="dropdown col-xs-6 mobile-filter">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <%= t('filter') %>
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu filter" aria-labelledby="dropdownMenu2">
+        <div class="panel-group" id="accordion-1" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne-1">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne-1" aria-expanded="true" aria-controls="collapseOne-1">
+                  <%= t('gb_internet') %>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-1">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'gb-mobile', 'gb-0-1', params[:path]&.include?('gb-0-1'), data: { 'search-param': 'gb-0-1' }%>
+                    0
+                    <%= t('gb') %>
+                    - 1
+                    <%= t('gb') %>
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'gb-mobile', 'gb-1.5-3', params[:path]&.include?('gb-1.5-3'), data: { 'search-param': 'gb-1.5-3' }%>
+                    1.5
+                    <%= t('gb') %>
+                    - 3
+                    <%= t('gb') %>
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'gb-mobile', 'gb-3-6', params[:path]&.include?('gb-3-6'), data: { 'search-param': 'gb-3-6' }%>
+                    3
+                    <%= t('gb') %>
+                    -
+                    <%= t('gb') %>
+                    6
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'gb-mobile', 'gb-6-100', params[:path]&.include?('gb-6-100'), data: { 'search-param': 'g-6-100' }%>
+                    6
+                    <%= t('gb') %>
+                    <%= t('or_more') %>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="panel-group" id="accordion-1" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne-1">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne-1" aria-expanded="true" aria-controls="collapseOne-1">
+                  <%= t('price') %>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne-desktop-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-1">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'preço-mobile', 'preço-15-30', params[:path]&.include?('preço-15-30'), data: { 'search-param': 'preço-15-30' }%>
+                    <%= t('money_unit') %>
+                    15 -
+                    <%= t('money_unit') %>
+                    30
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'preço-mobile', 'preço-30-45', params[:path]&.include?('preço-30-45'), data: { 'search-param': 'preço-30-45' }%>
+                    <%= t('money_unit') %>
+                    30 -
+                    <%= t('money_unit') %>
+                    45
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'preço-mobile', 'preço-45-70', params[:path]&.include?('preço-45-70'), data: { 'search-param': 'preço-45-70' }%>
+                    <%= t('money_unit') %>
+                    45 -
+                    <%= t('money_unit') %>
+                    70
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'preço-mobile', 'preço-70-100', params[:path]&.include?('preço-70-100'), data: { 'search-param': 'preço-70-100' }%>
+                    <%= t('money_unit') %>
+                    70 -
+                    <%= t('money_unit') %>
+                    100
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'preço-mobile', 'preço-100-130', params[:path]&.include?('preço-100-130'), data: { 'search-param': 'preço-100-130' }%>
+                    <%= t('money_unit') %>
+                    100 -
+                    <%= t('money_unit') %>
+                    130
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'preço-mobile', 'preço-130-1000', params[:path]&.include?('preço-130-1000'), data: { 'search-param': 'preço-130-1000' }%>
+                    <%= t('money_unit')%>
+                    130
+                    <%= t('or_more') %>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="panel-group" id="accordion-3" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne-3">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-3" href="#collapseOne-3" aria-expanded="true" aria-controls="collapseOne-3">
+                  <%= t('filter_by_operator') %>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne-3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-3">
+              <ul class="list-group">
+                <% Operator.joins(:cell_phone_plans).distinct.all.each do |operator| %>
+                  <li class="list-group-item">
+                    <label>
+                      <%= check_box_tag operator.id, operator.slug, params[:path]&.include?(operator.slug), data: { 'search-param': operator.slug }%>
+                      <%= operator.name %>
+                    </label>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="panel-group" id="accordion-1" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne-1">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne-1" aria-expanded="true" aria-controls="collapseOne-1">
+                  <%= t('tips_triunfei') %></a>
+              </h4>
+            </div>
+            <div id="collapseOne-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-1">
+              <ul class="list-group">
+              <%= render partial: 'shared/tip_item', collection: ProductTip.cell_phone_plan.all, as: :item %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- filter desktop -->
+      <div class="dropdown col-xs-12 desktop-filter">
+        <div class="panel-group" id="accordion-1" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne-1">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-1" href="#collapseOne-1" aria-expanded="true" aria-controls="collapseOne-1">
+                  <%= t('gb_internet') %>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-1">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'gb', 'gb-0-1', params[:path]&.include?('gb-0-1'), data: { 'search-param': 'gb-0-1' }%>
+                    0
+                    <%= t('gb') %>
+                    - 1
+                    <%= t('gb') %>
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'gb', 'gb-1.5-3', params[:path]&.include?('gb-1.5-3'), data: { 'search-param': 'gb-1.5-3' }%>
+                    1.5
+                    <%= t('gb') %>
+                    - 3
+                    <%= t('gb') %>
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'gb', 'gb-3-6', params[:path]&.include?('gb-3-6'), data: { 'search-param': 'gb-3-6' }%>
+                    3
+                    <%= t('gb') %>
+                    -
+                    <%= t('gb') %>
+                    6
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'gb', 'gb-6-100', params[:path]&.include?('gb-6-100'), data: { 'search-param': 'g-6-100' }%>
+                    6
+                    <%= t('gb') %>
+                    <%= t('or_more') %>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="panel-group" id="accordion-desktop-1" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne-desktop-1">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-desktop-1" href="#collapseOne-desktop-1" aria-expanded="true" aria-controls="collapseOne-desktop-1">
+                  <%= t('price') %>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne-desktop-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-desktop-1">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'preço', 'preço-15-30', params[:path]&.include?('preço-15-30'), data: { 'search-param': 'preço-15-30' }%>
+                    <%= t('money_unit') %>
+                    15 -
+                    <%= t('money_unit') %>
+                    30
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'preço', 'preço-30-45', params[:path]&.include?('preço-30-45'), data: { 'search-param': 'preço-30-45' }%>
+                    <%= t('money_unit') %>
+                    30 -
+                    <%= t('money_unit') %>
+                    45
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'preço', 'preço-45-70', params[:path]&.include?('preço-45-70'), data: { 'search-param': 'preço-45-70' }%>
+                    <%= t('money_unit') %>
+                    45 -
+                    <%= t('money_unit') %>
+                    70
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'preço', 'preço-70-100', params[:path]&.include?('preço-70-100'), data: { 'search-param': 'preço-70-100' }%>
+                    <%= t('money_unit') %>
+                    70 -
+                    <%= t('money_unit') %>
+                    100
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'preço', 'preço-100-130', params[:path]&.include?('preço-100-130'), data: { 'search-param': 'preço-100-130' }%>
+                    <%= t('money_unit') %>
+                    100 -
+                    <%= t('money_unit') %>
+                    130
+                  </label>
+                </li>
+                <li class="list-group-item">
+                  <label>
+                    <%= radio_button_tag 'preço', 'preço-130-1000', params[:path]&.include?('preço-130-1000'), data: { 'search-param': 'preço-130-1000' }%>
+                    <%= t('money_unit')%>
+                    130
+                    <%= t('or_more') %>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="panel-group" id="accordion-desktop-3" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne-desktop-3">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-desktop-3" href="#collapseOne-desktop-3" aria-expanded="true" aria-controls="collapseOne-desktop-3">
+                  <%= t('filter_by_operator') %>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne-desktop-3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-desktop-3">
+              <ul class="list-group">
+                <% Operator.joins(:cell_phone_plans).distinct.all.each do |operator| %>
+                  <li class="list-group-item">
+                    <label>
+                      <%= check_box_tag "operator-#{operator.id}", operator.slug, params[:path]&.include?(operator.slug), data: { 'search-param': operator.slug }%>
+                      <%= operator.name %>
+                    </label>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Filter por operator-->
+        <div class="panel-group" id="accordion-desktop-3" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne-desktop-3">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion-desktop-3" href="#collapseOne-desktop-3" aria-expanded="true" aria-controls="collapseOne-desktop-3">
+                  <%= t('tips_triunfei') %>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne-desktop-2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne-desktop-2">
+              <ul class="list-group">
+                <%= render partial: 'shared/tip_item', collection: ProductTip.cell_phone_plan.all, as: :item %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

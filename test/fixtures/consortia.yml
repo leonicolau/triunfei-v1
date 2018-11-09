@@ -1,0 +1,9 @@
+santander:
+  name: santander
+  benefits: a melhor
+  insurer: 'Bradesco'
+  value: 30000.9
+  payment_term: 12.00
+  monthly_installment: 1600.0
+  link: 'http://test.com/'
+  slug: 'santander'

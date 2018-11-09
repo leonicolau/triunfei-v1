@@ -1,0 +1,9 @@
+visa:
+  name: Visa
+  slug: visa
+master:
+  name: Master
+  slug: master
+amex:
+  name: Amex
+  slug: amex

@@ -1,0 +1,89 @@
+<% content_for :title, title_for_cards_index %>
+<section>
+  <div class='container-fluid container-index'>
+    <div class='container'>
+      <div class='row'>
+        <div class='col-xs-12 col-sm-3 col-md-3 pull-right hidden-xs hidden-sm'>
+          <div class='box-filter'></div>
+        </div>
+        <div class='col-xs-12 col-sm-9 col-md-9'>
+          <div class='row'>
+            <div class='col-md-12'>
+              <h1 class='main-title-page'>
+                <% if @product_tip&.title.present? %>
+                  <%= @product_tip&.title%>
+                <% else %>
+                  <%= h1_for_cards_index %>
+                <%end%>
+              </h1>
+            </div>
+          </div>
+          <div class='row'>
+            <div class='col-md-12 mt10 mb10 text-justify'>
+              <div class='lh text-dark-blue'>
+                <% if @product_tip&.description.present? %>
+                  <%= @product_tip&.description %>
+                <% else %>
+                <div class="hidden-xs hidden-sm">
+                  <%= t(:'cards.index.subtitle_html') %>
+                  <% Bank.joins(:cards).distinct.limit(3).all.each do |bank| %>
+                    <%= link_to bank.name, filter_cards_url(path: bank.slug, cid: cid_param)%>.
+                  <% end %>
+                  <br><br>
+                  <p class="text-align-center">
+                    <%= link_to '#index-more-info', class: 'text-undecoration', data: { toggle: :collapse },
+                        'aria-expanded': false, 'aria-controls': '#index-more-info' do %>
+                        <span class='display-inline'>Saiba Mais</span>
+                        <span class='display-inline'>
+                          <i class='fa fa-chevron-down toggle-wrap-open'></i>
+                          <i class='fa fa-chevron-up toggle-wrap-close'></i>
+                        </span>
+                    <% end %>
+                  </p>
+                  <br><br>
+                 </div>
+                <%end%>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id='index-more-info' class='collapse'>
+        <div class='row'>
+          <div class='col-md-12'>
+            <hr class='hr-index-info'>
+            <div class='text-align-justify pb10 lh'>
+              <%= t(:'text_index_cards_html')%>
+              <br>
+              <% if @product_tip&.text.present? %>
+                <%= @product_tip&.text %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='container'>
+    <div class='row'>
+      <%= render 'filter' %>
+      <div class='col-md-9'>
+        <div class='row desktop-sort'>
+          <div class='col-md-3 dropdown pull-right'>
+            <button class='btn btn-default dropdown-toggle' type='button'
+              id='dropdownMenu-desktop-1' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true'>
+                <i class='fa fa-sort-alpha-asc' aria-hidden='true'></i> <%= t(:'order') %> <span class='caret'></span>
+            </button>
+            <ul class='dropdown-menu sort' aria-labelledby='dropdownMenu-desktop-1'>
+              <li><a href='#' data-order='ordenado-por-mais-relevantes'><%= t(:'most_relevant') %></a></li>
+              <li><a href='#' data-order='ordenado-por-anuidade'><%= t(:'annuity') %></a></li>
+              <li><a href='#' data-order='ordenado-por-renda-minima'><%= t(:'minimum_rent') %></a></li>
+            </ul>
+          </div>
+        </div>
+        <%= render 'list', cards: @cards %>
+      </div>
+    </div>
+  </div>
+  <%= render 'blog_posts/list', blog_posts: grouped_blog_posts(@blog_posts.credit_card)%>
+</section>

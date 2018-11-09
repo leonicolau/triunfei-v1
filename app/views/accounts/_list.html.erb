@@ -1,0 +1,2 @@
+<%= render 'shared/empty_list', records: accounts.all %>
+<%= render partial: 'accounts/account', collection: @accounts, cached: true, as: :item %>

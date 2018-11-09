@@ -1,0 +1,44 @@
+<% content_for :title, @investment.name %>
+
+  <div class="content-section no-border">
+    <div class="container-lrg_cards flex container-show-plans">
+      <div class='col-6 product-img-container'>
+        <%= image_tag @investment.broker.photo.url, class: 'product-img' %>
+      </div>
+      <div class="col-10 product-text-container">
+        <div class="product-text">
+          <p>
+            <h1><%= @investment.name %></h1>
+          </p>
+          <p><%= t(:filter_by_broker) %>:
+            <b>
+              <%= @investment.broker.name %></b>
+          </p>
+          <p><%= t(:duration)%>:
+            <b>
+              <%= @investment.duration %> dias</b>
+          </p>
+          <p><%= t(:cdi_taxe)%>
+            <b>
+            <b>6,39%</b>
+          </p>
+          <p><%= t(:profitability)%>:
+            <b>
+              <%= @investment.profitability_value(params[:result]) %>%</b>
+          </p>
+        </div>
+        <div class="ctas">
+          <%= link_to t(:go_to_investment), go_to_site_investment_path(@investment, cid: cid_param), class: 'ctas-button primary-bg ctas-xl', target: '_blank', data: { 'ga-event-category': 'investimentos', 'ga-event-action': 'clickout', 'ga-event-label': @investment.name }%>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p10 br3 bg-light-gray fs16 text-align-justify loan_info">
+  	<div class="container-lrg_cards flex">
+  		<div class="col-12">
+  		  	<p class="paragraph">
+  		  	  <%= @investment.description %>
+  		  	</p>
+  		</div>
+  	</div>
+  </div>

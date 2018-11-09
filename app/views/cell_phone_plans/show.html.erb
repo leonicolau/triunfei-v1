@@ -1,0 +1,31 @@
+<% content_for :title, @cell_phone_plan.name %>
+
+<div class="content-section no-border">
+  <div class="container-lrg_cards flex container-show-plans">
+    <div class="col-6 product-img-container">
+      <%= image_tag @cell_phone_plan.photo.url, class: 'product-img-plans' %>
+    </div>
+    <div class="col-10 product-text-container">
+	    <div class="product-text">
+  			<p><h1><b><%= @cell_phone_plan.name %></b></h1></p>
+  			<p><%= t('operator') %><b>: <%= @cell_phone_plan.operator.name %></b></p>
+  			<p><%= t('gb') %>: <b><%= @cell_phone_plan.gb %></b></p>
+        <p><%= t('minutes') %>: <b><%= @cell_phone_plan.minutes %></b></p>
+        <p><%= t('price') %>: <b><%= number_to_currency(@cell_phone_plan.price) %></b></p>
+	    </div>
+	    <div class="ctas">
+        <%= link_to t('go_to_site'), go_to_site_cell_phone_plan_path(@cell_phone_plan, cid: cid_param), class: 'ctas-button primary-bg ctas-xl', target: '_blank',
+           data: { 'ga-event-category': 'planos', 'ga-event-action': 'clickout', 'ga-event-label': @cell_phone_plan.name }%>
+	    </div>
+    </div>
+  </div>
+</div>
+<div class="content-section">
+	<div class="container-lrg_cards flex">
+		<div class="col-12">
+		  	<p class="paragraph">
+		  	  <%= @cell_phone_plan.description %>
+		  	</p>
+		</div>
+	</div>
+</div>

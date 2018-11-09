@@ -1,0 +1,13 @@
+bahia:
+  insurer: santander
+  name: bahia nordeste
+  link: http://bahia.com
+  slug: bahia-nordeste
+  benefits: o melhor
+  country_destiny: portugal
+poa:
+  insurer: santander
+  name: poa
+  link: http://www.poa.com.br
+  slug: poa
+  insurance_type: viagem

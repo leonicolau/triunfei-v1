@@ -1,0 +1,74 @@
+<% content_for :title, title_for_investments_index %>
+  <section>
+    <div class="container-fluid container-index">
+      <div class='container'>
+        <div class='row'>
+          <div class='col-xs-12 col-sm-3 col-md-3 pull-right hidden-xs hidden-sm'>
+            <div class='insurance-box-filter'></div>
+          </div>
+          <div class='col-xs-12 col-sm-9 col-md-9'>
+            <div class='row'>
+              <div class='col-md-12'>
+                <h1 class='main-title-page'>
+                  <% if @product_tip&.title.present? %>
+                    <%= @product_tip&.title%>
+                  <% else %>
+                    <%= h1_for_investments_index %>
+                  <%end%>
+                </h1>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col-md-12 mt10 mb10 text-justify'>
+                <div class='lh text-dark-blue'>
+                  <% if @product_tip&.description.present? %>
+                    <%= @product_tip&.description %>
+                  <%end%>
+                  <br><br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='index-more-info' class='collapse'>
+          <div class='row'>
+            <div class='col-md-12'>
+              <hr class='hr-index-info'>
+              <div class='text-justify pb10 lh'>
+                <%= t(:'text_index_investments_html')%>
+                <br>
+                <% if @product_tip&.text.present? %>
+                  <%= @product_tip&.text %>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='container'>
+      <div class="row">
+        <%= render 'filter' %>
+        <div class="col-md-9">
+          <div class="row desktop-sort">
+            <div class="col-md-3 dropdown pull-right">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu-desktop-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <i class='fa fa-sort-alpha-asc' aria-hidden='true'></i>
+                <%= t(:'order') %>
+                <span class='caret'></span>
+              </button>
+              <ul class="dropdown-menu sort" aria-labelledby="dropdownMenu-desktop-1">
+                <li>
+                  <a href="#" data-order='ordenado-por-retorno-esperado'><%= t(:expected_return) %></a>
+                </li>
+                <li>
+                  <a href="#" data-order='ordenado-por-tipo-duracao'><%= t(:duration) %></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <%= render 'list', investments: @investments %>
+        </div>
+      </div>
+    </div>
+  </section>
